@@ -1,0 +1,230 @@
+12:03:50 :  => Update content SET category_id='1',content_name='test',content_summary='',content_detail='' Where content_id = 20 
+12:03:25 :  => Update content SET category_id='1',content_name='การ scp (secure copy) ข้ามระหว่างเครื่อง โดยไม่ต้อง login ',content_summary='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file&nbsp;<br />
+จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2 หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office&nbsp;<br />
+เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม หรือคำสั่ง scp (secure copy) นั้น&nbsp;<br />
+บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม.......................</p>
+<p><img height=\"121\" width=\"121\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/rd.jpg\" /></p>',content_detail='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2 หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม หรือคำสั่ง scp (secure copy) นั้น บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม แต่สำหรับ Windows จะต้องลง <a href=\"http://www.cygwin.com/\" target=\"_blank\">Cygwin</a> ก่อน ถึงจะสามารถใช้งานได้ ปกติ การใช้ scp นั้นจะมีการถาม password แต่เมื่อเราจะใช้ในการ backup หรือโอนไฟล์ เราคงจะต้องทำโดยอัตโนมัติ เช่น ตั้ง crontab ใน Linux หรือ ตั้ง Task Schedule ใน Windows เพราะงั้น เราจะต้องข้ามขั้นตอนการ login หรือการใส่ password นี้ไป ซึ่งสามารถทำได้โดยการสร้าง key สำหรับ login อัตโนมัติไว้ โดย key จะมี 2 อย่างคือ private key และ public key</p>
+<p>ขั้นตอนในการเซต key เพื่อใช้ scp โดยไม่ต้อง login มีดังนี้</p>
+<ol>
+    <li>ให้ตัดสินใจว่า เราจะใช้ user อะไรสำหรับใช้งาน scp นี้ เช่นในที่นี้ ผมขอยกตัวอย่างว่าใช้ user ชื่อ <font style=\"color: rgb(0,0,255)\">dumper<br />
+    </font></li>
+    <li>login เข้าเครื่อง local (จะเรียกเครื่องที่ตั้งให้ทำงานว่า local และจะเรียก เครื่องที่จะถูก remote เข้าไปว่า server) ถ้าเป็นไปได้ก็ให้ใช้ user name เดียวกันระหว่าง local กับ server หรือจะต่างกันก็ได้ ไม่เป็นไร ถ้าไม่กลัวจะงงเอง หลังจาก สนgin แล้วลอง <font style=\"color: rgb(0,0,255)\">pwd</font> ดูจะเห็นว่าเราอยู่ที่ home directory ของเรา ส่วนมากจะเป็น
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper</font></p>
+    <p>หลังจากนั้น ให้สร้าง <strong>private key</strong> และ <strong>public key</strong> ในเครื่อง local โดยใช้คำสั่ง</p>
+    <p><font style=\"color: rgb(0,0,255)\">ssh-keygen -t rsa</font></p>
+    <p>แล้วจะมีการถามประมาณว่าเราจะเก็บไฟล์ key ไว้ที่ไหน ชื่ออะไร ให้กด Enter ผ่านมาเลย จะได้ชื่อ ที่อยู่ ตามค่า default และ ไฟล์ที่เก็บ key จะถูกสร้างไว้ใต้ directory ชื่อ .ssh ซึ่งถ้าเรายังไม่สร้าง directory นี้ คำสั่งเมื่อกี้ก็จะสร้างให้เราเอง หลังจากรันคำสั่งข้างต้น จะได้ไฟล์ออกมาดังนี้</p>
+    <p><font style=\"color: rgb(0,0,255)\">[1] private key - /home/dumper/.ssh/id_rsa</font> <font style=\"color: rgb(0,0,255)\"><br />
+    [2] public key - /home/dumper/.ssh/id_rsa.pub</font></p>
+    <p>&nbsp;</p>
+    </li>
+    <li>ให้ copy file id_rsa.pub ขึ้นไปไว้ยัง server และเปลี่ยนชื่อเป็น authorized_keys อาจจะใช้ ftp หรือ อะไรแล้วแต่ถนันน้ะครับ แต่ในที่นี้จะยกตัวอย่างด้วย scp ดังนี้
+    <p><font style=\"color: rgb(0,0,255)\">scp id_rsa.pub dumper@my.server.ip.addr:/home/dumper/authorized_keys</font></p>
+    <p>โดยในขั้นตอนนี้จะมีการถามรหัสผ่านสำหรับ user dumper บน my.server.ip.addr (ip ของ server น้ะครับ หรือจะเป็นชื่อ domain ก็ได้ไม่ผิดกติกา)</p>
+    </li>
+    <li>เสร็จแล้วให้ login ไปที่เครื่อง server และเช็คดูว่าเจอไฟล์
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper/authorized_keys</font></p>
+    <p>หรือเปล่า ถ้าเรา scp มาสำเร็จ ก็จะต้องเจอน้ะครับ ถ้ายังไม่เจอก็กลับไปเริ่ม copy มาใหม่</p>
+    </li>
+    <li>ให้สร้าง directory ชื่อ .ssh ภายใต้ home directory ของเรา (ในที่นี้คือภายใต้ /home/dumper) แต่ถ้ามีอยู่แล้วก็ใช้ได้เลยไม่ต้องสร้างใหม่ เสร็จแล้วให้ย้าย authorized_keys เข้าไปไว้ใน .ssh โดยใช้คำสั่ง
+    <p><font style=\"color: rgb(0,0,255)\">mkdir .ssh</font> <font style=\"color: rgb(0,0,255)\">mv authorized_keys .ssh</font></p>
+    <p>แล้วลองเช็คดูจะเห็นว่ามีไฟล์ <font style=\"color: rgb(0,0,255)\">/home/dumper/.ssh/authorized_keys</font> แล้ว</p>
+    </li>
+    <li>ทีนี้ logout ออกมาจาก server อยู่ที่ local ก็ลอง scp ไฟล์ไปดูน้ะครับ ทีนี้ก็จะไม่มีการถาม password แล้ว</li>
+</ol>
+<h2>เพิ่มเติมการใช้งาน scp อย่างง่ายอีกหน่อย</h2>
+<p>ถ้าคุณใช้ linux ก็ดู manual แบบเต็มๆ เลยด้วยคำสั่ง man scp หรือถ้าขี้เกียจดู ก็เดี๋ยวจะยกตัวอย่างไว้สัก 3 อัน ง่ายๆ ไม่ซับซ้อน ที่ผมใช้บ่อย</p>
+<p>[1] <font style=\"color: rgb(0,0,255)\">scp /path/to/file/myLocalFile.tgz dumper@my.server.ip.addr:/home/dumper/myBackUpDir/</font> <br />
+จะเป็นการ upload ไฟล์จาก local ขึ้นไปเก็บไว้ที่ server ด้วยชื่อเดียวกัน</p>
+<p>[2] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/myServerFile.tgz /path/to/file/myServerFile.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local ด้วยชื่อเดียวกัน</p>
+<p>[3] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/file1.tgz /path/to/file/file2.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local โดยเปลี่ยนชื่อไฟล์ด้วย สามารถใช้ได้กับทั้งข้อ [1] และ [2] <br />
+&nbsp;</p>
+<p>&nbsp;</p>
+<p>ที่มา http://www.phpzealots.com/node/93<br />
+&nbsp;</p>' Where content_id = 20 
+12:03:13 :  => Update content SET category_id='1',content_name='การ scp (secure copy) ข้ามระหว่างเครื่อง โดยไม่ต้อง login ',content_summary='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file&nbsp;<br />
+จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2 หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office&nbsp;<br />
+เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม หรือคำสั่ง scp (secure copy) นั้น&nbsp;<br />
+บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม.......................</p>
+<p><img height=\"121\" alt=\"\" width=\"121\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/rd.jpg\" /></p>',content_detail='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2&nbsp;<br />
+หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม&nbsp;<br />
+หรือคำสั่ง scp (secure copy) นั้น บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม&nbsp;<br />
+แต่สำหรับ Windows จะต้องลง <a target=\"_blank\" href=\"http://www.cygwin.com/\">Cygwin</a> ก่อน ถึงจะสามารถใช้งานได้ ปกติ การใช้ scp นั้นจะมีการถาม password&nbsp;<br />
+แต่เมื่อเราจะใช้ในการ backup หรือโอนไฟล์ เราคงจะต้องทำโดยอัตโนมัติ เช่น ตั้ง crontab ใน Linux&nbsp;<br />
+หรือ ตั้ง Task Schedule ใน Windows เพราะงั้น เราจะต้องข้ามขั้นตอนการ login หรือการใส่ password นี้ไป&nbsp;<br />
+ซึ่งสามารถทำได้โดยการสร้าง key สำหรับ login อัตโนมัติไว้ โดย key จะมี 2 อย่างคือ private key และ public key</p>
+<p>ขั้นตอนในการเซต key เพื่อใช้ scp โดยไม่ต้อง login มีดังนี้</p>
+<ol>
+    <li>ให้ตัดสินใจว่า เราจะใช้ user อะไรสำหรับใช้งาน scp นี้ เช่นในที่นี้ ผมขอยกตัวอย่างว่าใช้ user ชื่อ <font style=\"color: rgb(0,0,255)\">dumper<br />
+    </font></li>
+    <li>login เข้าเครื่อง local (จะเรียกเครื่องที่ตั้งให้ทำงานว่า local และจะเรียก เครื่องที่จะถูก remote เข้าไปว่า server)&nbsp;<br />
+    ถ้าเป็นไปได้ก็ให้ใช้ user name เดียวกันระหว่าง local กับ server หรือจะต่างกันก็ได้ ไม่เป็นไร&nbsp;<br />
+    ถ้าไม่กลัวจะงงเอง หลังจาก สนgin แล้วลอง <font style=\"color: rgb(0,0,255)\">pwd</font> ดูจะเห็นว่าเราอยู่ที่ home directory ของเรา ส่วนมากจะเป็น
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper</font></p>
+    <p>หลังจากนั้น ให้สร้าง <strong>private key</strong> และ <strong>public key</strong> ในเครื่อง local โดยใช้คำสั่ง</p>
+    <p><font style=\"color: rgb(0,0,255)\">ssh-keygen -t rsa</font></p>
+    <p>แล้วจะมีการถามประมาณว่าเราจะเก็บไฟล์ key ไว้ที่ไหน ชื่ออะไร ให้กด Enter ผ่านมาเลย จะได้ชื่อ ที่อยู่ ตามค่า default และ ไฟล์ที่เก็บ key จะถูกสร้างไว้ใต้ directory ชื่อ .ssh ซึ่งถ้าเรายังไม่สร้าง directory นี้ คำสั่งเมื่อกี้ก็จะสร้างให้เราเอง หลังจากรันคำสั่งข้างต้น จะได้ไฟล์ออกมาดังนี้</p>
+    <p><font style=\"color: rgb(0,0,255)\">[1] private key - /home/dumper/.ssh/id_rsa</font> <font style=\"color: rgb(0,0,255)\"><br />
+    [2] public key - /home/dumper/.ssh/id_rsa.pub</font></p>
+    <p>&nbsp;</p>
+    </li>
+    <li>ให้ copy file id_rsa.pub ขึ้นไปไว้ยัง server และเปลี่ยนชื่อเป็น authorized_keys อาจจะใช้ ftp หรือ อะไรแล้วแต่ถนันน้ะครับ แต่ในที่นี้จะยกตัวอย่างด้วย scp ดังนี้
+    <p><font style=\"color: rgb(0,0,255)\">scp id_rsa.pub dumper@my.server.ip.addr:/home/dumper/authorized_keys</font></p>
+    <p>โดยในขั้นตอนนี้จะมีการถามรหัสผ่านสำหรับ user dumper บน my.server.ip.addr (ip ของ server น้ะครับ หรือจะเป็นชื่อ domain ก็ได้ไม่ผิดกติกา)</p>
+    </li>
+    <li>เสร็จแล้วให้ login ไปที่เครื่อง server และเช็คดูว่าเจอไฟล์
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper/authorized_keys</font></p>
+    <p>หรือเปล่า ถ้าเรา scp มาสำเร็จ ก็จะต้องเจอน้ะครับ ถ้ายังไม่เจอก็กลับไปเริ่ม copy มาใหม่</p>
+    </li>
+    <li>ให้สร้าง directory ชื่อ .ssh ภายใต้ home directory ของเรา (ในที่นี้คือภายใต้ /home/dumper) แต่ถ้ามีอยู่แล้วก็ใช้ได้เลยไม่ต้องสร้างใหม่ เสร็จแล้วให้ย้าย authorized_keys เข้าไปไว้ใน .ssh โดยใช้คำสั่ง
+    <p><font style=\"color: rgb(0,0,255)\">mkdir .ssh</font> <font style=\"color: rgb(0,0,255)\">mv authorized_keys .ssh</font></p>
+    <p>แล้วลองเช็คดูจะเห็นว่ามีไฟล์ <font style=\"color: rgb(0,0,255)\">/home/dumper/.ssh/authorized_keys</font> แล้ว</p>
+    </li>
+    <li>ทีนี้ logout ออกมาจาก server อยู่ที่ local ก็ลอง scp ไฟล์ไปดูน้ะครับ ทีนี้ก็จะไม่มีการถาม password แล้ว</li>
+</ol>
+<h2>เพิ่มเติมการใช้งาน scp อย่างง่ายอีกหน่อย</h2>
+<p>ถ้าคุณใช้ linux ก็ดู manual แบบเต็มๆ เลยด้วยคำสั่ง man scp หรือถ้าขี้เกียจดู ก็เดี๋ยวจะยกตัวอย่างไว้สัก 3 อัน ง่ายๆ ไม่ซับซ้อน ที่ผมใช้บ่อย</p>
+<p>[1] <font style=\"color: rgb(0,0,255)\">scp /path/to/file/myLocalFile.tgz dumper@my.server.ip.addr:/home/dumper/myBackUpDir/</font> <br />
+จะเป็นการ upload ไฟล์จาก local ขึ้นไปเก็บไว้ที่ server ด้วยชื่อเดียวกัน</p>
+<p>[2] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/myServerFile.tgz /path/to/file/myServerFile.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local ด้วยชื่อเดียวกัน</p>
+<p>[3] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/file1.tgz /path/to/file/file2.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local โดยเปลี่ยนชื่อไฟล์ด้วย สามารถใช้ได้กับทั้งข้อ [1] และ [2] <br />
+&nbsp;</p>
+<p>&nbsp;</p>
+<p>ที่มา http://www.phpzealots.com/node/93<br />
+&nbsp;</p>' Where content_id = 20 
+12:03:08 :  => Update content SET category_id='2',content_name='การ scp (secure copy) ข้ามระหว่างเครื่อง โดยไม่ต้อง login ',content_summary='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file&nbsp;<br />
+จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2 หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office&nbsp;<br />
+เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม หรือคำสั่ง scp (secure copy) นั้น&nbsp;<br />
+บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม.......................</p>
+<p><img height=\"121\" alt=\"\" width=\"121\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/rd.jpg\" /></p>',content_detail='<p>ใน บางครั้ง หากเราต้องการโอนย้ายไฟล์ข้ามเครื่องที่ใช้ linux เช่น backup file จาก server ตัวที่ 1 ไปยัง server ตัวที่ 2&nbsp;<br />
+หรือ ดูดไฟล์จาก server ลงมาไว้ที่เครื่อง backup ใน office เราสามารถทำได้สะดวกมากด้วย scp โปรแกรม&nbsp;<br />
+หรือคำสั่ง scp (secure copy) นั้น บน Linux ส่วนใหญ่จะสามารถใช้งานได้ทันที ไม่ต้องลงอะไรเพิ่ม&nbsp;<br />
+แต่สำหรับ Windows จะต้องลง <a target=\"_blank\" href=\"http://www.cygwin.com/\">Cygwin</a> ก่อน ถึงจะสามารถใช้งานได้ ปกติ การใช้ scp นั้นจะมีการถาม password&nbsp;<br />
+แต่เมื่อเราจะใช้ในการ backup หรือโอนไฟล์ เราคงจะต้องทำโดยอัตโนมัติ เช่น ตั้ง crontab ใน Linux&nbsp;<br />
+หรือ ตั้ง Task Schedule ใน Windows เพราะงั้น เราจะต้องข้ามขั้นตอนการ login หรือการใส่ password นี้ไป&nbsp;<br />
+ซึ่งสามารถทำได้โดยการสร้าง key สำหรับ login อัตโนมัติไว้ โดย key จะมี 2 อย่างคือ private key และ public key</p>
+<p>ขั้นตอนในการเซต key เพื่อใช้ scp โดยไม่ต้อง login มีดังนี้</p>
+<ol>
+    <li>ให้ตัดสินใจว่า เราจะใช้ user อะไรสำหรับใช้งาน scp นี้ เช่นในที่นี้ ผมขอยกตัวอย่างว่าใช้ user ชื่อ <font style=\"color: rgb(0,0,255)\">dumper<br />
+    </font></li>
+    <li>login เข้าเครื่อง local (จะเรียกเครื่องที่ตั้งให้ทำงานว่า local และจะเรียก เครื่องที่จะถูก remote เข้าไปว่า server)&nbsp;<br />
+    ถ้าเป็นไปได้ก็ให้ใช้ user name เดียวกันระหว่าง local กับ server หรือจะต่างกันก็ได้ ไม่เป็นไร&nbsp;<br />
+    ถ้าไม่กลัวจะงงเอง หลังจาก สนgin แล้วลอง <font style=\"color: rgb(0,0,255)\">pwd</font> ดูจะเห็นว่าเราอยู่ที่ home directory ของเรา ส่วนมากจะเป็น
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper</font></p>
+    <p>หลังจากนั้น ให้สร้าง <strong>private key</strong> และ <strong>public key</strong> ในเครื่อง local โดยใช้คำสั่ง</p>
+    <p><font style=\"color: rgb(0,0,255)\">ssh-keygen -t rsa</font></p>
+    <p>แล้วจะมีการถามประมาณว่าเราจะเก็บไฟล์ key ไว้ที่ไหน ชื่ออะไร ให้กด Enter ผ่านมาเลย จะได้ชื่อ ที่อยู่ ตามค่า default และ ไฟล์ที่เก็บ key จะถูกสร้างไว้ใต้ directory ชื่อ .ssh ซึ่งถ้าเรายังไม่สร้าง directory นี้ คำสั่งเมื่อกี้ก็จะสร้างให้เราเอง หลังจากรันคำสั่งข้างต้น จะได้ไฟล์ออกมาดังนี้</p>
+    <p><font style=\"color: rgb(0,0,255)\">[1] private key - /home/dumper/.ssh/id_rsa</font> <font style=\"color: rgb(0,0,255)\"><br />
+    [2] public key - /home/dumper/.ssh/id_rsa.pub</font></p>
+    <p>&nbsp;</p>
+    </li>
+    <li>ให้ copy file id_rsa.pub ขึ้นไปไว้ยัง server และเปลี่ยนชื่อเป็น authorized_keys อาจจะใช้ ftp หรือ อะไรแล้วแต่ถนันน้ะครับ แต่ในที่นี้จะยกตัวอย่างด้วย scp ดังนี้
+    <p><font style=\"color: rgb(0,0,255)\">scp id_rsa.pub dumper@my.server.ip.addr:/home/dumper/authorized_keys</font></p>
+    <p>โดยในขั้นตอนนี้จะมีการถามรหัสผ่านสำหรับ user dumper บน my.server.ip.addr (ip ของ server น้ะครับ หรือจะเป็นชื่อ domain ก็ได้ไม่ผิดกติกา)</p>
+    </li>
+    <li>เสร็จแล้วให้ login ไปที่เครื่อง server และเช็คดูว่าเจอไฟล์
+    <p><font style=\"color: rgb(0,0,255)\">/home/dumper/authorized_keys</font></p>
+    <p>หรือเปล่า ถ้าเรา scp มาสำเร็จ ก็จะต้องเจอน้ะครับ ถ้ายังไม่เจอก็กลับไปเริ่ม copy มาใหม่</p>
+    </li>
+    <li>ให้สร้าง directory ชื่อ .ssh ภายใต้ home directory ของเรา (ในที่นี้คือภายใต้ /home/dumper) แต่ถ้ามีอยู่แล้วก็ใช้ได้เลยไม่ต้องสร้างใหม่ เสร็จแล้วให้ย้าย authorized_keys เข้าไปไว้ใน .ssh โดยใช้คำสั่ง
+    <p><font style=\"color: rgb(0,0,255)\">mkdir .ssh</font> <font style=\"color: rgb(0,0,255)\">mv authorized_keys .ssh</font></p>
+    <p>แล้วลองเช็คดูจะเห็นว่ามีไฟล์ <font style=\"color: rgb(0,0,255)\">/home/dumper/.ssh/authorized_keys</font> แล้ว</p>
+    </li>
+    <li>ทีนี้ logout ออกมาจาก server อยู่ที่ local ก็ลอง scp ไฟล์ไปดูน้ะครับ ทีนี้ก็จะไม่มีการถาม password แล้ว</li>
+</ol>
+<h2>เพิ่มเติมการใช้งาน scp อย่างง่ายอีกหน่อย</h2>
+<p>ถ้าคุณใช้ linux ก็ดู manual แบบเต็มๆ เลยด้วยคำสั่ง man scp หรือถ้าขี้เกียจดู ก็เดี๋ยวจะยกตัวอย่างไว้สัก 3 อัน ง่ายๆ ไม่ซับซ้อน ที่ผมใช้บ่อย</p>
+<p>[1] <font style=\"color: rgb(0,0,255)\">scp /path/to/file/myLocalFile.tgz dumper@my.server.ip.addr:/home/dumper/myBackUpDir/</font> <br />
+จะเป็นการ upload ไฟล์จาก local ขึ้นไปเก็บไว้ที่ server ด้วยชื่อเดียวกัน</p>
+<p>[2] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/myServerFile.tgz /path/to/file/myServerFile.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local ด้วยชื่อเดียวกัน</p>
+<p>[3] <font style=\"color: rgb(0,0,255)\">scp dumper@my.server.ip.addr:/home/dumper/myTmpBackUpDir/file1.tgz /path/to/file/file2.tgz</font> <br />
+จะเป็นการดาวน์โหลดไฟล์จาก server ลงมาไว้ที่ local โดยเปลี่ยนชื่อไฟล์ด้วย สามารถใช้ได้กับทั้งข้อ [1] และ [2] <br />
+&nbsp;</p>
+<p>&nbsp;</p>
+<p>ที่มา http://www.phpzealots.com/node/93<br />
+&nbsp;</p>' Where content_id = 20 
+12:03:36 :  => Update content SET category_id='1',content_name='สั่งให้ php run คำสั่ง Service ต่าง ๆ ผ่าน Web Interface',content_summary='<p>ลองเอาไปใช้กันดูครับ ไม่ยากเลย แต่กว่าจะหาเจอว่าทำอย่างนี้&nbsp; หุหุ <br />
+เซลล์สมองตายไปหลายล้านเซลล์กันเลยทีเดียว</p>
+<p><img height=\"64\" alt=\"\" width=\"111\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg\" /></p>',content_detail='<pre>
+restart เครื่อง
+-----------------------------
+เริ่มจาก 
+#visudo
+แล้าหาบรรทัด
+Defaults requiretty
+และแก้เป็น
+#Defaults requiretty 
+จากนั้นเพิ่มบรรทัดสุดท้าย
+apache ALL=(ALL) NOPASSWD: ALL
+=======================================
+ใน file httpd.conf ใช้ user กับ group ที่เป็น apache ไม่ต้องแก้ไข
+==============================================
+ส่วนในไฟล์ php
+<?php
+	exec(\'/usr/bin/sudo /sbin/shutdown -r now\');
+?> 
+หรือถ้าไม่อยากระบุ path
+<?php
+	exec(\'sudo /sbin/shutdown -r now\');
+?></pre>
+<p>&nbsp;</p>' Where content_id = 19 
+12:03:14 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"189\" alt=\"\" width=\"200\" align=\"left\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:35 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("20","<p>เยี่ยมมากครับ ขอบคุณมากเลยครับ หาอยู่พอดี</p>","นที",now()) 
+14:03:34 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("20","<p>บทความเยี่ยมไปเลยครับ กำลังติดอยู่พอดี ช่วยได้เยอะ :_)</p>","dekub",now()) 
+14:03:59 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ("7","กอดตัวเอง - Into the Moon อินทูเดอะมูน ","<p>เพลงเพราะๆ ครับให้กำลังใจเพื่อนๆทุกคนที่ผิดหวังกับความรัก</p>
+<p>ยังไงก็สู้ๆ นะครับ</p>","<p>&nbsp;</p>
+<p><b><a href=\"http://www.blogzaa.com/\"> กอดตัวเอง - Into the Moon อินทูเดอะมูน </a></b></p>
+<p>เพราะเคยเจ็บ ฉันจึงรู้ ว่าความผิดหวังรุนแรงเท่าไหร่<br />
+รักแล้วเจ็บ รับไม่ไหว มันยากแค่ไหนที่ต้องเริ่มใหม่<br />
+<br />
+แต่ไม่นานจะผ่านพ้นไป เรื่องเลวร้ายให้เธอเรียนรู้<br />
+เมื่อไหร่ฝนซาจะเห็นฟ้าเปิดก็แค่อยากให้เธอ<br />
+<br />
+กอดตัวเองซักหนึ่งนาที จากนี้เริ่มชีวิตใหม่<br />
+บอกใจตัวเองอดทนเข้าไว้แม้มัน จะเจ็บแค่ไหนยอมรับให้ได้<br />
+<br />
+แม้ใจเจ็บ ให้จำไว้ ไม่มีคนไหนไม่เคยพลาดผิด<br />
+แค่ช่วงหนึ่ง ของชีวิต ต้องเคยผิดพลั้งทุกคนต้องผ่าน<br />
+<br />
+แต่ไม่นานจะผ่านพ้นไป เรื่องเลวร้ายให้เธอเรียนรู้<br />
+เมื่อไหร่ฝนซาจะเห็นฟ้าเปิดก็แค่อยากให้เธอ<br />
+<br />
+กอดตัวเองซักหนึ่งนาที จากนี้เริ่มชีวิตใหม่<br />
+บอกใจตัวเองอดทนเข้าไว้แม้มัน จะเจ็บแค่ไหนยอมรับให้ได้<br />
+<br />
+เคยใช้เวลามากมาย หมดไปกับความช้ำใจ<br />
+ขอให้เธอให้เวลาปลอบหัวใจ กอดตัวเองแค่ซักครั้ง<br />
+<br />
+อีกไม่นานมันไม่นานจะผ่านพ้นไป เรื่องเลวร้ายให้เธอเรียนรู้<br />
+เมื่อไหร่ฝนซาจะเห็นฟ้าเปิด ก็แค่อยากให้เธอ<br />
+<br />
+กอดตัวเองซักหนึ่งนาที จากนี้เริ่มชีวิตใหม่<br />
+บอกใจตัวเองอดทนเข้าไว้แม้มัน จะเจ็บแค่ไหนยอมรับให้ได้<br />
+<br />
+กอดตัวเองซักหนึ่งนาที จากนี้เริ่มชีวิตใหม่<br />
+บอกใจตัวเองอดทนเข้าไว้แม้มันจะเจ็บแค่ไหนยอมรับให้ได้<br />
+<br />
+เมื่อยังไม่หยุดหายใจ ก็จงใช้ชีวิตก้าวไป</p>
+<p><!--{12365832474920}--></p>
+<p style=\"float: right;\"><a href=\"http://www.blogzaa.com\"> BlogZaa.Com Music &amp; Lyric </a></p>",now()) 
+14:03:47 :  => Delete From content Where content_id = 21 
+17:03:53 :  => Delete From content Where content_id =  

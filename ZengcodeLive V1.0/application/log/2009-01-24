@@ -1,0 +1,12 @@
+04:01:04 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ("","America believes in education: the average professor earns more money in a year than a professional athlete earns in a whole week.
+[url=http://www.geocities.com/mp3torrent/girlboysmp3.html] linux mp3 [/url][url=http://www.geocities.com/musicmp3top/mp33.html] amy winehouse mp3 [/url][url=http://www.geocities.com/musicmp3top/mp31.html] hard drive mp3 players comparison [/url]
+<a href=http://www.geocities.com/musicmp3top/index.html >free wav to mp3 converter</a><a href=http://www.geocities.com/mp3torrent/mp3voice.html >youtube mp3 download</a><a href=http://www.geocities.com/musicmp3top/mp31.html >hard drive mp3 players comparison</a>","...","...",now()) 
+06:01:52 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update cms SET state = '' Where id=  
+06:01:14 :  => Delete From content Where content_id =  
+06:01:27 :  => Delete From cms Where id =  
+06:01:27 :  => Delete From contents Where id =  
+06:01:47 :  => Delete From content Where content_id =  
+06:01:01 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update cms SET state = '' Where id=  
+06:01:53 :  => Delete From category Where category_id =  
+06:01:13 :  => Delete From cms Where id =  
+06:01:13 :  => Delete From contents Where id =  

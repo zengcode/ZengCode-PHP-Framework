@@ -1,0 +1,53 @@
+<dataentry>
+	<property>
+	    <tablename>customer</tablename>
+	    <functional>customer</functional>
+		<primary_key>id,grade</primary_key>
+	</property>
+<!-- $form_configuration = array(
+                             'post_type' => 'post',
+							 'action'    => '/admin/faq/addNew',
+							 'upload'	 => 'no',
+							 'onsubmit'  => '',
+							 'style'     => '',
+							 'submit_th' => 'เพิ่มข้อมูล',
+							 'submit_en' => 'Add Data',
+							); -->
+	<fields>
+	     <type>field</type>
+		 <name>faq_question</name>
+		 <label_th>หัวข้อ :</label_th>
+		 <label_en>Topic :</label_en>
+		 <label_jp>ご飯が熱い。 :</label_jp>
+		 <input_type>textBox</input_type>
+		 <style>textBox</style>
+		 <validate>integer</validate>
+		 <length>10-50</length>
+	</fields>
+
+	<fields>
+	     <type>field</type>
+		 <name>faq_answer</name>
+		 <label_th>คำตอบ :</label_th>
+		 <label_en>Answer :</label_en>
+		 <label_jp>ご飯が熱い。 :</label_jp>
+		 <input_type>textEditorStandard</input_type>
+		 <style>textBox</style>
+		 <validate></validate>
+		 <length></length>
+	</fields>
+
+	<fields>
+	     <type>field</type>
+		 <name>faq_date</name>
+		 <label_th>วันที่ :</label_th>
+		 <label_en>Date :</label_en>
+		 <label_jp>ご飯が熱い。 :</label_jp>
+		 <input_type>calendar</input_type>
+		 <style></style>
+		 <validate>text</validate>
+		 <length></length>
+	</fields>
+
+</dataentry>
+

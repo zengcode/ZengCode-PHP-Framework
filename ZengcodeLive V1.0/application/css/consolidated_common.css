@@ -1,0 +1,218 @@
+/******************************* standard stuff *************************************/
+
+label { font-weight: bold; }
+
+input, select {
+  width:300px;
+}
+
+.radio {
+  padding:2px;
+  width:20px;
+}
+
+tdx {
+  border:1px solid #e3e3e3;
+  margin:0;
+}
+
+input, textarea, select {
+  border:1px solid #aaaaaa;
+  padding:2px;
+  background:#ffffff url(../images/generic/inputBg.gif) top left no-repeat;
+  margin-top:2px;
+}
+
+input.checkbox {
+  width:15px;
+  background:none;
+  border:0;
+}
+
+input.radio_button {
+  width:15px;
+  background:none;
+  border:0;
+}
+
+input.small, select.small {
+  width:50px;
+}
+
+input.large, select.large {
+  width:200px;
+}
+
+input.extra_large, select.extra_large {
+  width:300px;
+}
+
+input:hover, textarea:hover, select:hover {
+  border:1px solid #888888;
+}
+
+input:active, textarea:active, select:active {
+  border:1px solid #888888;
+}
+
+input.submit {
+  width:200px;
+  background:#ffffff url(../images/generic/submitBg.png) -20px 0 no-repeat;
+  color:#ffffff;
+}
+
+input.submit:hover {
+  
+  cursor: pointer;
+}
+
+textarea {
+  width:300px;
+  height: 200px;
+}
+
+textarea.deep {
+  height:350px;
+}
+
+textarea.shallow {
+  height:50px;
+}
+
+fieldset {
+  background:#f7f7f7;
+  padding:2%;
+  border:1px solid #e3e3e3;
+  margin:0;
+}
+
+
+/********************************* LiveValidation *************************************/
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+	color:#CC0000;
+}
+	
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active,
+.fieldWithErrors input.LV_valid_field,
+.fieldWithErrors textarea.LV_valid_field {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active,
+.fieldWithErrors input.LV_invalid_field,
+.fieldWithErrors textarea.LV_invalid_field {
+    border: 1px solid #CC0000;
+}
+
+
+input, select {
+  padding:3px;
+}
+
+input.radio_button {
+  margin-left:50px;
+}
+
+input.submit {
+  width:100px;
+  width: inherit;
+  background:#cccccc;
+  border:0;
+  border-bottom: 1px solid #999999;
+  border-right: 1px solid #999999;
+}
+
+textarea {
+  width:400px;
+}
+
+textarea.shallow {
+  height:100px;
+}
+
+
+
+A{font-family:Arial, Helvetica, sans-serif;
+     font-size:14,
+     text-decoration: none;
+}
+A:link{font-family:Arial, Helvetica, sans-serif;
+            color:  black;
+			font-size:13;
+			font-weight:bold;
+}
+A:visited{color:blue}
+A:hover{color:#ff0000}
+A:active{color: black}
+
+
+
+.errorMessage{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 25px;
+	color : maroon;
+	text-decoration : none;
+	font-weight:bold;
+}
+
+
+.successMessage{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 25px;
+	color : green;
+	text-decoration : none;
+	font-weight:bold;
+}
+
+
+
+.month{
+    width:180px;
+    float:left;
+    border:1px solid #ccc;
+    margin:8px;
+    border-collapse:collapse;
+}
+
+td {
+    border:1px solid #ddd;
+    color:#555;
+    padding:3px;
+    text-align:right;
+}
+
+th {
+    padding:5px;
+	background-image: url(images/hbg.gif);
+	background-repeat: repeat-x;
+    color:#fff;
+}
+
+.actday{
+	background-image: url(images/hbg.gif);
+	background-repeat: repeat-x;
+    color:#fff;
+    font-weight:bold;
+}
+
+.days{
+    background-color:#f1f1f1;
+}

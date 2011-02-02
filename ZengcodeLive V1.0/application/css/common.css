@@ -1,0 +1,226 @@
+body {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	line-height: 160%;
+	color: #666666;
+	background-color: #ECECEC;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+td {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+}
+.login-user {
+	font-family: "lr oSVbN", "Osaka";
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.login-user-name {
+	font-family: "lr oSVbN", "Osaka";
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+}
+.header-menu {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	background-color: #FFFFFF;
+	padding-top: 9px;
+	padding-right: 12px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+}
+a {
+	color: #333333;
+	text-decoration: underline;
+}
+a:link {
+	color: #333333;
+	text-decoration: underline;
+}
+a:hover {
+	color: #999999;
+	text-decoration: none;
+}
+a:active {
+	color: #999999;
+	text-decoration: none;
+}
+.body-bg-white {
+	background-color: #FFFFFF;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.sidebar-bg-white {
+	background-color: #FFFFFF;
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+.sidebar-menu {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	color: #333333;
+	/*background-attachment: fixed;*/
+	background-image: url(../images/bg-sidebar-menu.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: left;
+	margin-bottom: 5px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+}
+.sidebar-menu-over {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	color:#3300FF;
+	/*background-attachment: fixed;*/
+	background-image: url(../images/bg-sidebar-menu.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: left;
+	margin-bottom: 5px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+}
+.sidebar-submenu {
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 12px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+	margin-left: 19px;
+}
+
+.header-titel{
+	font-family: "lr oSVbN", "Verdana";
+	font-size: 12px;
+	color: #333333;
+	font-weight:bold;
+}
+
+.text_eng{
+	font-family:"Tahoma","MS PGothic","Verdana" ;
+	font-size: 10px;
+	line-height: 120%;
+	font-weight: normal;
+	color:#494949;
+}
+
+.total{
+	font-family:"MS PGothic","Verdana" ;
+	font-size: 12px;
+	line-height: 140%;
+	font-weight: bold;
+	color:#FF0000;
+}
+
+.copyright {
+	font-family: Thahoma;
+	font-size: 10px;
+	color: #646464;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.body-div-line {
+	padding: 10px;
+	border: 1px solid #858585;
+}
+.body-div-search {
+	padding: 10px;
+	border: 1px solid #858585;
+	background-color: #F7F7F7;
+}
+.body-div-navi {
+	padding: 10px;
+	border: 1px solid #858585;
+	font-family: "MS P Gothic";
+	font-size: 14px;
+	font-weight: bold;
+}
+.title-search {
+	font-family: "MS P Gothic";
+	font-size: 12px;
+	font-weight: bold;
+}
+.bg-tr-list-head {
+	background-color: #E8E8E8;
+	text-align: left;
+	font-weight: bold;
+	vertical-align:top;
+}
+.text-small {
+	font-family: "MS P Gothic";
+	font-size: 10px;
+	line-height: 170%;
+}
+
+.bg-tr-list-contents {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C3C3C3;
+	padding-top: 6px;
+	padding-bottom: 8px;
+	line-height: 160%;
+}
+.page {
+	text-align: center;
+}
+.page-current {
+	font-weight: bold;
+	color: #FF3737;
+}
+.bg-td-list-head {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C3C3C3;
+	padding-top: 6px;
+	padding-bottom: 8px;
+	line-height: 160%;
+	background-color: #F8F8F8;
+	font-weight: bold;
+}
+.tr-copydetail-head {
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #BEBEBE;
+	text-align: left;
+	color: #363636;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.tr-copydetail-head-choose {
+	font-size: 12px;
+	font-weight: bold;
+	background-color:#CCFFFF;
+	text-align: left;
+	color: #363636;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.asterisk {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF3737;
+}
+
+.list-overview-border {
+	border: 1px solid #858585;
+	vertical-align: top;
+}
+.link_button {
+	font-size:10px;
+	border:solid 1px #666666;
+}

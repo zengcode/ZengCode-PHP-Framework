@@ -1,0 +1,3 @@
+20:01:53 :  => Delete From cms Where id =  
+20:01:53 :  => Delete From contents Where id =  
+20:01:06 :  => Delete From content Where content_id =  

@@ -1,0 +1,93 @@
+10:10:33 :  => Delete From cms Where id = 3 
+10:10:33 :  => Delete From contents Where id = 3 
+11:10:17 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+11:10:17 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 
+11:10:37 :  => Insert Into cms (id,pic,test,status) values (5,'car.jpg','','Draft') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','topic_th','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','content_th','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','comment_th','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','topic_en','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','content_en','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','comment_en','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','topic_jp','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','content_jp','') 
+11:10:37 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','comment_jp','') 
+12:10:13 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+12:10:13 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 
+12:10:32 :  => Update cms SET state = 'ApprovingDelete' Where id= 4 
+14:10:41 :  => Insert into users (username,password,firstname,lastname,email,tel,usertype) Values ('a','0CC175B9C0F1B6A831C399E269772661','a','a','a@a.com','a','editor') 
+14:10:16 :  => Insert into users (username,password,firstname,lastname,email,tel,usertype) Values ('a','0CC175B9C0F1B6A831C399E269772661','a','a','a@a.com','a','editor') 
+14:10:33 :  => Insert into users (username,password,firstname,lastname,email,tel,usertype) Values ('a','0CC175B9C0F1B6A831C399E269772661','a','a','a@a.com','a','editor') 
+14:10:59 :  => Insert into users (username,password,firstname,lastname,email,tel,usertype) Values ('a','0CC175B9C0F1B6A831C399E269772661','a','a','a@a.com','a','editor') 
+14:10:36 :  => Update cms Set  
+14:10:10 :  => Delete From cms Where id =  
+14:10:10 :  => Delete From contents Where id =  
+14:10:15 :  => Delete From cms Where id =  
+14:10:15 :  => Delete From contents Where id =  
+14:10:48 :  => Delete From users Where id =  
+14:10:51 :  => Delete From users Where id =  
+14:10:06 :  => Delete From users Where id =  
+14:10:09 :  => Delete From users Where id =  
+14:10:26 :  => Delete From users Where id =  
+14:10:58 :  => Delete From users Where id = 4 
+14:10:00 :  => Delete From users Where id = 4 
+14:10:09 :  => Delete From users Where id = 4 
+14:10:04 :  => Delete From users Where id = 4 
+14:10:05 :  => Delete From users Where id = 4 
+14:10:06 :  => Delete From users Where id = 4 
+14:10:07 :  => Delete From users Where id = 4 
+14:10:09 :  => Delete From users Where id = 4 
+14:10:34 :  => Delete From users Where id = 4 
+14:10:06 :  => Delete From users Where id = 4 
+14:10:26 :  => Delete From users Where user_id = 4 
+14:10:55 :  => Delete From users Where user_id = 4 
+15:10:36 :  => Insert into users (username,password,firstname,lastname,email,tel,usertype) Values ('chiwa','E4FA457D9CB4FAC729A9B984F4885787','Chiwa ','Kantawong','kchiwa@gmail.com','0818308963','editor') 
+15:10:31 :  => Update cms Set  
+15:10:48 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='editor' Where user_id = 5 
+15:10:18 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='editor' Where user_id = 5 
+15:10:22 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='editor' Where user_id = 5 
+15:10:38 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='editor' Where user_id = 5 
+15:10:51 :  => Update users SET username='c',password='0CC175B9C0F1B6A831C399E269772661',firstname='aaaaa',lastname='a',email='a@a.com',tel='a',usertype='editor' Where user_id = 3 
+15:10:53 :  => Update users SET username='bee',password='0CC175B9C0F1B6A831C399E269772661',firstname='Nabee',lastname='Katai',email='katai@hotmail.com',tel='0823432345',usertype='approver' Where user_id = 3 
+15:10:15 :  => Update users SET username='bee',password='0CC175B9C0F1B6A831C399E269772661',firstname='Nabee',lastname='Katai',email='katai@hotmail.com',tel='0823432345',usertype='approver' Where user_id = 3 
+15:10:28 :  => Delete From users Where user_id = 1 
+15:10:20 :  => Update users SET username='oom',password='0CC175B9C0F1B6A831C399E269772661',firstname='Narakorn',lastname='Suwannawong',email='suwan@gmail.com',tel='022345432',usertype='admin' Where user_id = 2 
+15:10:15 :  => ERROR : Invalid column name 'image'.Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:19 :  => ERROR : Invalid column name 'image'.Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:43 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:17 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:50 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:40 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:50 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p>abcdef</p>' Where user_id = 5 
+15:10:14 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:45 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"189\" width=\"150\" alt=\"\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" /></p>' Where user_id = 5 
+15:10:30 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='approver',image='<p><img height=\"145\" width=\"115\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+15:10:00 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='admin',image='<p><img height=\"142\" width=\"130\" alt=\"\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" /></p>' Where user_id = 5 
+15:10:23 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='admin',image='<p><img height=\"126\" width=\"100\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" alt=\"\" /></p>' Where user_id = 5 
+17:10:39 :  => Update users SET username='chiwa',password='E4FA457D9CB4FAC729A9B984F4885787',firstname='Chiwa ',lastname='Kantawong',email='kchiwa@gmail.com',tel='0818308963',usertype='editor',image='<p><img height=\"126\" width=\"100\" alt=\"\" src=\"http://localhost/system/class/FckAjaxFileManage/uploaded/chiwa/pee.jpg\" /></p>' Where user_id = 5 
+17:10:15 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+17:10:15 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 

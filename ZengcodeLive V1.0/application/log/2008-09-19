@@ -1,0 +1,68 @@
+17:09:15 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:35 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:27 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:44 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:59 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:38 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:39 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:40 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:40 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:40 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:41 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:37 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:42 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:00 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:18 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:39 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:39 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:50 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:56 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:19 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:25 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+17:09:36 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:26 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:48 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:24 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:33 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:44 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:34 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:47 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:31 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:32 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:26 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:43 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:51 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:19 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:54 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:56 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:57 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:57 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:58 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:59 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:59 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:26 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+18:09:35 :  => Delete From cms_faq Where id=39 
+18:09:31 :  => Delete From cms_faq Where id=39 
+18:09:34 :  => Delete From cms_faq Where id=49 
+18:09:37 :  => Delete From cms_faq Where id=48 
+18:09:39 :  => Delete From cms_faq Where id=47 
+18:09:41 :  => Delete From cms_faq Where id=46 
+18:09:43 :  => Delete From cms_faq Where id=45 
+18:09:45 :  => Delete From cms_faq Where id=44 
+18:09:52 :  => Delete From cms_faq Where id=43 
+18:09:54 :  => Delete From cms_faq Where id=42 
+18:09:55 :  => Delete From cms_faq Where id=41 
+18:09:56 :  => Delete From cms_faq Where id=40 
+18:09:58 :  => Delete From cms_faq Where id=38 
+18:09:00 :  => Delete From cms_faq Where id=37 
+18:09:01 :  => Delete From cms_faq Where id=36 
+18:09:03 :  => Delete From cms_faq Where id=50 
+18:09:06 :  => Delete From cms_faq Where id=51 
+18:09:08 :  => Delete From cms_faq Where id=52 
+18:09:09 :  => Delete From cms_faq Where id=53 
+18:09:11 :  => Delete From cms_faq Where id=54 
+18:09:13 :  => Delete From cms_faq Where id=55 
+18:09:15 :  => Delete From cms_faq Where id=56 
+18:09:17 :  => Delete From cms_faq Where id=57 
+18:09:19 :  => Delete From cms_faq Where id=58 
+18:09:22 :  => Delete From cms_faq Where id=59 

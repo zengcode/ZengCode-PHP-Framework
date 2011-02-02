@@ -1,0 +1,22 @@
+14:10:23 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+14:10:23 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+14:10:23 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+14:10:45 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+14:10:45 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+14:10:45 :  => ERROR : Incorrect syntax near 'users'.SELECT * FROM INFORMATION_SCHEMA.Columns where TABLE_NAME = 'users 
+17:10:00 :  => Delete From users Where user_id = '2' 
+17:10:01 :  => Delete From users Where user_id = '' 
+17:10:02 :  => Delete From users Where user_id = '' 
+17:10:32 :  => Delete From users Where user_id = '' 
+17:10:33 :  => Delete From users Where user_id = '' 
+17:10:34 :  => Delete From users Where user_id = '' 
+17:10:34 :  => Delete From users Where user_id = '' 
+17:10:34 :  => Delete From users Where user_id = '' 
+17:10:34 :  => Delete From users Where user_id = '' 
+17:10:35 :  => Delete From users Where user_id = '' 
+17:10:35 :  => Delete From users Where user_id = '' 
+18:10:13 :  => Delete From users Where user_id = '' 
+18:10:15 :  => Delete From users Where user_id = '' 
+18:10:16 :  => Delete From users Where user_id = '' 
+18:10:38 :  => Delete From users Where user_id = '' 
+18:10:23 :  => Delete From users Where user_id = '' 

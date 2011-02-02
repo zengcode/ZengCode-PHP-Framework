@@ -1,0 +1,49 @@
+11:02:36 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ("1","สั่งให้ php run คำสั่ง Service ต่าง ๆ ผ่าน WEb","<p>ลองเอาไปใช้กันดูครับ ไม่ยากเลย แต่กว่าจะหาเจอว่าทำอย่างนี้&nbsp; หุหุ <br />
+เซลล์สมองตายไปหลายล้านเซลล์กันเลยทีเดียว</p>","<pre>
+restart เครื่อง
+-----------------------------
+เริ่มจาก 
+#visudo
+แล้าหาบรรทัด
+Defaults requiretty
+และแก้เป็น
+#Defaults requiretty 
+จากนั้นเพิ่มบรรทัดสุดท้าย
+apache ALL=(ALL) NOPASSWD: ALL
+=======================================
+ใน file httpd.conf ใช้ user กับ group ที่เป็น apache ไม่ต้องแก้ไข
+==============================================
+ส่วนในไฟล์ php
+&lt;?php
+	exec(\'/usr/bin/sudo /sbin/shutdown -r now\');
+?&gt; 
+หรือถ้าไม่อยากระบุ path
+&lt;?php
+	exec(\'sudo /sbin/shutdown -r now\');
+?&gt;</pre>
+<p>&nbsp;</p>",now()) 
+11:02:26 :  => Update content SET category_id='1',content_name='สั่งให้ php run คำสั่ง Service ต่าง ๆ ผ่าน WEb',content_summary='<p>ลองเอาไปใช้กันดูครับ ไม่ยากเลย แต่กว่าจะหาเจอว่าทำอย่างนี้&nbsp; หุหุ <br />
+เซลล์สมองตายไปหลายล้านเซลล์กันเลยทีเดียว</p>
+<p><img height=\"64\" width=\"111\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg\" alt=\"\" /></p>',content_detail='<pre>
+restart เครื่อง
+-----------------------------
+เริ่มจาก 
+#visudo
+แล้าหาบรรทัด
+Defaults requiretty
+และแก้เป็น
+#Defaults requiretty 
+จากนั้นเพิ่มบรรทัดสุดท้าย
+apache ALL=(ALL) NOPASSWD: ALL
+=======================================
+ใน file httpd.conf ใช้ user กับ group ที่เป็น apache ไม่ต้องแก้ไข
+==============================================
+ส่วนในไฟล์ php
+&lt;?php
+	exec(\'/usr/bin/sudo /sbin/shutdown -r now\');
+?&gt; 
+หรือถ้าไม่อยากระบุ path
+&lt;?php
+	exec(\'sudo /sbin/shutdown -r now\');
+?&gt;</pre>
+<p>&nbsp;</p>' Where content_id = 19 

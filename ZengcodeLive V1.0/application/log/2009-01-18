@@ -1,0 +1,5 @@
+07:01:11 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update cms SET state = '' Where id=  
+07:01:11 :  => Delete From content Where content_id =  
+07:01:15 :  => Delete From category Where category_id =  
+07:01:25 :  => Delete From cms Where id =  
+07:01:25 :  => Delete From contents Where id =  

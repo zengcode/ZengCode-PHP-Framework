@@ -1,0 +1,480 @@
+09:02:54 :  => Update content SET category_id='7',content_name='โฆษณารุ่นคุณปู่...จำกันได้ไหมเอ่ย',content_summary='<p>ทีมา <a href=\"http://fwmail.teenee.com/collection_set/15020.html\">http://fwmail.teenee.com/collection_set/15020.html</a><br />
+สำหรับผมเกิดไม่ทันจริงๆ หุหุ</p>
+<p><img style=\"width: 190px; height: 263px\" height=\"421\" alt=\"\" width=\"291\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127698.jpg\" /></p>',content_detail='<p><img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127698.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127699.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127700.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127701.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127702.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127703.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127704.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127705.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127706.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127707.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127708.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127709.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127710.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127711.jpg\" /><br />
+<br />
+<img alt=\"\" align=\"center\" src=\"http://fwmail.teenee.com/collection_set/img0/m127712.jpg\" /><br />
+<br />
+&nbsp;</p>' Where content_id = 18 
+09:02:14 :  => Update content SET category_id='1',content_name='A Simple Cache with PHP',content_summary='<p><img height=\"64\" alt=\"\" width=\"111\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg\" /></p>
+<p>การทำ Cache แบบง่าย ๆ ด้วย php <br />
+ลองดูละกันครับว่าง่ายดายขนาดไหน</p>
+<p>&nbsp;</p>',content_detail='<h3 style=\"color: red\">ง่ายๆครับ ไม่ยากเลย ทำความเข้าใจได้ไม่ยาก</h3>
+<p><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code>&lt;?php<br />
+<span class=\"dark-code\">// start the output buffer</span><br />
+ob_start(); ?&gt;<br />
+<br />
+<span class=\"dark-code\">//Your usual PHP script and HTML here ...</span> <br />
+<br />
+&lt;?php<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<span class=\"dark-code\">// open the cache file &quot;cache/home.html&quot; for writing</span><br />
+$fp = fopen($cachefile, \'w\'); <br />
+<span class=\"dark-code\">// save the contents of output buffer to the file</span><br />
+fwrite($fp, ob_get_contents()); <br />
+<span class=\"dark-code\">// close the file</span><br />
+fclose($fp); <br />
+<span class=\"dark-code\">// Send the output to the browser</span><br />
+ob_end_flush(); <br />
+?&gt;</code></span></span></p>
+<p><span style=\"font-size: larger\"><span style=\"font-family: Arial\">&nbsp;</span></span></p>
+<h3 style=\"color: red\"><span style=\"font-size: larger\"><span style=\"font-family: Arial\">เพิ่มเติมอีกนิดตรวจสอบซะหน่อยว่ามันทำ Cache ไว้หรือยัง</span></span></h3>
+<p><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code>&lt;?php<br />
+<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<br />
+if (file_exists($cachefile)) {<br />
+<br />
+<span class=\"dark-code\">// the page has been cached from an earlier request</span><br />
+<br />
+<span class=\"dark-code\">// output the contents of the cache file</span><br />
+<br />
+include($cachefile); <br />
+<br />
+<span class=\"dark-code\">// exit the script, so that the rest isnt executed</span><br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;</code></span></span></p>
+<h3><b><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code><br />
+</code></span></span><span style=\"color: #ff0000\"><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code>กำหนดอายุไขให้มันซะหน่อยมะ</code></span></span></span></b></h3>
+<p><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code><br />
+</code><code>&lt;?php <br />
+<br />
+<span class=\"dark-code\">// 5 minutes</span><br />
+$cachetime = 5 * 60; <br />
+<br />
+<span class=\"dark-code\">// Serve from the cache if it is younger than $cachetime</span><br />
+<br />
+if (file_exists($cachefile) &amp;&amp; <br />
+(time() - $cachetime &lt; filemtime($cachefile))) <br />
+{<br />
+<br />
+include($cachefile);<br />
+<br />
+echo &quot;&lt;!-- From cache generated &quot;.date(\'H:i\', <br />
+filemtime($cachefile)).&quot; <br />
+--&gt;\\n&quot;;<br />
+<br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;</code></span></span></p>
+<h3><span style=\"color: #ff0000\"><span style=\"font-size: larger\"><span style=\"font-family: Arial\"><code>เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด</code></span></span></span></h3>
+<p><span style=\"font-size: larger\"><span style=\"font-family: Arial\">&nbsp;</span></span></p>' Where content_id = 8 
+09:02:23 :  => Update content SET category_id='1',content_name='PHP กับการ อ่านเขียน Text Files อย่างง่ายๆ',content_summary='<p><img height=\"64\" alt=\"\" width=\"111\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg\" />ตัวอย่างง่ายๆ โดยอ่าน Text File เข้าไปเก็บใน textarea <br />
+แล้วก็เอาค่าจาก textarea เก็บลง Text File เหมือนเดิม</p>',content_detail='<h3><span style=\"color: #ff0000\">พอดีมีเพื่อนท่านนึงให้ช่วย เห็นว่าน่าจะมีประโยชน์สำหรับผู้เริ่มต้นบางท่าน</span></h3>
+<p>&lt;?php<br />
+$path&nbsp;&nbsp;&nbsp;&nbsp; = &quot;&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //ระบุ path ถ้าไฟล์อยู่ใน path เดียวกับไฟล์นี้ไม่ต้องใส่ก็ได้<br />
+$file_name = &quot;MyLogFile.txt&quot;; //ชื่อไฟล์<br />
+$filename&nbsp;&nbsp;&nbsp;&nbsp; = $path.$file_name;<br />
+<br />
+Echo &quot;Working with ==&gt;&nbsp; &quot;.$filename;<br />
+<br />
+if ($_POST)<br />
+{<br />
+&nbsp;&nbsp; Write_File($filename,$_POST[\'contents\']); <br />
+}<br />
+<br />
+$str = Read_File($filename);<br />
+?&gt;<br />
+<br />
+&lt;form method=&quot;post&quot;&gt;<br />
+&lt;textarea name=&quot;contents&quot; cols=&quot;100&quot; rows=&quot;10&quot;&gt;&lt;?=$str?&gt;&lt;/textarea&gt;<br />
+&lt;br&gt;&lt;input type=&quot;submit&quot; value=&quot;Overwrite This File&quot; onclick=&quot;return confirm(\'Do you want to overwrite this file\');&quot;&gt;<br />
+&lt;/form&gt;<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+&lt;?<br />
+//=====================File Manupulation Function======================//<br />
+<br />
+function Write_File($filename,$content)<br />
+{<br />
+&nbsp;&nbsp;&nbsp; if (is_writable($filename)) {<br />
+<br />
+&nbsp;&nbsp;&nbsp; if (!$handle = fopen($filename, \'w+\')) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color=\'red\' size=\'3\'&gt;Cannot open file ($filename)&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; &nbsp;if (fwrite($handle, $content) === FALSE) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color=\'red\' size=\'3\'&gt;Cannot write to file ($filename)&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+<br />
+&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color=\'green\' size=\'3\'&gt;Overwrite $filename is Successful&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp; fclose($handle);<br />
+} else {<br />
+&nbsp;&nbsp;&nbsp; echo &quot;&lt;br&gt;&lt;font color=\'red\' size=\'3\'&gt;The file $filename is not writable&lt;/font&gt;&lt;BR&gt;&quot;;<br />
+}<br />
+}<br />
+<br />
+function Read_File($filename)<br />
+{&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; $handle = fopen($filename, &quot;r&quot;);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;if (filesize($filename)) $contents = fread($handle, filesize($filename));<br />
+&nbsp;&nbsp;&nbsp; fclose($handle);<br />
+&nbsp;&nbsp;&nbsp; return $contents;<br />
+}<br />
+<br />
+?&gt;</p>' Where content_id = 17 
+09:02:57 :  => Update content SET category_id='6',content_name='Java Script แทรกข้อความที่ cursor อยู่ ',content_summary='<p><img height=\"97\" alt=\"\" width=\"128\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/java.jpg\" /></p>
+<p>คลิกเข้าไปดูกันเลยครับ</p>',content_detail='<h3><span style=\"color: #ff0000\">script ที่น่าใช้อีกตัวนึง คิดว่าน่าจะมีโอกาสเอาไปใช้กันได้เยอะนะครับ</span></h3>
+<p><br />
+&lt;script&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var elementName=&quot;&quot;;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; setElement(ele){<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elementName=ele.name;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; }<br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;function insertToBody() {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var tag=document.getElementById(\'variables\').value;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var myField;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; if (elementName == &quot;&quot; ){<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; return false;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; }<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;myField = document.getElementById(elementName);&nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (document.selection) {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel = document.selection.createRange();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel.text = tag;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else if (myField.selectionStart || myField.selectionStart == \'0\') {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var startPos = myField.selectionStart;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var endPos = myField.selectionEnd;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var cursorPos = endPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value = myField.value.substring(0, startPos)<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + tag<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + myField.value.substring(endPos, myField.value.length);<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; cursorPos += tag.length;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionStart = cursorPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionEnd = cursorPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value += tag;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&lt;/script&gt; <br />
+&nbsp;</p>
+<h3><br />
+<br />
+<span style=\"color: #ff0000\">ตัวอย่างการประยุกต์ใช้นะครับ</span></h3>
+<p><br />
+&lt;table border=\'0\' width=&quot;100%&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td width=&quot;50%&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;table&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;send_flag&quot; id=&quot;send_flag&quot;&gt;Send to sender&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;From&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_from&quot; id=&quot;send_from&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Reply-To&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_reply&quot; id=&quot;send_reply&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_subject&quot; id=&quot;send_subject&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr valign=&quot;top&quot;&gt;&lt;td&gt;Body&lt;/td&gt;&lt;td&gt;&lt;textarea id=&quot;send_body&quot; name=&quot;send_body&quot; cols=&quot;50&quot; rows=&quot;7&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/table&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td valign=&quot;top&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variable&lt;BR&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;select id=\'variables\'&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SUBJECT)&quot;&gt;SUBJECT&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(FROM)&quot;&gt;From&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(TO)&quot;&gt;To&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SOURCEIP)&quot;&gt;SourceIP&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(DATE)&quot;&gt;Date&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(REASON)&quot;&gt;Reason&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(ACTION)&quot;&gt;Action&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(HEADER)&quot;&gt;Header&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SIZE)&quot;&gt;Size&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(POSTMASTER)&quot;&gt;Postmaster&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;/select&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;input type=&quot;button&quot;&nbsp; value=&quot;&lt;?=_(&quot;Insert&quot;)?&gt;&quot; onclick=&quot;insertToBody();&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&lt;/table&gt;&nbsp;&nbsp;&nbsp;</p>' Where content_id = 15 
+09:02:22 :  => Update content SET category_id='6',content_name='Java Script แทรกข้อความที่ cursor อยู่ ',content_summary='<p><img height=\"97\" alt=\"\" width=\"128\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/java.jpg\" /></p>
+<p>คลิกเข้าไปดูกันเลยครับ</p>',content_detail='<h3><span style=\"color: #ff0000\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; script ที่น่าใช้อีกตัวนึง คิดว่าน่าจะมีโอกาสเอาไปใช้กันได้เยอะนะครับ</span></h3>
+<p><br />
+&lt;script&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var elementName=&quot;&quot;;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; setElement(ele){<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elementName=ele.name;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; }<br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;function insertToBody() {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var tag=document.getElementById(\'variables\').value;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var myField;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; if (elementName == &quot;&quot; ){<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; return false;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; }<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;myField = document.getElementById(elementName);&nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (document.selection) {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel = document.selection.createRange();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; sel.text = tag;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else if (myField.selectionStart || myField.selectionStart == \'0\') {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var startPos = myField.selectionStart;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var endPos = myField.selectionEnd;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; var cursorPos = endPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value = myField.value.substring(0, startPos)<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + tag<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; + myField.value.substring(endPos, myField.value.length);<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; cursorPos += tag.length;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionStart = cursorPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.selectionEnd = cursorPos;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.value += tag;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; myField.focus();<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br style=\"background-color: rgb(192,192,192)\" />
+&lt;/script&gt; <br />
+&nbsp;</p>
+<h3><br />
+<br />
+<span style=\"color: #ff0000\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตัวอย่างการประยุกต์ใช้นะครับ</span></h3>
+<p><br />
+&lt;table border=\'0\' width=&quot;100%&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td width=&quot;50%&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;table&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;&lt;INPUT TYPE=&quot;checkbox&quot; NAME=&quot;send_flag&quot; id=&quot;send_flag&quot;&gt;Send to sender&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;From&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_from&quot; id=&quot;send_from&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Reply-To&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_reply&quot; id=&quot;send_reply&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;send_subject&quot; id=&quot;send_subject&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;tr valign=&quot;top&quot;&gt;&lt;td&gt;Body&lt;/td&gt;&lt;td&gt;&lt;textarea id=&quot;send_body&quot; name=&quot;send_body&quot; cols=&quot;50&quot; rows=&quot;7&quot; onfocus=&quot;setElement(this)&quot;&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/table&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;td valign=&quot;top&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variable&lt;BR&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;select id=\'variables\'&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SUBJECT)&quot;&gt;SUBJECT&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(FROM)&quot;&gt;From&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(TO)&quot;&gt;To&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SOURCEIP)&quot;&gt;SourceIP&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(DATE)&quot;&gt;Date&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(REASON)&quot;&gt;Reason&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(ACTION)&quot;&gt;Action&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(HEADER)&quot;&gt;Header&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(SIZE)&quot;&gt;Size&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;option value=&quot;$(POSTMASTER)&quot;&gt;Postmaster&lt;/option&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;/select&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;input type=&quot;button&quot;&nbsp; value=&quot;&lt;?=_(&quot;Insert&quot;)?&gt;&quot; onclick=&quot;insertToBody();&quot;&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;/td&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br style=\"background-color: rgb(192,192,192)\" />
+&lt;/table&gt;&nbsp;&nbsp;&nbsp;</p>' Where content_id = 15 
+09:02:40 :  => Update content SET category_id='23',content_name='ความสัมพันธ์ระหว่าง Class Diagram และ Database',content_summary='<p><img height=\"85\" alt=\"\" width=\"127\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/database.jpg\" /></p>
+<p>ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; <a style=\"color: rgb(153,51,0)\" href=\"http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538\">minimalist</a><br style=\"color: rgb(153,51,0)\" />
+http://www.narisa.com/forums/index.php?showtopic=14372</p>',content_detail='<p><span style=\"color: #ff0000\">ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; </span><a style=\"color: rgb(153,51,0)\" href=\"http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538\"><span style=\"color: #ff0000\">minimalist</span></a><span style=\"color: #ff0000\"><br style=\"color: rgb(153,51,0)\" />
+http://www.narisa.com/forums/index.php?showtopic=14372</span><br />
+<br />
+<br />
+&nbsp;ตอนทำ Analysis เราต้องระบุว่าแต่ละคลาสที่หาได้เป็นคลาสชนิดใด<br />
+<br />
+Analysis Class มี 3 ประเภท คือ<br />
+1. Boundary Class คือส่วนติดต่อระหว่าง Actor กับ Use Case หรือ เอาให้ง่ายขึ้นคือ ส่วนติดต่อระหว่างโปรแกรมกับคนหรืออุปกรณ์หรือโปรแกรมอื่น เช่น หน้าจอ อินเตอร์เฟสใน OO หรือใน Java<br />
+2. Control Class คือส่วนที่ทำหน้าที่ประมวลผล Logic หลักของ Use Case นั้น<br />
+3. Entity Class คือส่วนที่ Represent ข้อมูลที่การประมวลผลใน Use Case นั้นมีการเรียกใช้ (ปกติคือ Read / Write)<br />
+<br />
+Object Data Model แบบพื้นฐานก็คือการดึงเอาพวก Entity Class ออกมารวมกันใน Class Diagram เดียว กำหนด<br />
+ความสัมพันธ์พวก Association, Composition, Aggregation, Generalization ให้เรียบร้อย และกำหนด Multiplicity ให้สมบูรณ์<br />
+(ย้ำ สมบูรณ์) ส่วน Navigability กำหนดให้เป็นแบบ Bi-Directional ชัวร์สุด กันเหนียว<br />
+<br />
+จากนั้น Class Diagram นี้ก็ Map ไปเป็น Relational Data Model (ER Diagram) ต่ออีกที การ Map จากยากหน่อย<br />
+หากใน Object Data Model มีการใช้ความสัมพันธ์แบบ Generalization (การ Extend / Inheritance) เพราะ Table ใน<br />
+Relational Database มัน Extend / Inherit กันไม่ได้ ต้องใช้เทคนิคในการ Map หรือใช้พวก Architectural Patterns<br />
+มาช่วยในการ Map<br />
+<br />
+การ Map ที่ว่าข้างต้นเรียกว่าการทำ Object-to-Relational Mapping (ORM)<br />
+<br />
+ส่วนจะทำอะไรก่อนอะไรหลังระหว่างทำคลาสก่อน หรือ ทำ table ก่อน<br />
+<br />
+ขึ้นกับ Software Development Process และที่สำคัญขึ้นกับการแบ่งทีมงาน (Resource) และความรู้ความชำนาญของผู้ทำ<br />
+เช่น<br />
+<br />
+Case: 1<br />
+นาย ก เป็น Software Designer ออกแบบ Object Data Model เก่ง นาย ก ก็ทำไป ส่วนนาย ข ออกแบบ ER Diagram เก่ง<br />
+นาย ข ก็ทำไป สุดท้าย นาย ค เป็น Architect หรือ เป็นอะไรก็ได้แต่เก่ง ORM ก็มาทำการ Map งานนาย ก กับนาย ข<br />
+<br />
+Case: 2<br />
+นาย ก เก่งไปหมด Solo คนเดียว ดังนั้นจะทำอะไรก่อนก็ได้ หรือทำไปพร้อม ๆ กันก็ได้ เช่น หาคลาสได้ 4 ตัว ก็ Map ไปเป็น<br />
+Table ก่อน จากนั้นอีก 4 วันหาคลาสได้อีก 5 ตัว ก็ Map ไปเป็น Table อีก<br />
+<br />
+Case: 3<br />
+บริษัทของนาย ก, ข และ ค ใช้ Software Development Process คือ XP โดยมี Policy ว่าต้องออกแบบ Object Data Model<br />
+ก่อน แล้วค่อย Map ไปเป็น ER Diagram ดังนั้น นาย ก ต้องออกแบบ Object Data Model ก่อน เสร็จแล้วนาย ค<br />
+ก็ Map ไปเป็น ER Diagram โดยนาย ค มีนาย ข เป็นที่ปรึกษาด้าน RDBMS / Relational Database Design<br />
+* ซึงบริษัทใหญ่ ๆ นาย ข มักถูกแบ่งออกไปเป็น นาย ข-ไข่ ทำหน้าที่ออกแบบ ER Diagram และ นาย ข-ขวด ทำหน้าที่<br />
+เป็น DBA<br />
+<br />
+Case: 4<br />
+บริษัทของนาย ก, ข และ ค มีประสบการณ์และชำนาญด้าน RDBMS และ/หรือ ไม่มี Software Development Process<br />
+ที่มีวุฒิภาวะ (Maturity) ที่ดี และ/หรือ DBA เป็นใหญ่หรือมี Power มาก (หลายองค์กรโอ๋ DBA มากเกินควร เพราะ Sensitive<br />
+กับข้อมูลใน \'ถัง\' ข้อมูลมากเกินไป) และ/หรือ นาย ก ไม่ได้เก่งด้าน Object Data Model แท้จริง แต่มีรากเหง้าประสบการณ์<br />
+ความรู้ ความชำนาญ และทัศนคติด้านการออกแบบ ER Diagram มามาก (เข้าข่าย Database Driven Development)<br />
+อาจทำให้การออกแบบ Object Data Model ไม่ดีเท่าที่ควร Case นี้ นาย ข มักเป็นผู้เริ่มทำก่อน โดยออกแบบ ER Diagam<br />
+ก่อน แล้วนาย ก ค่อยมาดูแล้ว Map ไปเป็นคลาส แต่ด้วย นาย ก ไม่แม่นเรื่อง Object Data Model ทำให้อาจได้คลาส<br />
+แบบผิด ๆ หรือไม่ดีออกมาได้ หลายครั้งสำหรับ Case นี้มักพบว่านาย ก กับนาย ข เป็นคนคนเดียวกัน คือ นาย กข และมักออกแบบ<br />
+ER Diagram ก่อน โดยในหัวคิดอะไรก็เป็น Column, Record, Table, Primary Key, Compound Key, Foreign Key,<br />
+Constraint, One-to-One, One-to-Many, Many-to-Many ฯลฯ แล้วค่อยมาหาคลาส หลายครั้งพบว่า Object Data Model<br />
+ไม่ได้ทำ แต่ได้คลาสเลย พอต่อมามีปัญหาขึ้นมา จะ Trace กลับไปก็ลำบาก<br />
+<br />
+ยังมี Case อื่น ๆ อีก แต่ 4 Case ข้างบนมักพบเห็นได้บ่อย ๆ Case ที่ดีคือจะทำอะไรก่อนก็ได้ระหว่าง Object Data Model<br />
+กับ ER Diagram แต่สำคัญไอ้เจ้าตรงกลางนี่ล่ะ คือการทำ Object-to-Relational Mapping ต้องมีคนทำเป็นจริง ๆ<br />
+Map เป็น คนที่ Map เก่งนอกจากต้องเก่ง OO, การออกแบบ Object Data Model และการออกแบบ ER Diagram แล้ว<br />
+ต้องเข้าใจเรื่อง Application / System Performance, Transaction, Persistence Mechanism, Resource<br />
+Comsumption ด้วย<br />
+<br />
+ดังนั้นหากต้องการ Generate จากคลาสไปเป็น Table โดยใช้ Tool ต้องศึกษาว่า Tool นั้นใช้เทคนิคการ Map แบบไหน<br />
+สามารถให้เราปรับแต่งหรือกำหนดการ Map ได้หรือไม่ (Tool ส่วนมากให้ทำได้)<br />
+<br />
+แต่ที่สำคัญคลาสที่จะถูก Generate ไปเป็น Table ต้องเป็น Entity Class เช่น เป็นพวก Value Object (JavaBeans)<br />
+ซึงคลาสเหล่านี้จะมี Persistence Mechanism / Logic ฝังอยู่ด้วยหรือไม่ก็ได้ ขึ้นกับเทคนิคการออกแบบ<br />
+<br />
+ลองหาหนังสือชื่อ Patterns of Enterprise Application Architecture โดย Martin Fowler มาอ่านดูนะครับ<br />
+จะมี Architectural Patterns ที่น่าสนใจในการทำ Object-to-Relational Mapping รวมถึงการทำ Inheritance Mapping<br />
+ที่น่าสนใจหลายตัว และอ่านง่าย<br />
+<br />
+- จงอย่าเชื่อ Tool เสมอไปว่ามันเลือกใช้กลยุทธ์ (Strategy) ที่ดีที่สุดในการทำ Mapping / Generate ให้กับเรา -<br />
+<br />
+- ผลลัพธ์ของการออกแบบจะไม่แสดงให้เห็นทันทีที่ซอฟต์แวร์ถูกพัฒนาเสร็จ ดังนั้น Software Testing ควรถูกบรรจุ<br />
+ไว้ทุก ๆ ช่วงของกระบวนการพัฒนาซอฟต์แวร์ -<br />
+<br />
+minimalist (ณรงค์ จันทร์สร้อย)<br />
+21 ธันวาคม 2549 <!--IBF.ATTACHMENT_76984--><!-- THE POST --></p>' Where content_id = 14 
+10:02:45 :  => Update content SET category_id='23',content_name='ความสัมพันธ์ระหว่าง Class Diagram และ Database',content_summary='<p><img height=\"85\" alt=\"\" width=\"127\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/database.jpg\" /></p>
+<p>ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; <a style=\"color: rgb(153,51,0)\" href=\"http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538\">minimalist</a><br style=\"color: rgb(153,51,0)\" />
+http://www.narisa.com/forums/index.php?showtopic=14372</p>',content_detail='<p><b><span style=\"color: #ff0000\">ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ <br />
+โดยเฉพาะเจ้าของคุณ&nbsp; </span></b><a style=\"color: rgb(153,51,0)\" href=\"http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;showuser=10538\"><b><span style=\"color: #ff0000\">minimalist</span></b></a><b><span style=\"color: #ff0000\"><br style=\"color: rgb(153,51,0)\" />
+http://www.narisa.com/forums/index.php?showtopic=14372</span><br />
+<br />
+<br />
+&nbsp;ตอนทำ Analysis เราต้องระบุว่าแต่ละคลาสที่หาได้เป็นคลาสชนิดใด<br />
+<br />
+Analysis Class มี 3 ประเภท คือ<br />
+1. Boundary Class คือส่วนติดต่อระหว่าง Actor กับ Use Case หรือ เอาให้ง่ายขึ้นคือ ส่วนติดต่อระหว่างโปรแกรมกับคนหรืออุปกรณ์หรือโปรแกรมอื่น เช่น หน้าจอ อินเตอร์เฟสใน OO หรือใน Java<br />
+2. Control Class คือส่วนที่ทำหน้าที่ประมวลผล Logic หลักของ Use Case นั้น<br />
+3. Entity Class คือส่วนที่ Represent ข้อมูลที่การประมวลผลใน Use Case นั้นมีการเรียกใช้ (ปกติคือ Read / Write)<br />
+<br />
+Object Data Model แบบพื้นฐานก็คือการดึงเอาพวก Entity Class ออกมารวมกันใน Class Diagram เดียว กำหนด<br />
+ความสัมพันธ์พวก Association, Composition, Aggregation, Generalization ให้เรียบร้อย และกำหนด Multiplicity ให้สมบูรณ์<br />
+(ย้ำ สมบูรณ์) ส่วน Navigability กำหนดให้เป็นแบบ Bi-Directional ชัวร์สุด กันเหนียว<br />
+<br />
+จากนั้น Class Diagram นี้ก็ Map ไปเป็น Relational Data Model (ER Diagram) ต่ออีกที การ Map จากยากหน่อย<br />
+หากใน Object Data Model มีการใช้ความสัมพันธ์แบบ Generalization (การ Extend / Inheritance) เพราะ Table ใน<br />
+Relational Database มัน Extend / Inherit กันไม่ได้ ต้องใช้เทคนิคในการ Map หรือใช้พวก Architectural Patterns<br />
+มาช่วยในการ Map<br />
+<br />
+การ Map ที่ว่าข้างต้นเรียกว่าการทำ Object-to-Relational Mapping (ORM)<br />
+<br />
+ส่วนจะทำอะไรก่อนอะไรหลังระหว่างทำคลาสก่อน หรือ ทำ table ก่อน<br />
+<br />
+ขึ้นกับ Software Development Process และที่สำคัญขึ้นกับการแบ่งทีมงาน (Resource) และความรู้ความชำนาญของผู้ทำ<br />
+เช่น<br />
+<br />
+Case: 1<br />
+นาย ก เป็น Software Designer ออกแบบ Object Data Model เก่ง นาย ก ก็ทำไป ส่วนนาย ข ออกแบบ ER Diagram เก่ง<br />
+นาย ข ก็ทำไป สุดท้าย นาย ค เป็น Architect หรือ เป็นอะไรก็ได้แต่เก่ง ORM ก็มาทำการ Map งานนาย ก กับนาย ข<br />
+<br />
+Case: 2<br />
+นาย ก เก่งไปหมด Solo คนเดียว ดังนั้นจะทำอะไรก่อนก็ได้ หรือทำไปพร้อม ๆ กันก็ได้ เช่น หาคลาสได้ 4 ตัว ก็ Map ไปเป็น<br />
+Table ก่อน จากนั้นอีก 4 วันหาคลาสได้อีก 5 ตัว ก็ Map ไปเป็น Table อีก<br />
+<br />
+Case: 3<br />
+บริษัทของนาย ก, ข และ ค ใช้ Software Development Process คือ XP โดยมี Policy ว่าต้องออกแบบ Object Data Model<br />
+ก่อน แล้วค่อย Map ไปเป็น ER Diagram ดังนั้น นาย ก ต้องออกแบบ Object Data Model ก่อน เสร็จแล้วนาย ค<br />
+ก็ Map ไปเป็น ER Diagram โดยนาย ค มีนาย ข เป็นที่ปรึกษาด้าน RDBMS / Relational Database Design<br />
+* ซึงบริษัทใหญ่ ๆ นาย ข มักถูกแบ่งออกไปเป็น นาย ข-ไข่ ทำหน้าที่ออกแบบ ER Diagram และ นาย ข-ขวด ทำหน้าที่<br />
+เป็น DBA<br />
+<br />
+Case: 4<br />
+บริษัทของนาย ก, ข และ ค มีประสบการณ์และชำนาญด้าน RDBMS และ/หรือ ไม่มี Software Development Process<br />
+ที่มีวุฒิภาวะ (Maturity) ที่ดี และ/หรือ DBA เป็นใหญ่หรือมี Power มาก (หลายองค์กรโอ๋ DBA มากเกินควร เพราะ Sensitive<br />
+กับข้อมูลใน \'ถัง\' ข้อมูลมากเกินไป) และ/หรือ นาย ก ไม่ได้เก่งด้าน Object Data Model แท้จริง แต่มีรากเหง้าประสบการณ์<br />
+ความรู้ ความชำนาญ และทัศนคติด้านการออกแบบ ER Diagram มามาก (เข้าข่าย Database Driven Development)<br />
+อาจทำให้การออกแบบ Object Data Model ไม่ดีเท่าที่ควร Case นี้ นาย ข มักเป็นผู้เริ่มทำก่อน โดยออกแบบ ER Diagam<br />
+ก่อน แล้วนาย ก ค่อยมาดูแล้ว Map ไปเป็นคลาส แต่ด้วย นาย ก ไม่แม่นเรื่อง Object Data Model ทำให้อาจได้คลาส<br />
+แบบผิด ๆ หรือไม่ดีออกมาได้ หลายครั้งสำหรับ Case นี้มักพบว่านาย ก กับนาย ข เป็นคนคนเดียวกัน คือ นาย กข และมักออกแบบ<br />
+ER Diagram ก่อน โดยในหัวคิดอะไรก็เป็น Column, Record, Table, Primary Key, Compound Key, Foreign Key,<br />
+Constraint, One-to-One, One-to-Many, Many-to-Many ฯลฯ แล้วค่อยมาหาคลาส หลายครั้งพบว่า Object Data Model<br />
+ไม่ได้ทำ แต่ได้คลาสเลย พอต่อมามีปัญหาขึ้นมา จะ Trace กลับไปก็ลำบาก<br />
+<br />
+ยังมี Case อื่น ๆ อีก แต่ 4 Case ข้างบนมักพบเห็นได้บ่อย ๆ Case ที่ดีคือจะทำอะไรก่อนก็ได้ระหว่าง Object Data Model<br />
+กับ ER Diagram แต่สำคัญไอ้เจ้าตรงกลางนี่ล่ะ คือการทำ Object-to-Relational Mapping ต้องมีคนทำเป็นจริง ๆ<br />
+Map เป็น คนที่ Map เก่งนอกจากต้องเก่ง OO, การออกแบบ Object Data Model และการออกแบบ ER Diagram แล้ว<br />
+ต้องเข้าใจเรื่อง Application / System Performance, Transaction, Persistence Mechanism, Resource<br />
+Comsumption ด้วย<br />
+<br />
+ดังนั้นหากต้องการ Generate จากคลาสไปเป็น Table โดยใช้ Tool ต้องศึกษาว่า Tool นั้นใช้เทคนิคการ Map แบบไหน<br />
+สามารถให้เราปรับแต่งหรือกำหนดการ Map ได้หรือไม่ (Tool ส่วนมากให้ทำได้)<br />
+<br />
+แต่ที่สำคัญคลาสที่จะถูก Generate ไปเป็น Table ต้องเป็น Entity Class เช่น เป็นพวก Value Object (JavaBeans)<br />
+ซึงคลาสเหล่านี้จะมี Persistence Mechanism / Logic ฝังอยู่ด้วยหรือไม่ก็ได้ ขึ้นกับเทคนิคการออกแบบ<br />
+<br />
+ลองหาหนังสือชื่อ Patterns of Enterprise Application Architecture โดย Martin Fowler มาอ่านดูนะครับ<br />
+จะมี Architectural Patterns ที่น่าสนใจในการทำ Object-to-Relational Mapping รวมถึงการทำ Inheritance Mapping<br />
+ที่น่าสนใจหลายตัว และอ่านง่าย<br />
+<br />
+- จงอย่าเชื่อ Tool เสมอไปว่ามันเลือกใช้กลยุทธ์ (Strategy) ที่ดีที่สุดในการทำ Mapping / Generate ให้กับเรา -<br />
+<br />
+- ผลลัพธ์ของการออกแบบจะไม่แสดงให้เห็นทันทีที่ซอฟต์แวร์ถูกพัฒนาเสร็จ ดังนั้น Software Testing ควรถูกบรรจุ<br />
+ไว้ทุก ๆ ช่วงของกระบวนการพัฒนาซอฟต์แวร์ -<br />
+<br />
+minimalist (ณรงค์ จันทร์สร้อย)<br />
+21 ธันวาคม 2549 </b><!--IBF.ATTACHMENT_76984--><!-- THE POST --></p>' Where content_id = 14 
+21:02:55 :  => Delete From cms Where id =  
+21:02:55 :  => Delete From contents Where id =  

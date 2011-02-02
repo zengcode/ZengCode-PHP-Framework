@@ -1,0 +1,4 @@
+14:03:44 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ("","","","",now()) 
+14:03:52 :  => Insert into category (category_name,category_remark,weight) Values ("","","1") 
+14:03:02 :  => Update category SET category_name='',category_remark='',weight='1' Where category_id = 24 
+14:03:12 :  => Update category SET category_name='',category_remark='',weight='1' Where category_id = 24 

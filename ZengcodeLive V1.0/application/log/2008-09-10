@@ -1,0 +1,32 @@
+10:09:17 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร xxx',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='1' Where  id= 2 
+10:09:30 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร ',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='1' Where  id= 2 
+10:09:07 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร  xxx',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='1' Where  id= 2 
+10:09:24 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร ',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='1' Where  id= 2 
+13:09:52 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','ห','100') 
+13:09:14 :  => Delete From cms_faq Where id=5  
+14:09:22 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','100') 
+14:09:30 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','100') 
+15:09:12 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+15:09:23 :  => Delete From cms_faq Where id=7  
+15:09:33 :  => Delete From cms_faq Where id=6  
+15:09:10 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+15:09:21 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','100') 
+15:09:28 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','100') 
+16:09:37 :  => Delete From cms_faq Where id=9  
+16:09:36 :  => Delete From cms_faq Where id=8  
+16:09:41 :  => Delete From cms_faq Where id=11  
+16:09:46 :  => Delete From cms_faq Where id=10  
+17:09:51 :  => Delete From cms_faq Where id=10  
+19:09:20 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 

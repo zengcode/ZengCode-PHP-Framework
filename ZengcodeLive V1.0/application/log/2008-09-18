@@ -1,0 +1,10 @@
+11:09:50 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Delete From cms_faq Where id=  
+11:09:29 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Delete From cms_faq Where id=  
+11:09:08 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Delete From cms_faq Where id=  
+11:09:15 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Delete From cms_faq Where id=  
+11:09:16 :  => Delete From cms_faq Where id=4 
+12:09:37 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('','','','','','') 
+12:09:18 :  => Update cms_faq SET faq_question='sss',faq_startDate='0000-00-00',faq_endDate='0000-00-00',faq_detail='<p>sss</p>',faq_active='0',faq_order='0' Where  id= 16 
+12:09:18 :  => Update cms_faq SET faq_question='sss',faq_startDate='0000-00-00',faq_endDate='0000-00-00',faq_detail='<p>sss</p>',faq_active='0',faq_order='0' Where  id= 16 
+12:09:14 :  => Update cms_faq SET faq_question='sss',faq_startDate='0000-00-00',faq_endDate='0000-00-00',faq_detail='<p>sss</p>',faq_active='0',faq_order='4' Where  id= 16 
+12:09:34 :  => Update cms_faq SET faq_question='ทำไมต้องใช้ Fujitsu Cms Framework',faq_startDate='2008-09-08',faq_endDate='2008-09-30',faq_detail='<p>เพราะว่า Fujitsu Cms Framework ดีที่สุดในโลก</p>',faq_active='1',faq_order='2' Where  id= 1 

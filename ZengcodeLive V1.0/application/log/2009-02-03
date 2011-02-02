@@ -1,0 +1,2 @@
+19:02:35 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("12","<p>...dfsdf</p>","sdfsdf",now()) 
+19:02:45 :  => Delete From comment Where comment_id = 13 

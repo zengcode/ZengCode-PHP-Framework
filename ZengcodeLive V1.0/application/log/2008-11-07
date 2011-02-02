@@ -1,0 +1,13 @@
+09:11:14 :  => Insert into category (category_name,category_remark,weight) Values ("ttttt","tttt","144") 
+10:11:36 :  => Update category SET category_name='ZengCode Framework Guide',category_remark='แนะนำการใช้เฟรมเวิอร์ค',weight='4' Where category_id = 8 
+11:11:38 :  => Delete From category Where category_id = 9 
+11:11:00 :  => Update static_content SET content_detail='<div class=\"box\">
+<p><span style=\"color: rgb(153, 51, 0);\"><b><span style=\"font-family: Arial;\">ติดต่อสอบถาม​​​ได้​​​ที่</span></b></span><span style=\"font-family: Arial;\"><font><font color=\"black\"><br />
+<br />
+</font><b><font color=\"black\">ชื่อ​.......​​นาย​​ ​​ชีวะ​​... ​นามสกุล​... ​​กัน​​​ทะวงค์​​<br />
+ชื่อเล่น​.......​​พี<br />
+โทรศัพท์​...... 081-8308963<br />
+เว็บไซต์​..... http://www.zengcode.com<br />
+อี​​-​​เมล์​​....... kchiwa@gmail.com  </font></b></font></span><span style=\"font-family: Arial;\"><font><b><font color=\"black\"><br />
+MSN......p@madoogun.com</font></b></font></span></p>
+</div>' Where content_key = 'contact' 

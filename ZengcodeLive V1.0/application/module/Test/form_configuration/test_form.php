@@ -1,0 +1,111 @@
+<?php
+
+
+$form_configuration = array(
+                             'post_type' => 'post',
+							 'action'    => '/admin/Module/Category/Action/Insert',
+							 'upload'	 => 'no',
+							 'onsubmit'  => '',
+							 'style'     => '',
+							 'submit_th' => 'เพิ่มข้อมูล',
+							 'submit_en' => 'Add Data',
+							);
+$combine = array(
+				array('type'	   => 'field',
+					  'name'	   => 'number',
+					  'label_th'   => 'number',
+					  'label_en'   => 'number',
+					  'label_jp'   => 'ご飯が熱い。 Gohan-ga atsui.',
+					  'input_type' => 'textBox',
+					  'style'      => 'textBox',
+					  'null'        => 'no',
+					  'validate'   => 'number' ,
+					  'number_length'     => '1-5'
+				 ),
+				 array('type'	   => 'field',
+					  'name'	   => 'number2',
+					  'label_th'   => 'number2',
+					  'label_en'   => 'number2',
+					  'label_jp'   => 'ご飯が熱い。 Gohan-ga atsui.',
+					  'input_type' => 'textEditorStandardSmall',
+					  'style'      => 'textBox',
+					  'null'        => '',
+					  'validate'   => 'editor' ,
+					  'same'       => '',
+					  'number_length'     => '',
+					  'error_msg'  => 'Please Input This Editor !!!!!!!!!!!!!!'
+				 ),
+				 array('type'	   => 'field',
+					  'name'	   => 'number3',
+					  'label_th'   => 'number3',
+					  'label_en'   => 'number3',
+					  'label_jp'   => 'ご飯が熱い。 Gohan-ga atsui.',
+					  'input_type' => 'textEditorStandardSmall',
+					  'style'      => 'textBox',
+					  'null'        => '',
+					  'validate'   => 'editor' ,
+					  'same'       => '',
+					  'number_length'     => '',
+					  'error_msg'  => 'Please Input This Editor3333 !!!!!!!!!!!!!!'
+				 )
+				);
+$form = array(		
+				array('type'	   => 'field',
+					  'name'	   => 'name',
+					  'label_th'   => 'Name',
+					  'label_en'   => 'Name',
+					  'label_jp'   => 'Name',
+					  'input_type' => 'textBox',
+					  'style'      => 'textBox',
+					  'null'        => 'no',
+					  'validate'   => 'text' ,
+					  'str_length'     => '1-3',
+					  'number_length'  => '',
+					  'error_msg'  => 'Please Input Name'
+												),
+                 array('type'	     => 'field',
+					'name'		 => 'age',
+					'label_th'   => 'age',
+					'label_en'   => 'age',
+					'label_jp'   => 'age',
+					'input_type' => 'textBox',
+					'style'      => 'textBox',
+					'null'        => 'no',
+					'validate'   => 'number' ,
+					'str_length'     => '1-3',
+					'number_length'  => '1-99',
+					'same'         => '',
+					'error_msg'  => 'Please Input Age'
+					),
+               
+			   array('type'	     => 'field',
+					'name'	     => 'email',
+					'label_th'   => 'email',
+					'label_en'   => 'email',
+					'label_jp'   => 'email',
+					'input_type' => 'textBox',
+					'style'      => 'textBox',
+					'null'        => 'no',
+					'validate'   => 'email' ,
+					'str_length' => '',
+					'number_length'  => '',
+					'same'       => '',
+					'error_msg'  => 'Please Input Email'
+					),
+               
+			   array('type'	     => 'field',
+					'name'	     => 'email_confirm',
+					'label_th'   => 'confirm email',
+					'label_en'   => 'confirm email',
+					'label_jp'   => 'confirm email',
+					'input_type' => 'textBox',
+					'style'      => 'textBox',
+					'null'        => 'no',
+					'validate'   => 'email' ,
+					'str_length' => '',
+					'number_length'  => '',
+					'same'       => '',
+					'error_msg'  => 'Please Input Confirm Email'
+					)      	      			      			
+		);
+?>

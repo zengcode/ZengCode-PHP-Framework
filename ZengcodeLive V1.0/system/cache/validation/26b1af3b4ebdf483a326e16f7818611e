@@ -1,0 +1,25 @@
+s:430:"<script>
+
+			function Validation()
+
+			{
+
+			
+		if ( isEmpty('poster_name') ) { 
+alert('please input Your Name');
+return false; 
+} 
+ oEditor = FCKeditorAPI.GetInstance('comment_detail'); 
+var text = oEditor.GetHTML(); 
+if ( text == "" ) { 
+ alert('please input Your Comment');
+oEditor.Focus();return false; 
+} 
+if ( isEmpty('captcha_code') ) { 
+alert('please input security code');
+return false; 
+} 
+return true; 
+}
+</script>
+";

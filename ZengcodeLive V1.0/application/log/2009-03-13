@@ -1,0 +1,414 @@
+13:03:09 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:27 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:44 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:26 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:51 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:13 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:34 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:24 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:54 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:01 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:54 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:57 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:31 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+13:03:49 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:55 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:31 :  => Update static_content SET content_detail='<p><b><span style=\"color: rgb(153, 51, 0);\">ติดต่อสอบถาม​​​ได้​​​ที่</span></b></p>
+<p><b>ชื่อ</b>​.......​​นาย​​ ​​ชีวะ​​... ​นามสกุล​... ​​กัน​​​ทะวงค์​​<br />
+<b>ชื่อเล่น</b>​.......​​พี<br />
+<b>โทรศัพท์​</b>...... 081-8308963<br />
+<b>เว็บไซต์</b>​..... http://www.zengcode.com<br />
+<b>อี​​-​​เมล์​​</b>....... kchiwa@gmail.com<br />
+<b>MSN</b>......p@madoogun.com</p>
+<p><br />
+&nbsp;</p>' Where content_key = 'contact' 
+13:03:53 :  => Update static_content SET content_detail='<p><b><span style=\"color: rgb(153, 51, 0);\">ติดต่อสอบถาม​​​ได้​​​ที่</span></b></p>
+<p><b>ชื่อ</b>​.......​​นาย​​ ​​ชีวะ​​... ​นามสกุล​... ​​กัน​​​ทะวงค์​​<br />
+<b>ชื่อเล่น</b>​.......​​พี<br />
+<b>โทรศัพท์​</b>...... 081-8308963<br />
+<b>เว็บไซต์</b>​..... http://www.zengcode.com<br />
+<b>อี​​-​​เมล์​​</b>....... kchiwa@gmail.com<br />
+<b>MSN</b>......p@madoogun.com</p>
+<p><br />
+&nbsp;</p>' Where content_key = 'contact' 
+13:03:43 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:59 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:19 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:25 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"189\" alt=\"\" width=\"200\" align=\"left\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:02 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:04 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"189\" alt=\"\" width=\"200\" align=\"left\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:21 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"189\" alt=\"\" width=\"200\" align=\"left\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:39 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"189\" alt=\"\" width=\"200\" align=\"left\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:00 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:56 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+13:03:55 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:11 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:55 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:39 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+14:03:52 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:48 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:08 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:37 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:12 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:13 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" alt=\"\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+14:03:58 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" style=\"margin-right: 10px;\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 

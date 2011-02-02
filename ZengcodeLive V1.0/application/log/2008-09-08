@@ -1,0 +1,9 @@
+14:09:42 :  => ERROR : Table 'cms.cms_faq' doesn't existInsert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('ทดสอบครับ','2008-09-08','2008-09-16','ฟฟฟฟ','0') 
+14:09:28 :  => ERROR : Unknown column 'faq_active' in 'field list'Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('ทำไมต้องใช้ Fujitsu Cms Framework','2008-09-08','2008-09-30','เพราะว่าสะดวกรวดเร็วในการพัฒนาโปรแกรมเว็บ','1') 
+14:09:41 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('ทำไมต้องใช้ Fujitsu Cms Framework','2008-09-08','2008-09-30','เพราะว่าสะดวกรวดเร็วในการพัฒนาโปรแกรมเว็บ','1') 
+14:09:35 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('ทำไมต้องใช้ Fujitsu Cms Framework','2008-09-08','2008-09-30','เพราะว่าสะดวกรวดเร็วในการพัฒนาโปรแกรมเว็บ','1') 
+14:09:44 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('ทำไมต้องใช้ Fujitsu Cms Framework','2008-09-08','2008-09-30','เพราะว่า Fujitsu Cms Framework ดีที่สุดในโลก<br/>','1') 
+17:09:36 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active) Values ('FAQ มีวิธีใช้งานอย่างไร','2008-09-02','2008-09-17','ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก','1') 

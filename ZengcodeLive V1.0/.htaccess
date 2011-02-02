@@ -1,0 +1,62 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+
+RewriteBase /
+
+#section allow ip address to use backend
+<Files ~ "(index_admin\.php)">
+order deny,allow
+#deny from all
+#allow from 192.168.98.0/24 10.164.198.0/24
+allow from all
+</Files>
+
+php_value display_errors "Off"
+php_value mssql.charset "UTF-8"
+php_value upload_max_filesize   "50M"
+php_value post_max_size   "50M"
+php_value mssql.textlimit   "2000000"
+php_value mssql.textsize   "2000000"
+
+#################  Path to Access File  #################
+# case file and directory existed , not rewrite   
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* - [L]
+
+
+RewriteRule  ^mail/(.*)$         /mail.php/$1 [L]
+RewriteRule  ^template/(.*)$    /application/template/$1  [L]
+RewriteRule  ^script/(.*)$      /application/script/$1  [L]
+RewriteRule  ^js/(.*)$          /application/js/$1  [L]
+RewriteRule  ^css/(.*)$         /application/css/$1  [L]
+RewriteRule  ^images/(.*)$      /files/images/$1  [L]    
+RewriteRule  ^docs/(.*)$        /files/docs/$1  [L]
+RewriteRule  ^users/(.*)$       /files/users/$1  [L] #stand for path
+
+
+
+
+
+########### Folder Access ########################################
+RewriteRule  ./Other/(.*)$      /Other/$1  [L]     #for folder access
+#RewriteRule  ./system/(.*)$     /system/$1  [L]
+#RewriteRule  ./acsc/(.*)$       /acsc/$1  [L]
+#RewriteRule  ./trac/(.*)$       /Trac/$1  [L]
+#RewriteRule  ./files/(.*)$     /files/$1  [L]
+##############################################################
+RewriteCond %{REQUEST_FILENAME}  !-f
+RewriteCond %{REQUEST_FILENAME}  !-d
+##############################################################
+RewriteRule (.*)$   /index.php/$1 [L]
+#RewriteRule  ^admin/(.*)$       /admin.php/$1 [L]
+#RewriteRule ^index$ http://www.google.com [L]
+#RewriteRule ^index/([A-Z0-9]{32})/([0-9]+)/ index.php [NC,L]
+#RewriteRule ^admin/([A-Z0-9]{32})/([0-9]+)/ admin.php [NC,L]
+#RewriteRule ./images/(.*)$         /images/$1 [L]
+#RewriteRule ./images\.jsp(.*)$         /images\.jsp$1 [L]
+#RewriteRule ./templates/(.*)$     /templates/$1 [L]
+#RewriteRule  ^system/(.*)$     /system/$1  [L]
+#RewriteRule  ^files/(.*)$      /files/$1  [L]
+#############################################################

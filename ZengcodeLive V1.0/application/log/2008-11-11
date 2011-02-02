@@ -1,0 +1,269 @@
+09:11:28 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("6","a
+b
+c
+d
+e
+f
+g","aaaa",now()) 
+09:11:08 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("7","นี้ครับโค้ด
+
+$sql = \"SELECT image, title,detail,date From data Where id=\'$id\' \";
+$result = mysql_db_query($dbname,$sql);
+$record = mysql_fetch_array($result);
+$image = $photoDir . mysql_result($result, 0, \'image\') ;
+$title = $record[title];
+$detail = $record[detail];
+$date = $record[date];
+
+$title=htmlspecialchars($title);
+$date=displaydate($date);
+echo \"<center>\";
+echo \"<Title>\". mysql_result($result, 0, \'title\'). \"</title>
+<table width=\'96%\' border=\'0\' style=\'font-family:MS Sans Serif;font-size:14;\'>
+<tr>
+<td width=\'600\' align=\'right\'><b>$date</b></td>
+</tr>
+<tr>
+<td><h3>$title   </h3><br><br><br><img src=\'./images/dashline.gif\'></td>
+</tr>
+<tr>
+<td><center><img src=\'$image\'></center><br><br></td>
+</tr>
+<tr>
+<td width=\'600\'>  </td>
+</tr>
+</table>\" ;
+echo \"</center><br>\";
+mysql_close();
+?>
+</td>
+<tr>
+<td width=\"600\">
+<?php
+$detail=str_replace(chr(13).chr(10), chr(10), $record[\"detail\"]);
+$detail=str_replace(chr(10), chr(32), $detail);
+$detail=str_replace(chr(9), chr(32), $detail);
+while(strstr($detail, chr(32).chr(32))){
+$detail=str_replace(chr(32).chr(32), chr(32), $detail);
+}//End while
+$detail=wordwrap($detail, 400, \"thisistheendofline\", true);
+$detail=htmlspecialchars($detail);
+$detail=str_replace(\"thisistheendofline\", \"<br>\".chr(13).chr(10), $detail);
+echo $detail;
+?>
+
+คือตอนนี้ผมกำลังเขียนเว็บข่าวอยู่ครับคุณสรันคือผมก็ต้องไป copy
+เอาเนื้อหาข่าวจากเว็บข่าวเขามาใช่มั้ยครับ แต่พอ copy มาวางอักษร
+ก็จะออกมาไม่สวยเรียงไม่เป็นระเบียบผมเลยยากได้โค้ดที่เอาไว้จัดเรียง
+อักษรโดยอัตโนมัติเมื่อผม copy เอาเนื้อหาข่าวมาวางครับ คุณ สรันพอ
+มีวิธีแก้ยังไงกับโค้ดนี้บ้างครับ ด้วยความนับถือครับ ","pee",now()) 
+09:11:31 :  => Delete From comment Where comment_id = 10 
+09:11:36 :  => Delete From comment Where comment_id = 10 
+09:11:30 :  => Delete From comment Where comment_id = 10 
+09:11:55 :  => Delete From comment Where comment_id = 10 
+09:11:47 :  => Delete From comment Where comment_id = 10 
+09:11:04 :  => Delete From comment Where comment_id = 10 
+09:11:36 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("7","<p>a</p>
+<p>b</p>
+<p><i><b>c</b></i></p>
+<p><i><b>d</b></i></p>
+<p><i><b>e</b></i></p>
+<p><i><b>f</b></i></p>
+<p><i><b>g</b></i></p>","aaaaa",now()) 
+09:11:12 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("7","<p>...<img height=\"104\" width=\"100\" src=\"http://localhost/files/FckAjaxFileManage/uploaded/image/badtz-maru-toungeout.jpg\" alt=\"\" /></p>","aaa",now()) 
+10:11:53 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("7","<p><i><b>...sssssssssssssssssssssssss<br />
+dsffffffffffffffffffffffffffffff</b></i></p>","xxxxxxxxx",now()) 
+11:11:36 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial\"><img style=\"margin-right: 10px\" height=\"164\" alt=\"\" width=\"158\" align=\"left\" src=\"http://localhost/files/FckAjaxFileManage/uploaded/image/badtz-maru-toungeout.jpg\" /></span></p>
+<h3><span style=\"font-family: Arial\">&nbsp;สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial\"><b><span style=\"color: rgb(153,51,0)\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153,51,0)\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153,51,0)\"><span style=\"font-family: Arial\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่านช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p><span style=\"color: rgb(153,51,0)\"><b>ปล.</b></span>มีเรื่องรบกวนครับ หากพี่น้องคนไหนมีความรู้ความสามารถด้านการทำ Logo เกิดนึกสงสารผมขึ้นมา<br />
+จะช่วยกรุณาออกแบบให้ผมก็จะเป็นพระคุณมากครับ ขอบคุณไว้ล่วงหน้านะครับ</p>' Where content_key = 'hello' 
+11:11:07 :  => Update static_content SET content_detail='<p>dyeh yeh yeh</p>
+<p><textarea rows=\"10\" cols=\"50\" name=\"a\">aaaaaa</textarea></p>' Where content_key = 'download' 
+11:11:11 :  => Update static_content SET content_detail='<p>yeh yeh yeh</p>' Where content_key = 'download' 
+13:11:05 :  => Insert into content (category_id,content_name,content_summary,content_detail,post_date) Values ("1","A Simple Cache with PHP","<p>การทำ Cache แบบง่าย ๆ ด้วย php <br />
+ลองดูละกันครับว่าง่ายดายขนาดไหน</p>","<p><code>&lt;?php<br />
+<span class=\"dark-code\">// start the output buffer</span><br />
+ob_start();   ?&gt;<br />
+<br />
+<span class=\"dark-code\">//Your usual PHP script and HTML here ...</span> <br />
+<br />
+&lt;?php<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<span class=\"dark-code\">// open the cache file &quot;cache/home.html&quot; for writing</span><br />
+$fp = fopen($cachefile, \'w\'); <br />
+<span class=\"dark-code\">// save the contents of output buffer to the file</span><br />
+fwrite($fp, ob_get_contents()); <br />
+<span class=\"dark-code\">// close the file</span><br />
+fclose($fp); <br />
+<span class=\"dark-code\">// Send the output to the browser</span><br />
+ob_end_flush(); <br />
+?&gt;</code></p>
+<p><code>เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด</code></p>
+<p>&nbsp;</p>",now()) 
+13:11:54 :  => Update content SET category_id='1',content_name='A Simple Cache with PHP',content_summary='<p>การทำ Cache แบบง่าย ๆ ด้วย php <br />
+ลองดูละกันครับว่าง่ายดายขนาดไหน</p>',content_detail='<p><code>&lt;?php<br />
+<span class=\"dark-code\">// start the output buffer</span><br />
+ob_start();   ?&gt;<br />
+<br />
+<span class=\"dark-code\">//Your usual PHP script and HTML here ...</span> <br />
+<br />
+&lt;?php<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<span class=\"dark-code\">// open the cache file &quot;cache/home.html&quot; for writing</span><br />
+$fp = fopen($cachefile, \'w\'); <br />
+<span class=\"dark-code\">// save the contents of output buffer to the file</span><br />
+fwrite($fp, ob_get_contents()); <br />
+<span class=\"dark-code\">// close the file</span><br />
+fclose($fp); <br />
+<span class=\"dark-code\">// Send the output to the browser</span><br />
+ob_end_flush(); <br />
+?&gt;</code></p>
+<p>&nbsp;</p>
+<p>เพิ่มเติมอีกนิดตรวจสอบซะหน่อยว่ามันทำ Cache ไว้หรือยัง</p>
+<pre><code>&lt;?php<br /><br />$cachefile = &quot;cache/home.html&quot;;<br /><br />if (file_exists($cachefile)) {<br /><br />	<span class=\"dark-code\">// the page has been cached from an earlier request</span><br /><br />	<span class=\"dark-code\">// output the contents of the cache file</span><br /><br />	include($cachefile); <br /><br />	<span class=\"dark-code\">// exit the script, so that the rest isnt executed</span><br />	exit;<br /><br />}<br /><br />?&gt;<br /><br />กำหนดอายุไขให้มันซะหน่อยมะ <br /></code><code>&lt;?php <br /><br />		 <span class=\"dark-code\">// 5 minutes</span><br />        $cachetime = 5 * 60; <br /><br />        <span class=\"dark-code\">// Serve from the cache if it is younger than $cachetime</span><br /><br />        if (file_exists($cachefile) &amp;&amp; <br />           (time() - $cachetime &lt; filemtime($cachefile))) <br />        {<br /><br />        	include($cachefile);<br /><br />        	echo &quot;&lt;!-- From cache generated &quot;.date(\'H:i\', <br />           filemtime($cachefile)).&quot; <br />        	--&gt;\\n&quot;;<br /><br />        	exit;<br /><br />        }<br /><br />?&gt;</code></pre>
+<p><code>เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด</code></p>
+<p>&nbsp;</p>' Where content_id = 8 
+13:11:19 :  => Update content SET category_id='1',content_name='A Simple Cache with PHP',content_summary='<p>การทำ Cache แบบง่าย ๆ ด้วย php <br />
+ลองดูละกันครับว่าง่ายดายขนาดไหน</p>',content_detail='<h3 style=\"color: Red;\">มามะ</h3>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>&lt;?php<br />
+<span class=\"dark-code\">// start the output buffer</span><br />
+ob_start();   ?&gt;<br />
+<br />
+<span class=\"dark-code\">//Your usual PHP script and HTML here ...</span> <br />
+<br />
+&lt;?php<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<span class=\"dark-code\">// open the cache file &quot;cache/home.html&quot; for writing</span><br />
+$fp = fopen($cachefile, \'w\'); <br />
+<span class=\"dark-code\">// save the contents of output buffer to the file</span><br />
+fwrite($fp, ob_get_contents()); <br />
+<span class=\"dark-code\">// close the file</span><br />
+fclose($fp); <br />
+<span class=\"dark-code\">// Send the output to the browser</span><br />
+ob_end_flush(); <br />
+?&gt;</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">&nbsp;</span></span></p>
+<h3 style=\"color: Red;\"><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">เพิ่มเติมอีกนิดตรวจสอบซะหน่อยว่ามันทำ Cache ไว้หรือยัง</span></span></h3>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>&lt;?php<br />
+<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<br />
+if (file_exists($cachefile)) {<br />
+<br />
+<span class=\"dark-code\">// the page has been cached from an earlier request</span><br />
+<br />
+<span class=\"dark-code\">// output the contents of the cache file</span><br />
+<br />
+include($cachefile); <br />
+<br />
+<span class=\"dark-code\">// exit the script, so that the rest isnt executed</span><br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;<br />
+<br />
+กำหนดอายุไขให้มันซะหน่อยมะ</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code> <br />
+</code><code>&lt;?php <br />
+<br />
+<span class=\"dark-code\">// 5 minutes</span><br />
+$cachetime = 5 * 60; <br />
+<br />
+<span class=\"dark-code\">// Serve from the cache if it is younger than $cachetime</span><br />
+<br />
+if (file_exists($cachefile) &amp;&amp; <br />
+(time() - $cachetime &lt; filemtime($cachefile))) <br />
+{<br />
+<br />
+include($cachefile);<br />
+<br />
+echo &quot;&lt;!-- From cache generated &quot;.date(\'H:i\', <br />
+filemtime($cachefile)).&quot; <br />
+--&gt;\\n&quot;;<br />
+<br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">&nbsp;</span></span></p>' Where content_id = 8 
+20:11:47 :  => Update content SET category_id='1',content_name='A Simple Cache with PHP',content_summary='<p>การทำ Cache แบบง่าย ๆ ด้วย php <br />
+ลองดูละกันครับว่าง่ายดายขนาดไหน</p>
+<p><img height=\"104\" width=\"100\" src=\"http://localhost/files/FckAjaxFileManage/uploaded/image/badtz-maru-toungeout.jpg\" alt=\"\" /></p>',content_detail='<h3 style=\"color: Red;\">มามะ</h3>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>&lt;?php<br />
+<span class=\"dark-code\">// start the output buffer</span><br />
+ob_start();   ?&gt;<br />
+<br />
+<span class=\"dark-code\">//Your usual PHP script and HTML here ...</span> <br />
+<br />
+&lt;?php<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<span class=\"dark-code\">// open the cache file &quot;cache/home.html&quot; for writing</span><br />
+$fp = fopen($cachefile, \'w\'); <br />
+<span class=\"dark-code\">// save the contents of output buffer to the file</span><br />
+fwrite($fp, ob_get_contents()); <br />
+<span class=\"dark-code\">// close the file</span><br />
+fclose($fp); <br />
+<span class=\"dark-code\">// Send the output to the browser</span><br />
+ob_end_flush(); <br />
+?&gt;</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">&nbsp;</span></span></p>
+<h3 style=\"color: Red;\"><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">เพิ่มเติมอีกนิดตรวจสอบซะหน่อยว่ามันทำ Cache ไว้หรือยัง</span></span></h3>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>&lt;?php<br />
+<br />
+$cachefile = &quot;cache/home.html&quot;;<br />
+<br />
+if (file_exists($cachefile)) {<br />
+<br />
+<span class=\"dark-code\">// the page has been cached from an earlier request</span><br />
+<br />
+<span class=\"dark-code\">// output the contents of the cache file</span><br />
+<br />
+include($cachefile); <br />
+<br />
+<span class=\"dark-code\">// exit the script, so that the rest isnt executed</span><br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;<br />
+<br />
+กำหนดอายุไขให้มันซะหน่อยมะ</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code> <br />
+</code><code>&lt;?php <br />
+<br />
+<span class=\"dark-code\">// 5 minutes</span><br />
+$cachetime = 5 * 60; <br />
+<br />
+<span class=\"dark-code\">// Serve from the cache if it is younger than $cachetime</span><br />
+<br />
+if (file_exists($cachefile) &amp;&amp; <br />
+(time() - $cachetime &lt; filemtime($cachefile))) <br />
+{<br />
+<br />
+include($cachefile);<br />
+<br />
+echo &quot;&lt;!-- From cache generated &quot;.date(\'H:i\', <br />
+filemtime($cachefile)).&quot; <br />
+--&gt;\\n&quot;;<br />
+<br />
+exit;<br />
+<br />
+}<br />
+<br />
+?&gt;</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\"><code>เป็นไงครับ ง่ายซะ อย่างงี้ก็หายเซ็งไปได้อีกนิด</code></span></span></p>
+<p><span style=\"font-size: larger;\"><span style=\"font-family: Arial;\">&nbsp;</span></span></p>' Where content_id = 8 

@@ -1,0 +1,60 @@
+11:10:16 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+11:10:16 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 
+11:10:17 :  => Insert Into cms (id,pic,test,status) values (5,'car.jpg','','Draft') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','topic_th','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','content_th','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','comment_th','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','topic_en','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','content_en','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','comment_en','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','topic_jp','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','content_jp','') 
+11:10:17 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','comment_jp','') 
+12:10:44 :  => Insert Into cms (id,pic,test,status) values (5,'car.jpg','','Draft') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','topic_th','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','content_th','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','comment_th','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','topic_en','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','content_en','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','comment_en','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','topic_jp','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','content_jp','') 
+12:10:44 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','comment_jp','') 
+12:10:44 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+12:10:44 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 
+12:10:51 :  => Update cms Set pic = 'car.jpg',test = '' Where id = '5' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_th' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'content_th' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_th' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_en' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'content_en' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_en' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'topic_jp' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'content_jp' 
+12:10:52 :  => Update contents  SET content = '' Where id = '5' and field = 'comment_jp' 
+12:10:52 :  => Insert Into cms (id,pic,test,status) values (5,'car.jpg','','Draft') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','topic_th','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','content_th','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'th','comment_th','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','topic_en','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','content_en','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'en','comment_en','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','topic_jp','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','content_jp','') 
+12:10:52 :  => Insert into  contents  (id,lang,field,content) values  (5,'jp','comment_jp','') 

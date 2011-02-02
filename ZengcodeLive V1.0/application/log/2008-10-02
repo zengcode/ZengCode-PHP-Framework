@@ -1,0 +1,10 @@
+11:10:44 :  => Delete From cms Where id = 1 
+11:10:44 :  => Delete From contents Where id = 1 
+11:10:47 :  => Delete From cms Where id = 1 
+11:10:47 :  => Delete From contents Where id = 1 
+11:10:15 :  => Delete From users Where id = 4 
+11:10:41 :  => Update cms SET state = 'ApprovingDelete' Where id= 3 
+11:10:02 :  => Delete From users Where id = 2 
+11:10:05 :  => Delete From users Where id = 2 
+11:10:11 :  => Update cms SET state = 'ApprovingPublish' Where id= 2 
+11:10:11 :  => Update cms SET state = 'Approved' Where id= 2 

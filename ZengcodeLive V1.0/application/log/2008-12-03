@@ -1,0 +1,1 @@
+17:12:12 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ("3","<p>ถามไม่ตอบ <b>งอนนนนนนนนนน</b></p>","พี",now()) 

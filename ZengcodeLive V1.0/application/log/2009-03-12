@@ -1,0 +1,99 @@
+09:03:58 :  => Update static_content SET content_detail='<p><span style=\"font-family: Arial;\"><img height=\"189\" align=\"left\" width=\"200\" alt=\"\" src=\"http://www.zengcode.com/files/FckAjaxFileManage/uploaded/icons/mvc.jpg\" style=\"margin-right: 10px;\" /></span></p>
+<h3><span style=\"font-family: Arial;\">สวัสดีครับแฟนๆ Madoogun.com ยินดีต้อนรับสู่บ้านใหม่ครับ</span></h3>
+<p><span style=\"font-family: Arial;\"><b><span style=\"color: rgb(153, 51, 0);\">ZengCode Framework</span></b> ขอฝากเนื้อฝากตัวกับชาว Developer ทุกท่านด้วยนะครับ<br />
+ผู้พัฒนาเองไม่ได้หวังว่ามันจะใช้งานได้ดีขนาดไปเทียบกับจ้างยุทธจักรด้านนี้ <br />
+ไม่ว่าจะเป็น Prado หรือแม้แต่ Cake ซึ่งนั้นเค้าระดับ<b><span style=\"color: rgb(153, 51, 0);\">เทพเรียกพี่</span></b>แล้วครับ<br />
+ผมก็เป็นแค่ Developer ธรรมดา ๆ คนนึงครับ<br />
+ที่สร้าง Framework ตัวนี้ขึ้นมาก็เพื่อศึกษา และพัฒนาทักษะด้าน OOP ของตัวเอง</span><span style=\"font-family: Arial;\"><br />
+อีกทั้งปกติตัวผมเองเขียนโค้ดได้มั่วซั่วมาก ไม่มีระเบียบ อยากเขียนอะไรคิดออกก็เขียน<br />
+ไม่มีแบบแผน บางทีกลับมาแก้โค้ดตัวเอง บอกได้คำเดียวว่า </span><b><span style=\"color: rgb(153, 51, 0);\"><span style=\"font-family: Arial;\">เซ็งโครต เซ็ง โครต โครต </span></span></b><span style=\"font-family: Arial;\"><br />
+และนี่จึงเป็นที่มาของชื่อ Framework ของผมครับ<br />
+และอีกประเด็นก็เพื่อจุดประการให้พี่น้องชาว Developer ทุกท่าน <br />
+ช่วยกันคิดพัฒนาสิ่งต่างๆ เพื่อวงการด้าน IT<br />
+ของเราได้ทัดเทียมนานาอารยะประเทศเค้านะคร ับผมขอเป็นจุดเล็กๆจุดนึงที่พร้อมจะมุ่งมั่น<br />
+พัฒนาผลงานด้านนี้ต่อไปครับ สู้ๆ นะพี่น้องชาว Developer ทุกท่าน</span></p>
+<p>&nbsp;</p>
+<hr />' Where content_key = 'hello' 
+09:03:19 :  => Update content SET category_id='1',content_name='มาป้องกัน Cross-Site scripting อันร้ายกาจกันครับ ',content_summary='<p>มาป้องกัน Cross-Site sc<x>ripting อันร้ายกาจกันครับ<br />
+พอดีไปเจอมาช่วยได้เยอะครับ แต่ไม่แน่ใจว่าครอบคลุมหรือเปล่า<br />
+ตอนแรกผมก็โดน SQL Injection ด้วยและก็มี sc<x>ript บางตัวหลุด<br />
+อย่างที่ไม่คาดคิดว่ามันจะร้ายกาจได้ขนาดนี้ ต้องขอบคุณ พี่ด้า Inpross มากนะครับ<br />
+ที่อุตส่าห์นั่งหาสาเหตุกันตั้งนานสองนาน</x></x></p>
+<p><x><x><br />
+</x></x></p>',content_detail='<p><b>เอาไปเลยครับ sc<x>ript </x></b></p>
+<p>function RemoveXSS($val) {<br />
+&nbsp;&nbsp; // remove all non-printable characters. CR(0a) and LF(0b) and TAB(9) are allowed<br />
+&nbsp;&nbsp; // this prevents some character re-spacing such as &lt;java\\0sc<x>ript&gt;<br />
+&nbsp;&nbsp; // note that you have to handle splits with \\n \\r and \\t later since they *are* allowed in some inputs<br />
+&nbsp;&nbsp; $val = preg_replace(\'/([\\x00-\\x08\\x0b-\\x0c\\x0e-\\x19])/\' \'\' $val);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // straight replacements the user should never need these since they\'re normal characters<br />
+&nbsp;&nbsp; // this prevents like &lt;IMG SRC=&amp;#X40&amp;#X61&amp;#X76&amp;#X61&amp;#X73&amp;#X63&amp;#X72&amp;#X69&amp;#X70&amp;#X74&amp;#X3A &amp;#X61&amp;#X6C&amp;#X65&amp;#X72&amp;#X74&amp;#X28&amp;#X27&amp;#X58&amp;#X53&amp;#X53&amp;#X27&amp;#X29&gt;<br />
+&nbsp;&nbsp; $search = \'abcdefghijklmnopqrstuvwxyz\';<br />
+&nbsp;&nbsp; $search .= \'ABCDEFGHIJKLMNOPQRSTUVWXYZ\';<br />
+&nbsp;&nbsp; $search .= \'1234567890!@#$%^&amp;*()\';<br />
+&nbsp;&nbsp; $search .= \'~`&quot;;:?+/={}[]-_|\\\'\\\\\';<br />
+&nbsp;&nbsp; for ($i = 0; $i &lt; strlen($search); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ;? matches the ; which is optional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 0{07} matches any padded zeros which are optional and go up to 8 chars<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#x0040 @ search for the hex values<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#[xX]0{08}\'.dechex(ord($search[$i])).\';?)/i\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &amp;#00064 @ 0{07} matches \'0\' zero to seven times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace(\'/(&amp;#0{08}\'.ord($search[$i]).\';?)/\' $search[$i] $val); // with a ;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // now the only remaining whitespace attacks are \\t \\n and \\r<br />
+&nbsp;&nbsp; $ra1 = Array(\'ja<x>vasc<x>ript\' \'vb<x>sc<x>ript\' \'ex<x>pression\' \'ap<x>plet\' \'me<x>ta\' \'xm<x>l\' \'bl<x>ink\' \'li<x>nk\' \'st<x>yle\' \'sc<x>ript\' \'em<x>bed\' \'ob<x>ject\' \'if<x>rame\' \'fr<x>ame\' \'fr<x>ameset\' \'il<x>ayer\' \'la<x>yer\' \'bg<x>sound\' \'ti<x>tle\' \'ba<x>se\');<br />
+&nbsp;&nbsp; $ra2 = Array(\'on<x>abort\' \'on<x>activate\' \'on<x>afterprint\' \'on<x>afterupdate\' \'on<x>beforeactivate\' \'on<x>beforecopy\' \'on<x>beforecut\' \'on<x>beforedeactivate\' \'on<x>beforeeditfocus\' \'on<x>beforepaste\' \'on<x>beforeprint\' \'on<x>beforeunload\' \'on<x>beforeupdate\' \'on<x>blur\' \'on<x>bounce\' \'on<x>cellchange\' \'on<x>change\' \'on<x>click\' \'on<x>contextmenu\' \'on<x>controlselect\' \'on<x>copy\' \'on<x>cut\' \'on<x>dataavailable\' \'on<x>datasetchanged\' \'on<x>datasetcomplete\' \'on<x>dblclick\' \'on<x>deactivate\' \'on<x>drag\' \'on<x>dragend\' \'on<x>dragenter\' \'on<x>dragleave\' \'on<x>dragover\' \'on<x>dragstart\' \'on<x>drop\' \'on<x>error\' \'on<x>errorupdate\' \'on<x>filterchange\' \'on<x>finish\' \'on<x>focus\' \'on<x>focusin\' \'on<x>focusout\' \'on<x>help\' \'on<x>keydown\' \'on<x>keypress\' \'on<x>keyup\' \'on<x>layoutcomplete\' \'on<x>load\' \'on<x>losecapture\' \'on<x>mousedown\' \'on<x>mouseenter\' \'on<x>mouseleave\' \'on<x>mousemove\' \'on<x>mouseout\' \'on<x>mouseover\' \'on<x>mouseup\' \'on<x>mousewheel\' \'on<x>move\' \'on<x>moveend\' \'on<x>movestart\' \'on<x>paste\' \'on<x>propertychange\' \'on<x>readystatechange\' \'on<x>reset\' \'on<x>resize\' \'on<x>resizeend\' \'on<x>resizestart\' \'on<x>rowenter\' \'on<x>rowexit\' \'on<x>rowsdelete\' \'on<x>rowsinserted\' \'on<x>scroll\' \'on<x>select\' \'on<x>selection<x>change\' \'on<x>selectstart\' \'on<x>start\' \'on<x>stop\' \'on<x>submit\' \'on<x>unload\');<br />
+&nbsp;&nbsp; $ra = array_merge($ra1 $ra2);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; $found = true; // keep replacing as long as the previous round replaced something<br />
+&nbsp;&nbsp; while ($found == true) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val_before = $val;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($i = 0; $i &lt; sizeof($ra); $i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern = \'/\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for ($j = 0; $j &lt; strlen($ra[$i]); $j++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($j &gt; 0) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'(&amp;#[xX]0{08}([9ab]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'|(&amp;#0{08}([9|10|13]);)\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \')*\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= $ra[$i][$j];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $pattern .= \'/i\';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $replacement = substr($ra[$i] 0 2).\'&lt;x&gt;\'.substr($ra[$i] 2); // add in &lt;&gt; to nerf the tag<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $val = preg_replace($pattern $replacement $val); // filter out the hex tags<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($val_before == $val) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // no replacements were made so exit the loop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $found = false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; return $val;<br />
+} <br />
+&nbsp;</x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></x></p>
+<p><u><b>ที่มา </b></u>http://kallahar.com/smallprojects/php_xss_filter_function.php</p>' Where content_id = 25 
+09:03:54 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>ssss</p>','<script>alert(\'\');</script>',now()) 
+09:03:15 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>sssssssssss</p>','<script>alert(\'Hack by pee\')</script>',now()) 
+09:03:20 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>fsdfdsf</p>','<script>alert(\'Hack Again\');</script>',now()) 
+09:03:44 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>fsdfdsf</p>','<sc<x>ript>alert(\'Hack Again\');</sc<x>ript>',now()) 
+09:03:15 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>fsdfdsf</p>','<sc<x>ript>alert(\'Hack Again\');</sc<x>ript>',now()) 
+09:03:02 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>sc<x>riptsc<x>riptsc<x>riptsc<x>riptsc<x>ript</p>','sc<x>ript',now()) 
+09:03:23 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>sc<x>riptsc<x>riptsc<x>riptsc<x>riptsc<x>ript</p>','sc<x>ript',now()) 
+09:03:30 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('25','<p>sc<x>riptsc<x>riptsc<x>riptsc<x>riptsc<x>ript</p>','sc<x>ript',now()) 
+10:03:17 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('17','<p>fdsfds</p>','sdfds',now()) 
+11:03:13 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('17','<p>xxx</p>','xxx',now()) 
+11:03:02 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date) Values ('17','<p>sss</p>','ss',now()) 
+13:03:15 :  => Insert into category (category_name,category_remark,weight) Values ('xxx','xxx','1') 
+13:03:28 :  => Insert into category (category_name,category_remark,weight) Values ('xxx','xxx','1') 
+13:03:31 :  => Delete From category Where category_id = 29 
+13:03:33 :  => Delete From category Where category_id = 28 
+13:03:41 :  => Update static_content SET content_detail='<p>กรุณารอสักพักนะครับ กำลังปรับปรุงแก้ไขนิดหน่อย xxx</p>' Where content_key = 'download' 
+13:03:47 :  => Update static_content SET content_detail='<p>กรุณารอสักพักนะครับ กำลังปรับปรุงแก้ไขนิดหน่อย </p>' Where content_key = 'download' 
+15:03:29 :  => Update category SET category_name='News',category_remark='ข้อมูลข่าวสารด้าน IT',weight='0' Where category_id = 5 
+17:03:23 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date,ip) Values ('25','<p>test</p>','test',now(),'127.0.0.1') 
+17:03:13 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date,ip) Values ('25','<p>dsfdsf</p>','dsf',now(),'127.0.0.1') 
+21:03:38 :  => Insert into comment (content_id,comment_detail,poster_name,posted_date,ip) Values ('17','<p>dfsdfs</p>','dfdsf',now(),'127.0.0.1') 

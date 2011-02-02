@@ -1,0 +1,21 @@
+11:09:29 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',,,, Where  id= 2' at line 1Update cms_faq SET ,,,,, Where  id= 2 
+11:09:16 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='100' Where  id= 2 
+11:09:37 :  => Update cms_faq SET faq_question='FAQ มีวิธีใช้งานอย่างไร',faq_startDate='2008-09-02',faq_endDate='2008-09-17',faq_detail='ใช้งานง่าย<br/>
+มาก<br/>
+มาก<br/>
+มาก',faq_active='1',faq_order='1' Where  id= 2 
+11:09:08 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('sssss','2008-09-09','2008-09-08','Detail','1','100') 
+11:09:21 :  => Update cms_faq SET faq_question='sssss',faq_startDate='2008-09-09',faq_endDate='2008-09-08',faq_detail='Detail',faq_active='1',faq_order='2' Where  id= 3 
+11:09:15 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* From faq_cms Where id=3' at line 1Delete * From faq_cms Where id=3  
+11:09:30 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* From faq_cms Where id=3' at line 1Delete * From faq_cms Where id=3  
+11:09:31 :  => ERROR : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* From faq_cms Where id=3' at line 1Delete * From faq_cms Where id=3  
+11:09:47 :  => ERROR : Table 'cms.faq_cms' doesn't existDelete From faq_cms Where id=3  
+11:09:00 :  => ERROR : Table 'cms.faq_cms' doesn't existDelete From faq_cms Where id=3  
+11:09:14 :  => Delete From cms_faq Where id=3  
+11:09:58 :  => Insert into cms_faq (faq_question,faq_startDate,faq_endDate,faq_detail,faq_active,faq_order) Values ('ssssss','2008-09-10','2008-09-18','Detail xxxxxx<br/>','1','3') 
+11:09:39 :  => Update cms_faq SET faq_question='ทดสอบ',faq_startDate='2008-09-01',faq_endDate='2008-09-18',faq_detail='Detail xxxxxx<br/>',faq_active='1',faq_order='3' Where  id= 4 
+11:09:11 :  => Update cms_faq SET faq_question='ทดสอบ',faq_startDate='2008-09-01',faq_endDate='2008-09-18',faq_detail='Detail xxxxxx<br/>
+<img height=\"105\" width=\"150\" src=\"/files/users/all/Image/google.png\" alt=\"\"/><br/>',faq_active='1',faq_order='3' Where  id= 4 
